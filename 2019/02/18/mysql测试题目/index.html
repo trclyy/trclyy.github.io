@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="mysql," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="田润超的博客" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql测试题目">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/mysql测试题目/index.html">
+<meta property="og:site_name" content="田润超的博客">
+<meta property="og:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-18T07:08:11.945Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql测试题目">
+<meta name="twitter:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '余某'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/18/mysql测试题目/"/>
+
+
+
+
+
+  <title>mysql测试题目 | 田润超的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+     <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+	<!-- 右上角或者左上角实现fork me on github-->
+	<a href="https://github.com/GiHeart" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">田润超的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/mysql测试题目/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="python_wuyanzu_boke">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/wuyanzu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="田润超的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">mysql测试题目</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T15:07:35+08:00">
+                2019-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><p>CREATE DATABASE QQDB;</p>
+<h3 id="2-创建各表（表结构；约束）"><a href="#2-创建各表（表结构；约束）" class="headerlink" title="2.创建各表（表结构；约束）"></a>2.创建各表（表结构；约束）</h3><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>创建<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>USE QQDB;</p>
+<p>DROP TABLE IF EXISTS QQUser;<br>CREATE TABLE QQUser<br>(<br>qqid BIGINT PRIMARY KEY,<br>PASSWORD VARCHAR(20) NOT NULL,<br>lastlogtime DATETIME NOT NULL,<br>online INT NOT NULL,<br>LEVEL INT NOT NULL<br>);</p>
+<p>DROP TABLE IF EXISTS baseinfo;<br>CREATE TABLE baseinfo<br>(<br>qqid BIGINT PRIMARY KEY,<br>nickname VARCHAR(50) NOT NULL,<br>sex INT,<br>age INT NOT NULL,<br>province VARCHAR(50),<br>city VARCHAR(50),<br>address VARCHAR(200),<br>phone CHAR(50),<br>CONSTRAINT <code>FK_qqid</code> FOREIGN KEY (<code>qqid</code>) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
+<p>DROP TABLE IF EXISTS relaion;<br>CREATE TABLE relaion<br>(<br>qqid BIGINT NOT NULL,<br>relationqqid BIGINT NOT NULL,<br>relationstatus INT NOT NULL,<br>CONSTRAINT <code>FK_r_qqid</code> FOREIGN KEY (qqid) REFERENCES <code>qquser</code> (<code>qqid</code>),<br>CONSTRAINT <code>FK_r_relationqqid</code> FOREIGN KEY (relationqqid) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
+<h2 id="3-添加-插入-数据"><a href="#3-添加-插入-数据" class="headerlink" title="3.添加/插入 数据"></a>3.添加/插入 数据</h2><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>添加<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>insert  into <code>qquser</code>(<code>QQid</code>,<code>Password</code>,<code>lastlogTime</code>,<code>Online</code>,<code>level</code>)<br>values (1,’a123456’,’2017-03-02 00:00:00’,1,6),<br>(2,’b123456’,’2017-03-02 00:00:00’,2,7),<br>(3,’c123456’,’2018-03-01 00:00:00’,2,6),<br>(4,’d123456’,’2018-03-02 00:00:00’,2,8),<br>(7,’g123456’,’2012-02-02 00:00:00’,0,-1),<br>(8855678,’gues0221’,’2008-02-21 16:28:20’,1,6),<br>(54789625,’add512#&amp;’,’2008-02-16 17:01:35’,2,1),<br>(88662753,’admin0219’,’2008-02-19 21:08:35’,0,5);</p>
+<p>insert  into <code>baseinfo</code>(<code>QQID</code>,<code>nickName</code>,<code>Sex</code>,<code>Age</code>,<code>provice</code>,<code>City</code>,<code>Addres</code>,<code>phone</code>)<br>values (1,’小明’,0,18,’山东省’,’济南’,’小村村’,’004’),<br>(2,’小天’,1,15,’山东’,’聊城’,’大村村’,’005’),<br>(3,’小王’,1,16,’河南’,’开封’,’不知奥’,’006’),<br>(4,’嘟嘟鱼’,0,13,’天津’,’塘沽’,’呵呵’,’007’),<br>(8855678,’独行侠,1,38,’北京’,’海淀区’,’解放中路号院123室’,’003’),<br>(54789625,’蝴蝶飞飞’,1,16,’北京’,’海淀区’,’亚运村’,’001’),<br>(88662753,’青青草’,0,20,’河南省’,’安阳’,’汤阴’,’002’);</p>
+<p>INSERT INTO <code>relaion</code>(<code>qqid</code>,<code>relationqqid</code>,<code>relationstatus</code>)<br>VALUES(54789625,88662753,0),<br>(88662753,8855678,1),<br>(54789625,8855678,0);</p>
+<h2 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h2><p>##查询数据</p>
+<p>#01.查询QQ号码为54789625的所有好友信息，包括QQ号码，昵称，年龄<br>select RelationQQID as QQ号码,NickName as 昵称,Age as 年龄<br>from BaseInfo,Relation<br>where BaseInfo.QQID=Relation.RelationQQID<br>and Relation.QQID=54789625<br>and RelationStatus=0 或者1</p>
+<p>#02.查询当前在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID AND Online=0</p>
+<p>#03.查询北京的、年龄在18至45岁之间的在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND   BaseInfo.Province LIKE ‘%北京%’<br>AND   BaseInfo.Age BETWEEN 18 AND 45<br>AND   Online=0</p>
+<p>#04.查询昵称为青青草的用户信息<br>SELECT NickName,Province,City,Address<br>FROM BaseInfo<br>WHERE NickName=’青青草’</p>
+<p>#05.查询QQ号码为54789625的用户的好友中每个省份的总人数，并且总人数按由大到小排序。<br>SELECT BaseInfo.Province,COUNT(*) AS 总人数 FROM Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.RelationStatus=0<br>AND Relation.QQID=54789625<br>GROUP BY BaseInfo.Province<br>ORDER BY 总人数 DESC</p>
+<p>#06.查询至少有150天未登录QQ账号的用户信息，包括QQ号码，最后一次登录时间、等级、昵称、年龄，并按时间的降序排列<br>SELECT QQUser.QQID,QQUser.LastLogTime,QQUser.Level,BaseInfo.NickName,BaseInfo.Age<br>FROM BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND DATEDIFF(NOW(),lastLogTime)&gt;=150<br>ORDER BY DATEDIFF(NOW(),lastLogTime) DESC</p>
+<p>#07.查询QQ号码为54789625的好友中等级为10级以上的“月亮”级用户信息。<br>SELECT NickName,Province<br>FROM QQUser,Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>AND Relation.RelationStatus=0<br>AND Relation.RelationQQID=QQUser.QQID<br>AND QQUser.Level&gt;=10</p>
+<p>#08.–查询QQ号码为54789625的好友中隐身的用户信息。<br>SELECT NickName,province<br>FROM Relation INNER JOIN BaseInfo<br>ON Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>INNER JOIN QQUser<br>ON QQUser.QQID=RelationQQID<br>AND Online=2  #2代表隐身<br>AND Relation.RelationStatus=0  #0代表好友</p>
+<p>#09.–查询好友超过20个的用户信息。<br>SELECT Nickname,province<br>FROM BaseInfo WHERE QQID IN<br>(SELECT QQID<br>FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY QQID<br>HAVING COUNT(*)&gt;20<br>)</p>
+<p>#10.为了查看信誉度，管理员需要查询被当做黑名单人物次数排名前3的用户<br>SELECT  RelationQQID,COUNT(<em>) AS 次数<br>FROM Relation<br>WHERE RelationStatus=1<br>GROUP BY RelationQQID<br>ORDER BY COUNT(</em>) DESC<br>LIMIT 3</p>
+<h2 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a>5.修改数据</h2><p>##修改数据</p>
+<p>#01.假设我的QQ号码为8855678，今天我隐身登录<br>UPDATE QQUser SET Online=2,LastLogTime=NOW()<br>WHERE QQID=8855678</p>
+<p>#02.假设我的QQ号码为8855678，修改我的昵称为“被淹死的鱼”，地址为“解放中路号院123室”<br>UPDATE BaseInfo SET NickName=’被淹死的鱼’,Address=’解放中路号院室’<br>WHERE  QQID=8855678</p>
+<p>#03.假设我的QQ号码为54789625，将我的好友“青青草”拖进黑名单。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=88662753</p>
+<p>#04.为了提高QQ用户的聊天积极性，把等级小于6级的用户的等级都提升1个级别。<br>update QQUser set Level=Level+1<br>where Level&lt;6</p>
+<p>#05.管理员将超过365天没有登录过的QQ锁定（即将等级值设定为-1）。<br>UPDATE QQUser SET LEVEL=-1<br>WHERE DATEDIFF(NOW(),lastLogTime)&gt;=365</p>
+<p>#06.为了奖励用户，将好友数量超过20的用户等级提升1个级别。<br>UPDATE QQUser SET LEVEL=LEVEL+1<br>WHERE QQID IN(<br>SELECT Relation.QQID FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY Relation.QQID<br>HAVING COUNT(Relation.RelationQQID)&gt;=20)</p>
+<p>#07.把QQ号码为54789625的用户的好友“嘟嘟鱼”拖进黑名单中。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=<br>(SELECT QQID FROM BaseInfo WHERE NickName=’嘟嘟鱼’)<br>AND RelationStatus=0</p>
+<h2 id="6-删除数据"><a href="#6-删除数据" class="headerlink" title="6.删除数据"></a>6.删除数据</h2><p>##删除数据</p>
+<p>#1.把QQ号码为54789625的用户黑名单中的用户删除。<br>DELETE FROM Relation WHERE QQID=54789625 AND RelationStatus=1</p>
+<p>#2.QQ号码为54789625的用户多次在QQ中发布违法信息，造成了很坏的影响，因此管理员决定将其删除。<br>DELETE FROM Relation WHERE QQID=54789625 OR RelationQQID=54789625<br>DELETE FROM BaseInfo WHERE QQID=54789625<br>DELETE FROM QQUser WHERE QQID=54789625</p>
+<p>#3.管理员将超过1000天没有登录过的QQ删除。<br>DELETE FROM Relation WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>OR RelationQQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM BaseInfo WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM QQUser<br>WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000</p>
+<p>辅助blog</p>
+<h2 id="MySQL-获得当前日期时间-函数"><a href="#MySQL-获得当前日期时间-函数" class="headerlink" title="MySQL 获得当前日期时间 函数"></a>MySQL 获得当前日期时间 函数</h2><p>获得当前日期+时间（date + time）函数：now()</p>
+<p>mysql&gt; select now();</p>
+<p>+———————+| now() |+———————+| 2008-08-08 22:20:46 |+———————+</p>
+<p>获得当前日期+时间（date + time）函数：sysdate()<br>sysdate() 日期时间函数跟 now() 类似，不同之处在于：now() 在执行开始时值就得到了， sysdate() 在函数执行时动态得到值。看下面的例子就明白了：</p>
+<p>mysql&gt; select now(), sleep(3), now();</p>
+<p>+———————+———-+———————+| now() | sleep(3) | now() |+———————+———-+———————+| 2008-08-08 22:28:21 | 0 | 2008-08-08 22:28:21 |+———————+———-+———————+</p>
+<p>sysdate() 日期时间函数，一般情况下很少用到。</p>
+<p>MySQL 获得当前时间戳函数：current_timestamp, current_timestamp()</p>
+<p>mysql&gt; select current_timestamp, current_timestamp();</p>
+<p>+———————+———————+| current_timestamp | current_timestamp() |+———————+———————+| 2008-08-09 23:22:24 | 2008-08-09 23:22:24 |+———————+———————+</p>
+<p>MySQL 日期转换函数、时间转换函数<br>MySQL Date/Time to Str（日期/时间转换为字符串）函数：date_format(date,format), time_format(time,format)</p>
+<p>mysql&gt; select date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’);</p>
+<p>+—————————————————-+| date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’) |+—————————————————-+| 20080808222301 |+—————————————————-+</p>
+<p>MySQL 日期、时间转换函数：date_format(date,format), time_format(time,format) 能够把一个日期/时间转换成各种各样的字符串格式。它是 str_to_date(str,format) 函数的 一个逆转换。</p>
+<p>MySQL Str to Date （字符串转换为日期）函数：str_to_date(str, format)</p>
+<p>select str_to_date(‘08/09/2008’, ‘%m/%d/%Y’); – 2008-08-09select str_to_date(‘08/09/08’ , ‘%m/%d/%y’); – 2008-08-09select str_to_date(‘08.09.2008’, ‘%m.%d.%Y’); – 2008-08-09select str_to_date(‘08:09:30’, ‘%h:%i:%s’); – 08:09:30select str_to_date(‘08.09.2008 08:09:30’, ‘%m.%d.%Y %h:%i:%s’); – 2008-08-09 08:09:30</p>
+<p>可以看到，str_to_date(str,format) 转换函数，可以把一些杂乱无章的字符串转换为日期格式。另外，它也可以转换为时间。“format” 可以参看 MySQL 手册。</p>
+<p>MySQL （日期、天数）转换函数：to_days(date), from_days(days)</p>
+<p>select to_days(‘0000-00-00’); – 0select to_days(‘2008-08-08’); – 733627</p>
+<p>MySQL （时间、秒）转换函数：time_to_sec(time), sec_to_time(seconds)</p>
+<p>select time_to_sec(‘01:00:05’); – 3605select sec_to_time(3605); – ‘01:00:05’</p>
+<p>MySQL 拼凑日期、时间函数：makdedate(year,dayofyear), maketime(hour,minute,second)</p>
+<p>select makedate(2001,31); – ‘2001-01-31’select makedate(2001,32); – ‘2001-02-01’select maketime(12,15,30); – ‘12:15:30’</p>
+<p>MySQL （Unix 时间戳、日期）转换函数</p>
+<p>unix_timestamp(),</p>
+<p>unix_timestamp(date),</p>
+<p>from_unixtime(unix_timestamp),</p>
+<p>from_unixtime(unix_timestamp,format)</p>
+<p>下面是示例：</p>
+<p>select unix_timestamp(); – 1218290027select unix_timestamp(‘2008-08-08’); – 1218124800select unix_timestamp(‘2008-08-08 12:30:00’); – 1218169800</p>
+<p>select from_unixtime(1218290027); – ‘2008-08-09 21:53:47’select from_unixtime(1218124800); – ‘2008-08-08 00:00:00’select from_unixtime(1218169800); – ‘2008-08-08 12:30:00’</p>
+<p>select from_unixtime(1218169800, ‘%Y %D %M %h:%i:%s %x’); – ‘2008 8th August 12:30:00 2008’</p>
+<p>MySQL 日期时间计算函数</p>
+<p>MySQL 为日期增加一个时间间隔：date_add()</p>
+<p>set @dt = now();</p>
+<p>select date_add(@dt, interval 1 day); – add 1 dayselect date_add(@dt, interval 1 hour); – add 1 hourselect date_add(@dt, interval 1 minute); – …select date_add(@dt, interval 1 second);select date_add(@dt, interval 1 microsecond);select date_add(@dt, interval 1 week);select date_add(@dt, interval 1 month);select date_add(@dt, interval 1 quarter);select date_add(@dt, interval 1 year);</p>
+<p>select date_add(@dt, interval -1 day); – sub 1 day</p>
+<p>MySQL adddate(), addtime()函数，可以用 date_add() 来替代。下面是 date_add() 实现 addtime() 功能示例：</p>
+<p>mysql&gt; set @dt = ‘2008-08-09 12:12:33’;</p>
+<p>mysql&gt;</p>
+<p>mysql&gt; select date_add(@dt, interval ‘01:15:30’ hour_second);</p>
+<p>+————————————————+| date_add(@dt, interval ‘01:15:30’ hour_second) |+————————————————+| 2008-08-09 13:28:03 |+————————————————+</p>
+<p>mysql&gt; select date_add(@dt, interval ‘1 01:15:30’ day_second);</p>
+<p>+————————————————-+| date_add(@dt, interval ‘1 01:15:30’ day_second) |+————————————————-+| 2008-08-10 13:28:03 |+————————————————-+</p>
+<p>MySQL 为日期减去一个时间间隔：date_sub()</p>
+<p>mysql&gt; select date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second);</p>
+<p>+—————————————————————-+| date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second) |+—————————————————————-+| 1997-12-30 22:58:59 |+—————————————————————-+</p>
+<p>MySQL date_sub() 日期时间函数 和 date_add() 用法一致，不再赘述。</p>
+<p>MySQL 日期、时间相减函数：datediff(date1,date2), timediff(time1,time2)</p>
+<p>MySQL datediff(date1,date2)：两个日期相减 date1 - date2，返回天数。select datediff(‘2008-08-08’, ‘2008-08-01’); – 7select datediff(‘2008-08-01’, ‘2008-08-08’); – -7</p>
+<p>MySQL timediff(time1,time2)：两个日期相减 time1 - time2，返回 time 差值。</p>
+<p>select timediff(‘2008-08-08 08:08:08’, ‘2008-08-08 00:00:00’); – 08:08:08select timediff(‘08:08:08’, ‘00:00:00’); – 08:08:08</p>
+<p>注意：timediff(time1,time2) 函数的两个参数类型必须相同。</p>
+<p>MySQL 时间戳（timestamp）转换、增、减函数：</p>
+<p>timestamp(date) – date to timestamptimestamp(dt,time) – dt + time</p>
+<p>timestampadd(unit,interval,datetime_expr) –timestampdiff(unit,datetime_expr1,datetime_expr2) –</p>
+<p>请看示例部分：</p>
+<p>select timestamp(‘2008-08-08’); – 2008-08-08 00:00:00select timestamp(‘2008-08-08 08:00:00’, ‘01:01:01’); – 2008-08-08 09:01:01select timestamp(‘2008-08-08 08:00:00’, ‘10 01:01:01’); – 2008-08-18 09:01:01</p>
+<p>select timestampadd(day, 1, ‘2008-08-08 08:00:00’); – 2008-08-09 08:00:00select date_add(‘2008-08-08 08:00:00’, interval 1 day); – 2008-08-09 08:00:00</p>
+<p>MySQL timestampadd() 函数类似于 date_add()。select timestampdiff(year,’2002-05-01’,’2001-01-01’); – -1select timestampdiff(day ,’2002-05-01’,’2001-01-01’); – -485select timestampdiff(hour,’2008-08-08 12:00:00’,’2008-08-08 00:00:00’); – -12</p>
+<p>select datediff(‘2008-08-08 12:00:00’, ‘2008-08-01 00:00:00’); – 7</p>
+<p>MySQL timestampdiff() 函数就比 datediff() 功能强多了，datediff() 只能计算两个日期（date）之间相差的天数。</p>
+<p>MySQL 时区（timezone）转换函数<br>convert_tz(dt,from_tz,to_tz)</p>
+<p>select convert_tz(‘2008-08-08 12:00:00’, ‘+08:00’, ‘+00:00’); – 2008-08-08 04:00:00</p>
+<p>时区转换也可以通过 date_add, date_sub, timestampadd 来实现。</p>
+<p>select date_add(‘2008-08-08 12:00:00’, interval -8 hour); – 2008-08-08 04:00:00select date_sub(‘2008-08-08 12:00:00’, interval 8 hour); – 2008-08-08 04:00:00select timestampadd(hour, -8, ‘2008-08-08 12:00:00’); – 2008-08-08 04:00:00</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/image/weixin.jpg" alt="python_wuyanzu_boke wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫，加我微信</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    python_wuyanzu_boke
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/02/18/mysql测试题目/" title="mysql测试题目">http://yoursite.com/2019/02/18/mysql测试题目/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+	<div>
+		
+			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+		
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag">#mysql</a>
+		  
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/python解释器安装/" rel="next" title="python解释器安装">
+                <i class="fa fa-chevron-left"></i> python解释器安装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/18/常用浏览器User-Agent大全/" rel="prev" title="常用浏览器User_Agent大全">
+                常用浏览器User_Agent大全 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/image/wuyanzu.jpg"
+                alt="python_wuyanzu_boke" />
+            
+              <p class="site-author-name" itemprop="name">python_wuyanzu_boke</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/trclyy?tab=repositories" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Tian_rc" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Friends
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://forali.club/" title="余德强" target="_blank">余德强</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建数据库"><span class="nav-number">1.</span> <span class="nav-text">1.创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建各表（表结构；约束）"><span class="nav-number">2.</span> <span class="nav-text">2.创建各表（表结构；约束）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加-插入-数据"><span class="nav-number"></span> <span class="nav-text">3.添加/插入 数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查询数据"><span class="nav-number"></span> <span class="nav-text">4.查询数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-修改数据"><span class="nav-number"></span> <span class="nav-text">5.修改数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-删除数据"><span class="nav-number"></span> <span class="nav-text">6.删除数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-获得当前日期时间-函数"><span class="nav-number"></span> <span class="nav-text">MySQL 获得当前日期时间 函数</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">python_wuyanzu_boke</span>
+
+  
+</div>
+
+
+  <div class="powered-by"></div>
+
+
+
+
+
+
+  <div class="theme-info">
+  </div>
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共69.2k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260},"mobile":{"show":false},"log":false});</script></body>
+</html>
