@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-18T07:47:55.048Z</updated>
+  <updated>2019-02-23T10:37:33.002Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>防止ＳＱＬ注入的五种方法</title>
+    <link href="http://yoursite.com/2019/02/23/%E9%98%B2%E6%AD%A2SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E4%BA%94%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/02/23/防止SQL注入的五种方法/</id>
+    <published>2019-02-23T10:36:31.000Z</published>
+    <updated>2019-02-23T10:37:33.002Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="防止SQL注入的五种方法"><a href="#防止SQL注入的五种方法" class="headerlink" title="防止ＳＱＬ注入的五种方法"></a><a href="https://www.cnblogs.com/baizhanshi/p/6002898.html" target="_blank" rel="noopener">防止ＳＱＬ注入的五种方法</a></h1><p><strong>一、SQL注入简介</strong></p><p>​    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。</p><p><strong>二、SQL注入攻击的总体思路</strong></p><p>1.寻找到SQL注入的位置</p><p>2.判断服务器类型和后台数据库类型</p><p>3.针对不通的服务器和数据库特点进行SQL注入攻击</p><p><strong>三、SQL注入攻击实例</strong></p><p>比如在一个登录界面，要求输入用户名和密码：</p><p>可以这样输入实现免帐号登录：</p><p>用户名： ‘or 1 = 1 –</p><p>密 码：</p><p>点登陆,如若没有做特殊处理,那么这个非法用户就很得意的登陆进去了.(当然现在的有些语言的数据库API已经处理了这些问题)</p><p>这是为什么呢? 下面我们分析一下：</p><p>从理论上说，后台认证程序中会有如下的SQL语句：</p><p>String sql = “select * from user_table where username=</p><p>‘ “+userName+” ‘ and password=’ “+password+” ‘“;</p><p>当输入了上面的用户名和密码，上面的SQL语句变成：</p><p>SELECT * FROM user_table WHERE username=</p><p>‘’or 1 = 1 – and password=’’</p><p>分析SQL语句：</p><p>条件后面username=”or 1=1 用户名等于 ” 或1=1 那么这个条件一定会成功；</p><p>然后后面加两个-，这意味着注释，它将后面的语句注释，让他们不起作用，这样语句永远都能正确执行，用户轻易骗过系统，获取合法身份。</p><p>这还是比较温柔的，如果是执行</p><p>SELECT * FROM user_table WHERE</p><p>username=’’ ;DROP DATABASE (DB Name) –’ and password=’’</p><p>….其后果可想而知… </p><p><strong>四、应对方法</strong></p><p>下面我针对JSP，说一下应对方法：</p><p><strong>1.（简单又有效的方法）PreparedStatement</strong></p><p>采用预编译语句集，它内置了处理SQL注入的能力，只要使用它的setXXX方法传值即可。</p><p>使用好处：</p><p>(1).代码的可读性和可维护性.</p><p>(2).PreparedStatement尽最大可能提高性能.</p><p>(3).最重要的一点是极大地提高了安全性.</p><p>原理：</p><p>sql注入只对sql语句的准备(编译)过程有破坏作用</p><p>而PreparedStatement已经准备好了,执行阶段只是把输入串作为数据处理,</p><p>而不再对sql语句进行解析,准备,因此也就避免了sql注入问题. </p><p><strong>2.使用正则表达式过滤传入的参数</strong></p><p>要引入的包：</p><p>import java.util.regex.*;</p><p>正则表达式：</p><p>private String CHECKSQL = “^(.+)\sand\s(.+)|(.+)\sor(.+)\s$”;</p><p>判断是否匹配：</p><p>Pattern.matches(CHECKSQL,targerStr);</p><p>下面是具体的正则表达式：</p><p>检测SQL meta-characters的正则表达式 ：</p><p>/(\%27)|(\’)|(--)|(\%23)|(#)/ix</p><p>修正检测SQL meta-characters的正则表达式 ：/((\%3D)|(=))[^\n]*((\%27)|(\’)|(--)|(\%3B)|(:))/i</p><p>典型的SQL 注入攻击的正则表达式 ：/\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/ix</p><p>检测SQL注入，UNION查询关键字的正则表达式 ：/((\%27)|(\’))union/ix(\%27)|(\’)</p><p>检测MS SQL Server SQL注入攻击的正则表达式：</p><p>/exec(\s|+)+(s|x)p\w+/ix</p><p>等等…..</p><p><strong>3.字符串过滤</strong></p><p>比较通用的一个方法：</p><p>（||之间的参数可以根据自己程序的需要添加）</p><p>public static boolean sql_inj(String str){</p><p>String inj_str = “‘|and|exec|insert|select|delete|update|</p><p>count|*|%|chr|mid|master|truncate|char|declare|;|or|-|+|,”;</p><p>String inj_stra[] = split(inj_str,”|”);</p><p>for (int i=0 ; i &lt; inj_stra.length ; i++ ){</p><p>if (str.indexOf(inj_stra[i])&gt;=0){</p><p>return true;</p><p>}</p><p>}</p><p>return false;</p><p>}</p><p><strong>4.jsp中调用该函数检查是否包函非法字符</strong></p><p>防止SQL从URL注入：</p><p>sql_inj.java代码：</p><p>package sql_inj;</p><p>import java.net.*;</p><p>import java.io.*;</p><p>import java.sql.*;</p><p>import java.text.*;</p><p>import java.lang.String;</p><p>public class sql_inj{</p><p>public static boolean sql_inj(String str){</p><p>String inj_str = “‘|and|exec|insert|select|delete|update|</p><p>count|*|%|chr|mid|master|truncate|char|declare|;|or|-|+|,”;</p><p>//这里的东西还可以自己添加</p><p>String[] inj_stra=inj_str.split(“\|”);</p><p>for (int i=0 ; i &lt; inj_stra.length ; i++ ){</p><p>if (str.indexOf(inj_stra[i])&gt;=0){</p><p>return true;</p><p>}</p><p>}</p><p>return false;</p><p>}</p><p>}</p><p><strong>5.JSP页面判断代码：</strong></p><p>使用javascript在客户端进行不安全字符屏蔽</p><p>功能介绍：检查是否含有”‘”,”\”,”/”</p><p>参数说明：要检查的字符串</p><p>返回值：0：是1：不是</p><p>函数名是</p><p>function check(a){</p><p>return 1;</p><p>fibdn = new Array (”‘” ,”\”,”/”);</p><p>i=fibdn.length;</p><p>j=a.length;</p><p>for (ii=0; ii＜i; ii++)</p><p>{ for (jj=0; jj＜j; jj++)</p><p>{ temp1=a.charAt(jj);</p><p>temp2=fibdn[ii];</p><p>if (tem’; p1==temp2)</p><p>{ return 0; }</p><p>}</p><p>}</p><p>return 1;</p><p>}</p><p>===================================</p><p>总的说来，防范一般的SQL注入只要在代码规范上下点功夫就可以了。</p><p>凡涉及到执行的SQL中有变量时，用JDBC（或者其他数据持久层）提供的如：PreparedStatement就可以 ，切记不要用拼接字符串的方法就可以了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;防止SQL注入的五种方法&quot;&gt;&lt;a href=&quot;#防止SQL注入的五种方法&quot; class=&quot;headerlink&quot; title=&quot;防止ＳＱＬ注入的五种方法&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/baizhanshi/p/6002
+      
+    
+    </summary>
+    
+    
+      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>CSRF_oken介绍与应对策略</title>

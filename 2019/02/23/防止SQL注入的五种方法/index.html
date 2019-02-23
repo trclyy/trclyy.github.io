@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="sql," />
 
 
 
@@ -96,13 +96,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="田润超的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+<meta name="description" content="防止ＳＱＬ注入的五种方法一、SQL注入简介 ​    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。 二、SQL注入攻击的总体思路 1.寻找到SQL注入的位置 2.判断服务器类型和后台数据库类型 3.针对不通的服务器和数据库特点进行SQL注入攻击 三、SQL注入攻击实例 比如在一个登录界面，">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="防止ＳＱＬ注入的五种方法">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/防止SQL注入的五种方法/index.html">
 <meta property="og:site_name" content="田润超的博客">
+<meta property="og:description" content="防止ＳＱＬ注入的五种方法一、SQL注入简介 ​    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。 二、SQL注入攻击的总体思路 1.寻找到SQL注入的位置 2.判断服务器类型和后台数据库类型 3.针对不通的服务器和数据库特点进行SQL注入攻击 三、SQL注入攻击实例 比如在一个登录界面，">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-23T10:37:33.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="田润超的博客">
+<meta name="twitter:title" content="防止ＳＱＬ注入的五种方法">
+<meta name="twitter:description" content="防止ＳＱＬ注入的五种方法一、SQL注入简介 ​    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。 二、SQL注入攻击的总体思路 1.寻找到SQL注入的位置 2.判断服务器类型和后台数据库类型 3.针对不通的服务器和数据库特点进行SQL注入攻击 三、SQL注入攻击实例 比如在一个登录界面，">
 
 
 
@@ -132,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/防止SQL注入的五种方法/"/>
 
 
 
 
 
-  <title>归档 | 田润超的博客</title>
+  <title>防止ＳＱＬ注入的五种方法 | 田润超的博客</title>
   
 
 
@@ -157,9 +162,9 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-     <div class="container sidebar-position-left page-archive">
+     <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<!-- 右上角或者左上角实现fork me on github-->
 	<a href="https://github.com/GiHeart" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -298,410 +303,365 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 31 篇日志。 继续努力。
-      </span>
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/防止SQL注入的五种方法/">
 
-      
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="python_wuyanzu_boke">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/wuyanzu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="田润超的博客">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">防止ＳＱＬ注入的五种方法</h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T18:36:31+08:00">
+                2019-02-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/git常用命令/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">git常用命令</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:15:39+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/码云生成公钥/" itemprop="url">
-              
-                <span itemprop="name">码云生成公钥</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:13:16+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/正则表示式中re-S和小括号的作用/" itemprop="url">
-              
-                <span itemprop="name">正则表示式中re.S和小括号的作用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:10:42+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="防止SQL注入的五种方法"><a href="#防止SQL注入的五种方法" class="headerlink" title="防止ＳＱＬ注入的五种方法"></a><a href="https://www.cnblogs.com/baizhanshi/p/6002898.html" target="_blank" rel="noopener">防止ＳＱＬ注入的五种方法</a></h1><p><strong>一、SQL注入简介</strong></p>
+<p>​    SQL注入是比较常见的网络攻击方式之一，它不是利用操作系统的BUG来实现攻击，而是针对程序员编程时的疏忽，通过SQL语句，实现无帐号登录，甚至篡改数据库。</p>
+<p><strong>二、SQL注入攻击的总体思路</strong></p>
+<p>1.寻找到SQL注入的位置</p>
+<p>2.判断服务器类型和后台数据库类型</p>
+<p>3.针对不通的服务器和数据库特点进行SQL注入攻击</p>
+<p><strong>三、SQL注入攻击实例</strong></p>
+<p>比如在一个登录界面，要求输入用户名和密码：</p>
+<p>可以这样输入实现免帐号登录：</p>
+<p>用户名： ‘or 1 = 1 –</p>
+<p>密 码：</p>
+<p>点登陆,如若没有做特殊处理,那么这个非法用户就很得意的登陆进去了.(当然现在的有些语言的数据库API已经处理了这些问题)</p>
+<p>这是为什么呢? 下面我们分析一下：</p>
+<p>从理论上说，后台认证程序中会有如下的SQL语句：</p>
+<p>String sql = “select * from user_table where username=</p>
+<p>‘ “+userName+” ‘ and password=’ “+password+” ‘“;</p>
+<p>当输入了上面的用户名和密码，上面的SQL语句变成：</p>
+<p>SELECT * FROM user_table WHERE username=</p>
+<p>‘’or 1 = 1 – and password=’’</p>
+<p>分析SQL语句：</p>
+<p>条件后面username=”or 1=1 用户名等于 ” 或1=1 那么这个条件一定会成功；</p>
+<p>然后后面加两个-，这意味着注释，它将后面的语句注释，让他们不起作用，这样语句永远都能正确执行，用户轻易骗过系统，获取合法身份。</p>
+<p>这还是比较温柔的，如果是执行</p>
+<p>SELECT * FROM user_table WHERE</p>
+<p>username=’’ ;DROP DATABASE (DB Name) –’ and password=’’</p>
+<p>….其后果可想而知… </p>
+<p><strong>四、应对方法</strong></p>
+<p>下面我针对JSP，说一下应对方法：</p>
+<p><strong>1.（简单又有效的方法）PreparedStatement</strong></p>
+<p>采用预编译语句集，它内置了处理SQL注入的能力，只要使用它的setXXX方法传值即可。</p>
+<p>使用好处：</p>
+<p>(1).代码的可读性和可维护性.</p>
+<p>(2).PreparedStatement尽最大可能提高性能.</p>
+<p>(3).最重要的一点是极大地提高了安全性.</p>
+<p>原理：</p>
+<p>sql注入只对sql语句的准备(编译)过程有破坏作用</p>
+<p>而PreparedStatement已经准备好了,执行阶段只是把输入串作为数据处理,</p>
+<p>而不再对sql语句进行解析,准备,因此也就避免了sql注入问题. </p>
+<p><strong>2.使用正则表达式过滤传入的参数</strong></p>
+<p>要引入的包：</p>
+<p>import java.util.regex.*;</p>
+<p>正则表达式：</p>
+<p>private String CHECKSQL = “^(.+)\sand\s(.+)|(.+)\sor(.+)\s$”;</p>
+<p>判断是否匹配：</p>
+<p>Pattern.matches(CHECKSQL,targerStr);</p>
+<p>下面是具体的正则表达式：</p>
+<p>检测SQL meta-characters的正则表达式 ：</p>
+<p>/(\%27)|(\’)|(--)|(\%23)|(#)/ix</p>
+<p>修正检测SQL meta-characters的正则表达式 ：/((\%3D)|(=))[^\n]*((\%27)|(\’)|(--)|(\%3B)|(:))/i</p>
+<p>典型的SQL 注入攻击的正则表达式 ：/\w*((\%27)|(\’))((\%6F)|o|(\%4F))((\%72)|r|(\%52))/ix</p>
+<p>检测SQL注入，UNION查询关键字的正则表达式 ：/((\%27)|(\’))union/ix(\%27)|(\’)</p>
+<p>检测MS SQL Server SQL注入攻击的正则表达式：</p>
+<p>/exec(\s|+)+(s|x)p\w+/ix</p>
+<p>等等…..</p>
+<p><strong>3.字符串过滤</strong></p>
+<p>比较通用的一个方法：</p>
+<p>（||之间的参数可以根据自己程序的需要添加）</p>
+<p>public static boolean sql_inj(String str){</p>
+<p>String inj_str = “‘|and|exec|insert|select|delete|update|</p>
+<p>count|*|%|chr|mid|master|truncate|char|declare|;|or|-|+|,”;</p>
+<p>String inj_stra[] = split(inj_str,”|”);</p>
+<p>for (int i=0 ; i &lt; inj_stra.length ; i++ ){</p>
+<p>if (str.indexOf(inj_stra[i])&gt;=0){</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<p>return false;</p>
+<p>}</p>
+<p><strong>4.jsp中调用该函数检查是否包函非法字符</strong></p>
+<p>防止SQL从URL注入：</p>
+<p>sql_inj.java代码：</p>
+<p>package sql_inj;</p>
+<p>import java.net.*;</p>
+<p>import java.io.*;</p>
+<p>import java.sql.*;</p>
+<p>import java.text.*;</p>
+<p>import java.lang.String;</p>
+<p>public class sql_inj{</p>
+<p>public static boolean sql_inj(String str){</p>
+<p>String inj_str = “‘|and|exec|insert|select|delete|update|</p>
+<p>count|*|%|chr|mid|master|truncate|char|declare|;|or|-|+|,”;</p>
+<p>//这里的东西还可以自己添加</p>
+<p>String[] inj_stra=inj_str.split(“\|”);</p>
+<p>for (int i=0 ; i &lt; inj_stra.length ; i++ ){</p>
+<p>if (str.indexOf(inj_stra[i])&gt;=0){</p>
+<p>return true;</p>
+<p>}</p>
+<p>}</p>
+<p>return false;</p>
+<p>}</p>
+<p>}</p>
+<p><strong>5.JSP页面判断代码：</strong></p>
+<p>使用javascript在客户端进行不安全字符屏蔽</p>
+<p>功能介绍：检查是否含有”‘”,”\”,”/”</p>
+<p>参数说明：要检查的字符串</p>
+<p>返回值：0：是1：不是</p>
+<p>函数名是</p>
+<p>function check(a){</p>
+<p>return 1;</p>
+<p>fibdn = new Array (”‘” ,”\”,”/”);</p>
+<p>i=fibdn.length;</p>
+<p>j=a.length;</p>
+<p>for (ii=0; ii＜i; ii++)</p>
+<p>{ for (jj=0; jj＜j; jj++)</p>
+<p>{ temp1=a.charAt(jj);</p>
+<p>temp2=fibdn[ii];</p>
+<p>if (tem’; p1==temp2)</p>
+<p>{ return 0; }</p>
+<p>}</p>
+<p>}</p>
+<p>return 1;</p>
+<p>}</p>
+<p>===================================</p>
+<p>总的说来，防范一般的SQL注入只要在代码规范上下点功夫就可以了。</p>
+<p>凡涉及到执行的SQL中有变量时，用JDBC（或者其他数据持久层）提供的如：PreparedStatement就可以 ，切记不要用拼接字符串的方法就可以了。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/常用浏览器User-Agent大全/" itemprop="url">
-              
-                <span itemprop="name">常用浏览器User_Agent大全</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:08:42+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/mysql测试题目/" itemprop="url">
-              
-                <span itemprop="name">mysql测试题目</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:07:35+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/python解释器安装/" itemprop="url">
-              
-                <span itemprop="name">python解释器安装</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:05:15+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/python常见的异常类型/" itemprop="url">
-              
-                <span itemprop="name">python常见的异常类型</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:02:32+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/python装饰器/" itemprop="url">
-              
-                <span itemprop="name">python装饰器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T15:00:46+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/mysql命令大全/" itemprop="url">
-              
-                <span itemprop="name">mysql命令大全</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T14:56:09+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/02/18/python常用的数据库之一mysql基础篇/" itemprop="url">
-              
-                <span itemprop="name">python常用的数据库之_mysql基础篇</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-18T14:46:16+08:00"
-              content="2019-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/image/weixin.jpg" alt="python_wuyanzu_boke wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫，加我微信</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    python_wuyanzu_boke
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/02/23/防止SQL注入的五种方法/" title="防止ＳＱＬ注入的五种方法">http://yoursite.com/2019/02/23/防止SQL注入的五种方法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+	<div>
+		
+			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+		
+	</div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sql/" rel="tag">#sql</a>
+		  
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/18/CSRF-oken介绍与应对策略/" rel="next" title="CSRF_oken介绍与应对策略">
+                <i class="fa fa-chevron-left"></i> CSRF_oken介绍与应对策略
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -709,6 +669,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -729,8 +693,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -831,6 +804,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#防止SQL注入的五种方法"><span class="nav-number">1.</span> <span class="nav-text">防止ＳＱＬ注入的五种方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -982,6 +971,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
