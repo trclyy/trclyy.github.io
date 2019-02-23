@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="http," />
 
 
 
@@ -96,18 +96,21 @@
 
 
 
-<meta name="description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
-<meta name="keywords" content="mysql">
+<meta name="description" content="TCP是一个面向连接的服务,面向连接的服务是电话系统服务模式的抽象,每一次完整的数据传输都必须经过建立连接,数据传输和终止连接三个过程,TCP建立连接的过程称为三次握手,下面说一下三次握手的具体过程: TCP三次握手过程 主机A通过向主机B 发送一个含有同步序列号的标志位的数据段给主机B ,向主机B 请求建立连接,通过这个数据段,主机A告诉主机B 两件事:我想要和你通信;你可以用哪个序列号作为起始">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql测试题目">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/mysql测试题目/index.html">
+<meta property="og:title" content="MTCP建立连接和断开连接过程详解">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/MTCP建立连接和断开连接过程详解/index.html">
 <meta property="og:site_name" content="田润超的博客">
-<meta property="og:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta property="og:description" content="TCP是一个面向连接的服务,面向连接的服务是电话系统服务模式的抽象,每一次完整的数据传输都必须经过建立连接,数据传输和终止连接三个过程,TCP建立连接的过程称为三次握手,下面说一下三次握手的具体过程: TCP三次握手过程 主机A通过向主机B 发送一个含有同步序列号的标志位的数据段给主机B ,向主机B 请求建立连接,通过这个数据段,主机A告诉主机B 两件事:我想要和你通信;你可以用哪个序列号作为起始">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T07:08:11.945Z">
+<meta property="og:image" content="http://s15.sinaimg.cn/mw690/001LJkOrgy6FV957oh83e&690">
+<meta property="og:image" content="https://img-blog.csdn.net/20160402170316654">
+<meta property="og:updated_time" content="2019-02-23T11:34:49.599Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql测试题目">
-<meta name="twitter:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta name="twitter:title" content="MTCP建立连接和断开连接过程详解">
+<meta name="twitter:description" content="TCP是一个面向连接的服务,面向连接的服务是电话系统服务模式的抽象,每一次完整的数据传输都必须经过建立连接,数据传输和终止连接三个过程,TCP建立连接的过程称为三次握手,下面说一下三次握手的具体过程: TCP三次握手过程 主机A通过向主机B 发送一个含有同步序列号的标志位的数据段给主机B ,向主机B 请求建立连接,通过这个数据段,主机A告诉主机B 两件事:我想要和你通信;你可以用哪个序列号作为起始">
+<meta name="twitter:image" content="http://s15.sinaimg.cn/mw690/001LJkOrgy6FV957oh83e&690">
 
 
 
@@ -137,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/mysql测试题目/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/MTCP建立连接和断开连接过程详解/"/>
 
 
 
 
 
-  <title>mysql测试题目 | 田润超的博客</title>
+  <title>MTCP建立连接和断开连接过程详解 | 田润超的博客</title>
   
 
 
@@ -317,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/mysql测试题目/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/MTCP建立连接和断开连接过程详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="python_wuyanzu_boke">
@@ -334,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql测试题目</h1>
+          <h1 class="post-title" itemprop="name headline">MTCP建立连接和断开连接过程详解</h1>
         
 
         <div class="post-meta">
@@ -346,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T15:07:35+08:00">
-                2019-02-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T19:34:01+08:00">
+                2019-02-23
               </time>
             
 
@@ -378,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.5k
+                  780
                 </span>
               
 
@@ -394,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  2
                 </span>
               
             </div>
@@ -415,104 +418,24 @@
       
 
       
-        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><p>CREATE DATABASE QQDB;</p>
-<h3 id="2-创建各表（表结构；约束）"><a href="#2-创建各表（表结构；约束）" class="headerlink" title="2.创建各表（表结构；约束）"></a>2.创建各表（表结构；约束）</h3><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>创建<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>USE QQDB;</p>
-<p>DROP TABLE IF EXISTS QQUser;<br>CREATE TABLE QQUser<br>(<br>qqid BIGINT PRIMARY KEY,<br>PASSWORD VARCHAR(20) NOT NULL,<br>lastlogtime DATETIME NOT NULL,<br>online INT NOT NULL,<br>LEVEL INT NOT NULL<br>);</p>
-<p>DROP TABLE IF EXISTS baseinfo;<br>CREATE TABLE baseinfo<br>(<br>qqid BIGINT PRIMARY KEY,<br>nickname VARCHAR(50) NOT NULL,<br>sex INT,<br>age INT NOT NULL,<br>province VARCHAR(50),<br>city VARCHAR(50),<br>address VARCHAR(200),<br>phone CHAR(50),<br>CONSTRAINT <code>FK_qqid</code> FOREIGN KEY (<code>qqid</code>) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
-<p>DROP TABLE IF EXISTS relaion;<br>CREATE TABLE relaion<br>(<br>qqid BIGINT NOT NULL,<br>relationqqid BIGINT NOT NULL,<br>relationstatus INT NOT NULL,<br>CONSTRAINT <code>FK_r_qqid</code> FOREIGN KEY (qqid) REFERENCES <code>qquser</code> (<code>qqid</code>),<br>CONSTRAINT <code>FK_r_relationqqid</code> FOREIGN KEY (relationqqid) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
-<h2 id="3-添加-插入-数据"><a href="#3-添加-插入-数据" class="headerlink" title="3.添加/插入 数据"></a>3.添加/插入 数据</h2><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>添加<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>insert  into <code>qquser</code>(<code>QQid</code>,<code>Password</code>,<code>lastlogTime</code>,<code>Online</code>,<code>level</code>)<br>values (1,’a123456’,’2017-03-02 00:00:00’,1,6),<br>(2,’b123456’,’2017-03-02 00:00:00’,2,7),<br>(3,’c123456’,’2018-03-01 00:00:00’,2,6),<br>(4,’d123456’,’2018-03-02 00:00:00’,2,8),<br>(7,’g123456’,’2012-02-02 00:00:00’,0,-1),<br>(8855678,’gues0221’,’2008-02-21 16:28:20’,1,6),<br>(54789625,’add512#&amp;’,’2008-02-16 17:01:35’,2,1),<br>(88662753,’admin0219’,’2008-02-19 21:08:35’,0,5);</p>
-<p>insert  into <code>baseinfo</code>(<code>QQID</code>,<code>nickName</code>,<code>Sex</code>,<code>Age</code>,<code>provice</code>,<code>City</code>,<code>Addres</code>,<code>phone</code>)<br>values (1,’小明’,0,18,’山东省’,’济南’,’小村村’,’004’),<br>(2,’小天’,1,15,’山东’,’聊城’,’大村村’,’005’),<br>(3,’小王’,1,16,’河南’,’开封’,’不知奥’,’006’),<br>(4,’嘟嘟鱼’,0,13,’天津’,’塘沽’,’呵呵’,’007’),<br>(8855678,’独行侠,1,38,’北京’,’海淀区’,’解放中路号院123室’,’003’),<br>(54789625,’蝴蝶飞飞’,1,16,’北京’,’海淀区’,’亚运村’,’001’),<br>(88662753,’青青草’,0,20,’河南省’,’安阳’,’汤阴’,’002’);</p>
-<p>INSERT INTO <code>relaion</code>(<code>qqid</code>,<code>relationqqid</code>,<code>relationstatus</code>)<br>VALUES(54789625,88662753,0),<br>(88662753,8855678,1),<br>(54789625,8855678,0);</p>
-<h2 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h2><p>##查询数据</p>
-<p>#01.查询QQ号码为54789625的所有好友信息，包括QQ号码，昵称，年龄<br>select RelationQQID as QQ号码,NickName as 昵称,Age as 年龄<br>from BaseInfo,Relation<br>where BaseInfo.QQID=Relation.RelationQQID<br>and Relation.QQID=54789625<br>and RelationStatus=0 或者1</p>
-<p>#02.查询当前在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID AND Online=0</p>
-<p>#03.查询北京的、年龄在18至45岁之间的在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND   BaseInfo.Province LIKE ‘%北京%’<br>AND   BaseInfo.Age BETWEEN 18 AND 45<br>AND   Online=0</p>
-<p>#04.查询昵称为青青草的用户信息<br>SELECT NickName,Province,City,Address<br>FROM BaseInfo<br>WHERE NickName=’青青草’</p>
-<p>#05.查询QQ号码为54789625的用户的好友中每个省份的总人数，并且总人数按由大到小排序。<br>SELECT BaseInfo.Province,COUNT(*) AS 总人数 FROM Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.RelationStatus=0<br>AND Relation.QQID=54789625<br>GROUP BY BaseInfo.Province<br>ORDER BY 总人数 DESC</p>
-<p>#06.查询至少有150天未登录QQ账号的用户信息，包括QQ号码，最后一次登录时间、等级、昵称、年龄，并按时间的降序排列<br>SELECT QQUser.QQID,QQUser.LastLogTime,QQUser.Level,BaseInfo.NickName,BaseInfo.Age<br>FROM BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND DATEDIFF(NOW(),lastLogTime)&gt;=150<br>ORDER BY DATEDIFF(NOW(),lastLogTime) DESC</p>
-<p>#07.查询QQ号码为54789625的好友中等级为10级以上的“月亮”级用户信息。<br>SELECT NickName,Province<br>FROM QQUser,Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>AND Relation.RelationStatus=0<br>AND Relation.RelationQQID=QQUser.QQID<br>AND QQUser.Level&gt;=10</p>
-<p>#08.–查询QQ号码为54789625的好友中隐身的用户信息。<br>SELECT NickName,province<br>FROM Relation INNER JOIN BaseInfo<br>ON Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>INNER JOIN QQUser<br>ON QQUser.QQID=RelationQQID<br>AND Online=2  #2代表隐身<br>AND Relation.RelationStatus=0  #0代表好友</p>
-<p>#09.–查询好友超过20个的用户信息。<br>SELECT Nickname,province<br>FROM BaseInfo WHERE QQID IN<br>(SELECT QQID<br>FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY QQID<br>HAVING COUNT(*)&gt;20<br>)</p>
-<p>#10.为了查看信誉度，管理员需要查询被当做黑名单人物次数排名前3的用户<br>SELECT  RelationQQID,COUNT(<em>) AS 次数<br>FROM Relation<br>WHERE RelationStatus=1<br>GROUP BY RelationQQID<br>ORDER BY COUNT(</em>) DESC<br>LIMIT 3</p>
-<h2 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a>5.修改数据</h2><p>##修改数据</p>
-<p>#01.假设我的QQ号码为8855678，今天我隐身登录<br>UPDATE QQUser SET Online=2,LastLogTime=NOW()<br>WHERE QQID=8855678</p>
-<p>#02.假设我的QQ号码为8855678，修改我的昵称为“被淹死的鱼”，地址为“解放中路号院123室”<br>UPDATE BaseInfo SET NickName=’被淹死的鱼’,Address=’解放中路号院室’<br>WHERE  QQID=8855678</p>
-<p>#03.假设我的QQ号码为54789625，将我的好友“青青草”拖进黑名单。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=88662753</p>
-<p>#04.为了提高QQ用户的聊天积极性，把等级小于6级的用户的等级都提升1个级别。<br>update QQUser set Level=Level+1<br>where Level&lt;6</p>
-<p>#05.管理员将超过365天没有登录过的QQ锁定（即将等级值设定为-1）。<br>UPDATE QQUser SET LEVEL=-1<br>WHERE DATEDIFF(NOW(),lastLogTime)&gt;=365</p>
-<p>#06.为了奖励用户，将好友数量超过20的用户等级提升1个级别。<br>UPDATE QQUser SET LEVEL=LEVEL+1<br>WHERE QQID IN(<br>SELECT Relation.QQID FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY Relation.QQID<br>HAVING COUNT(Relation.RelationQQID)&gt;=20)</p>
-<p>#07.把QQ号码为54789625的用户的好友“嘟嘟鱼”拖进黑名单中。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=<br>(SELECT QQID FROM BaseInfo WHERE NickName=’嘟嘟鱼’)<br>AND RelationStatus=0</p>
-<h2 id="6-删除数据"><a href="#6-删除数据" class="headerlink" title="6.删除数据"></a>6.删除数据</h2><p>##删除数据</p>
-<p>#1.把QQ号码为54789625的用户黑名单中的用户删除。<br>DELETE FROM Relation WHERE QQID=54789625 AND RelationStatus=1</p>
-<p>#2.QQ号码为54789625的用户多次在QQ中发布违法信息，造成了很坏的影响，因此管理员决定将其删除。<br>DELETE FROM Relation WHERE QQID=54789625 OR RelationQQID=54789625<br>DELETE FROM BaseInfo WHERE QQID=54789625<br>DELETE FROM QQUser WHERE QQID=54789625</p>
-<p>#3.管理员将超过1000天没有登录过的QQ删除。<br>DELETE FROM Relation WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>OR RelationQQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM BaseInfo WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM QQUser<br>WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000</p>
-<p>辅助blog</p>
-<h2 id="MySQL-获得当前日期时间-函数"><a href="#MySQL-获得当前日期时间-函数" class="headerlink" title="MySQL 获得当前日期时间 函数"></a>MySQL 获得当前日期时间 函数</h2><p>获得当前日期+时间（date + time）函数：now()</p>
-<p>mysql&gt; select now();</p>
-<p>+———————+| now() |+———————+| 2008-08-08 22:20:46 |+———————+</p>
-<p>获得当前日期+时间（date + time）函数：sysdate()<br>sysdate() 日期时间函数跟 now() 类似，不同之处在于：now() 在执行开始时值就得到了， sysdate() 在函数执行时动态得到值。看下面的例子就明白了：</p>
-<p>mysql&gt; select now(), sleep(3), now();</p>
-<p>+———————+———-+———————+| now() | sleep(3) | now() |+———————+———-+———————+| 2008-08-08 22:28:21 | 0 | 2008-08-08 22:28:21 |+———————+———-+———————+</p>
-<p>sysdate() 日期时间函数，一般情况下很少用到。</p>
-<p>MySQL 获得当前时间戳函数：current_timestamp, current_timestamp()</p>
-<p>mysql&gt; select current_timestamp, current_timestamp();</p>
-<p>+———————+———————+| current_timestamp | current_timestamp() |+———————+———————+| 2008-08-09 23:22:24 | 2008-08-09 23:22:24 |+———————+———————+</p>
-<p>MySQL 日期转换函数、时间转换函数<br>MySQL Date/Time to Str（日期/时间转换为字符串）函数：date_format(date,format), time_format(time,format)</p>
-<p>mysql&gt; select date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’);</p>
-<p>+—————————————————-+| date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’) |+—————————————————-+| 20080808222301 |+—————————————————-+</p>
-<p>MySQL 日期、时间转换函数：date_format(date,format), time_format(time,format) 能够把一个日期/时间转换成各种各样的字符串格式。它是 str_to_date(str,format) 函数的 一个逆转换。</p>
-<p>MySQL Str to Date （字符串转换为日期）函数：str_to_date(str, format)</p>
-<p>select str_to_date(‘08/09/2008’, ‘%m/%d/%Y’); – 2008-08-09select str_to_date(‘08/09/08’ , ‘%m/%d/%y’); – 2008-08-09select str_to_date(‘08.09.2008’, ‘%m.%d.%Y’); – 2008-08-09select str_to_date(‘08:09:30’, ‘%h:%i:%s’); – 08:09:30select str_to_date(‘08.09.2008 08:09:30’, ‘%m.%d.%Y %h:%i:%s’); – 2008-08-09 08:09:30</p>
-<p>可以看到，str_to_date(str,format) 转换函数，可以把一些杂乱无章的字符串转换为日期格式。另外，它也可以转换为时间。“format” 可以参看 MySQL 手册。</p>
-<p>MySQL （日期、天数）转换函数：to_days(date), from_days(days)</p>
-<p>select to_days(‘0000-00-00’); – 0select to_days(‘2008-08-08’); – 733627</p>
-<p>MySQL （时间、秒）转换函数：time_to_sec(time), sec_to_time(seconds)</p>
-<p>select time_to_sec(‘01:00:05’); – 3605select sec_to_time(3605); – ‘01:00:05’</p>
-<p>MySQL 拼凑日期、时间函数：makdedate(year,dayofyear), maketime(hour,minute,second)</p>
-<p>select makedate(2001,31); – ‘2001-01-31’select makedate(2001,32); – ‘2001-02-01’select maketime(12,15,30); – ‘12:15:30’</p>
-<p>MySQL （Unix 时间戳、日期）转换函数</p>
-<p>unix_timestamp(),</p>
-<p>unix_timestamp(date),</p>
-<p>from_unixtime(unix_timestamp),</p>
-<p>from_unixtime(unix_timestamp,format)</p>
-<p>下面是示例：</p>
-<p>select unix_timestamp(); – 1218290027select unix_timestamp(‘2008-08-08’); – 1218124800select unix_timestamp(‘2008-08-08 12:30:00’); – 1218169800</p>
-<p>select from_unixtime(1218290027); – ‘2008-08-09 21:53:47’select from_unixtime(1218124800); – ‘2008-08-08 00:00:00’select from_unixtime(1218169800); – ‘2008-08-08 12:30:00’</p>
-<p>select from_unixtime(1218169800, ‘%Y %D %M %h:%i:%s %x’); – ‘2008 8th August 12:30:00 2008’</p>
-<p>MySQL 日期时间计算函数</p>
-<p>MySQL 为日期增加一个时间间隔：date_add()</p>
-<p>set @dt = now();</p>
-<p>select date_add(@dt, interval 1 day); – add 1 dayselect date_add(@dt, interval 1 hour); – add 1 hourselect date_add(@dt, interval 1 minute); – …select date_add(@dt, interval 1 second);select date_add(@dt, interval 1 microsecond);select date_add(@dt, interval 1 week);select date_add(@dt, interval 1 month);select date_add(@dt, interval 1 quarter);select date_add(@dt, interval 1 year);</p>
-<p>select date_add(@dt, interval -1 day); – sub 1 day</p>
-<p>MySQL adddate(), addtime()函数，可以用 date_add() 来替代。下面是 date_add() 实现 addtime() 功能示例：</p>
-<p>mysql&gt; set @dt = ‘2008-08-09 12:12:33’;</p>
-<p>mysql&gt;</p>
-<p>mysql&gt; select date_add(@dt, interval ‘01:15:30’ hour_second);</p>
-<p>+————————————————+| date_add(@dt, interval ‘01:15:30’ hour_second) |+————————————————+| 2008-08-09 13:28:03 |+————————————————+</p>
-<p>mysql&gt; select date_add(@dt, interval ‘1 01:15:30’ day_second);</p>
-<p>+————————————————-+| date_add(@dt, interval ‘1 01:15:30’ day_second) |+————————————————-+| 2008-08-10 13:28:03 |+————————————————-+</p>
-<p>MySQL 为日期减去一个时间间隔：date_sub()</p>
-<p>mysql&gt; select date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second);</p>
-<p>+—————————————————————-+| date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second) |+—————————————————————-+| 1997-12-30 22:58:59 |+—————————————————————-+</p>
-<p>MySQL date_sub() 日期时间函数 和 date_add() 用法一致，不再赘述。</p>
-<p>MySQL 日期、时间相减函数：datediff(date1,date2), timediff(time1,time2)</p>
-<p>MySQL datediff(date1,date2)：两个日期相减 date1 - date2，返回天数。select datediff(‘2008-08-08’, ‘2008-08-01’); – 7select datediff(‘2008-08-01’, ‘2008-08-08’); – -7</p>
-<p>MySQL timediff(time1,time2)：两个日期相减 time1 - time2，返回 time 差值。</p>
-<p>select timediff(‘2008-08-08 08:08:08’, ‘2008-08-08 00:00:00’); – 08:08:08select timediff(‘08:08:08’, ‘00:00:00’); – 08:08:08</p>
-<p>注意：timediff(time1,time2) 函数的两个参数类型必须相同。</p>
-<p>MySQL 时间戳（timestamp）转换、增、减函数：</p>
-<p>timestamp(date) – date to timestamptimestamp(dt,time) – dt + time</p>
-<p>timestampadd(unit,interval,datetime_expr) –timestampdiff(unit,datetime_expr1,datetime_expr2) –</p>
-<p>请看示例部分：</p>
-<p>select timestamp(‘2008-08-08’); – 2008-08-08 00:00:00select timestamp(‘2008-08-08 08:00:00’, ‘01:01:01’); – 2008-08-08 09:01:01select timestamp(‘2008-08-08 08:00:00’, ‘10 01:01:01’); – 2008-08-18 09:01:01</p>
-<p>select timestampadd(day, 1, ‘2008-08-08 08:00:00’); – 2008-08-09 08:00:00select date_add(‘2008-08-08 08:00:00’, interval 1 day); – 2008-08-09 08:00:00</p>
-<p>MySQL timestampadd() 函数类似于 date_add()。select timestampdiff(year,’2002-05-01’,’2001-01-01’); – -1select timestampdiff(day ,’2002-05-01’,’2001-01-01’); – -485select timestampdiff(hour,’2008-08-08 12:00:00’,’2008-08-08 00:00:00’); – -12</p>
-<p>select datediff(‘2008-08-08 12:00:00’, ‘2008-08-01 00:00:00’); – 7</p>
-<p>MySQL timestampdiff() 函数就比 datediff() 功能强多了，datediff() 只能计算两个日期（date）之间相差的天数。</p>
-<p>MySQL 时区（timezone）转换函数<br>convert_tz(dt,from_tz,to_tz)</p>
-<p>select convert_tz(‘2008-08-08 12:00:00’, ‘+08:00’, ‘+00:00’); – 2008-08-08 04:00:00</p>
-<p>时区转换也可以通过 date_add, date_sub, timestampadd 来实现。</p>
-<p>select date_add(‘2008-08-08 12:00:00’, interval -8 hour); – 2008-08-08 04:00:00select date_sub(‘2008-08-08 12:00:00’, interval 8 hour); – 2008-08-08 04:00:00select timestampadd(hour, -8, ‘2008-08-08 12:00:00’); – 2008-08-08 04:00:00</p>
+        <p>TCP是一个面向连接的服务,面向连接的服务是电话系统服务模式的抽象,每一次完整的数据传输都必须经过建立连接,数据传输和终止连接三个过程,TCP建立连接的过程称为三次握手,下面说一下三次握手的具体过程:</p>
+<h3 id="TCP三次握手过程"><a href="#TCP三次握手过程" class="headerlink" title="TCP三次握手过程"></a>TCP三次握手过程</h3><ol>
+<li>主机A通过向主机B 发送一个含有同步序列号的标志位的数据段给主机B ,向主机B 请求建立连接,通过这个数据段,主机A告诉主机B 两件事:我想要和你通信;你可以用哪个序列号作为起始数据段来回应我。</li>
+<li>主机B 收到主机A的请求后,用一个带有确认应答(ACK)和同步序列号(SYN)标志位的数据段响应主机A,也告诉主机A两件事:我已经收到你的请求了,你可以传输数据了;你要用哪佧序列号作为起始数据段来回应我。</li>
+<li>主机A收到这个数据段后,再发送一个确认应答,确认已收到主机B 的数据段:我已收到回复,我现在要开始传输实际数据了。</li>
+</ol>
+<p>这样TCP三次握手就完成了,主机A和主机B 就可以传输数据了。三次握手的特点：没有应用层的数据,SYN这个标志位只有在TCP建产连接时才会被置1,握手完成后SYN标志位被置0。</p>
+<p>TCP建立连接要进行三次握手,而断开连接要进行四次,这是由于TCP的半关闭造成的,因为TCP连接是全双工的(即数据可在两个方向上同时传递)所以进行关闭时每个方向上都要单独进行关闭,这个单方向的关闭就叫半关闭.关闭的方法是一方完成它的数据传输后,就发送一个FIN来向另一方通告将要终止这个方向的连接.当一端收到一个FIN,它必须通知应用层TCP连接已终止了这个方向的数据传送,发送FIN通常是应用层进行关闭的结果。</p>
+<h3 id="四次断开过程"><a href="#四次断开过程" class="headerlink" title="四次断开过程"></a>四次断开过程</h3><ol>
+<li>当主机A完成数据传输后,将控制位FIN置1,提出停止TCP连接的请求</li>
+<li>主机B收到FIN后对其作出响应,确认这一方向上的TCP连接将关闭,将ACK置1</li>
+<li>由B 端再提出反方向的关闭请求,将FIN置1</li>
+<li>主机A对主机B的请求进行确认,将ACK置1,双方向的关闭结束。</li>
+</ol>
+<p><a href="http://photo.blog.sina.com.cn/showpic.html#blogid=60a4fcef0101e813&amp;url=http://album.sina.com.cn/pic/001LJkOrgy6FV957oh83e" target="_blank" rel="noopener"><img src="http://s15.sinaimg.cn/mw690/001LJkOrgy6FV957oh83e&amp;690" alt="TCP三次握手 与 四次断开 的详细过程剖析"></a></p>
+<p>由TCP的三次握手和四次断开可以看出,TCP使用面向连接的通信方式,大大提高了数据通信的可靠性,使发送数据端和接收端在数据正式传输前就有了交互,为数据正式传输打下了可靠的基础。</p>
+<p>讲到这里在来一张全面的图来理解一下：(图片来自：<a href="http://blog.csdn.net/hjw1991324/article/details/51044580" target="_blank" rel="noopener">http://blog.csdn.net/hjw1991324/article/details/51044580</a>)</p>
+<p><img src="https://img-blog.csdn.net/20160402170316654" alt="这里写图片描述"></p>
 
       
     </div>
@@ -541,7 +464,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/02/18/mysql测试题目/" title="mysql测试题目">http://yoursite.com/2019/02/18/mysql测试题目/</a>
+    <a href="http://yoursite.com/2019/02/23/MTCP建立连接和断开连接过程详解/" title="MTCP建立连接和断开连接过程详解">http://yoursite.com/2019/02/23/MTCP建立连接和断开连接过程详解/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -565,7 +488,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag">#mysql</a>
+            <a href="/tags/http/" rel="tag">#http</a>
 		  
         </div>
       
@@ -578,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/python解释器安装/" rel="next" title="python解释器安装">
-                <i class="fa fa-chevron-left"></i> python解释器安装
+              <a href="/2019/02/23/防止SQL注入的五种方法/" rel="next" title="防止ＳＱＬ注入的五种方法">
+                <i class="fa fa-chevron-left"></i> 防止ＳＱＬ注入的五种方法
               </a>
             
           </div>
@@ -588,8 +511,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/18/常用浏览器User-Agent大全/" rel="prev" title="常用浏览器User_Agent大全">
-                常用浏览器User_Agent大全 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/23/常用经典SQL语句大全完整版-详解-实例/" rel="prev" title="常用经典SQL语句大全完整版--详解+实例">
+                常用经典SQL语句大全完整版--详解+实例 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -801,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建数据库"><span class="nav-number">1.</span> <span class="nav-text">1.创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建各表（表结构；约束）"><span class="nav-number">2.</span> <span class="nav-text">2.创建各表（表结构；约束）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加-插入-数据"><span class="nav-number"></span> <span class="nav-text">3.添加/插入 数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查询数据"><span class="nav-number"></span> <span class="nav-text">4.查询数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-修改数据"><span class="nav-number"></span> <span class="nav-text">5.修改数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-删除数据"><span class="nav-number"></span> <span class="nav-text">6.删除数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-获得当前日期时间-函数"><span class="nav-number"></span> <span class="nav-text">MySQL 获得当前日期时间 函数</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP三次握手过程"><span class="nav-number">1.</span> <span class="nav-text">TCP三次握手过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四次断开过程"><span class="nav-number">2.</span> <span class="nav-text">四次断开过程</span></a></li></ol></div>
             
 
           </div>

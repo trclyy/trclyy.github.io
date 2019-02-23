@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="mysql," />
+  <meta name="keywords" content="sql," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
-<meta name="keywords" content="mysql">
+<meta name="description" content="下列语句部分是Mssql语句，不可以在access中使用。　　SQL分类：　　DDL—数据定义语言(CREATE，ALTER，DROP，DECLARE)　　DML—数据操纵语言(SELECT，DELETE，UPDATE，INSERT)　　DCL—数据控制语言(GRANT，REVOKE，COMMIT，ROLLBACK)　　首先,简要介绍基础语句：　　1、说明：创建数据库CREATE DATABASE">
+<meta name="keywords" content="sql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql测试题目">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/mysql测试题目/index.html">
+<meta property="og:title" content="常用经典SQL语句大全完整版--详解+实例">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/常用经典SQL语句大全完整版-详解-实例/index.html">
 <meta property="og:site_name" content="田润超的博客">
-<meta property="og:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta property="og:description" content="下列语句部分是Mssql语句，不可以在access中使用。　　SQL分类：　　DDL—数据定义语言(CREATE，ALTER，DROP，DECLARE)　　DML—数据操纵语言(SELECT，DELETE，UPDATE，INSERT)　　DCL—数据控制语言(GRANT，REVOKE，COMMIT，ROLLBACK)　　首先,简要介绍基础语句：　　1、说明：创建数据库CREATE DATABASE">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T07:08:11.945Z">
+<meta property="og:updated_time" content="2019-02-23T11:44:48.846Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql测试题目">
-<meta name="twitter:description" content="1.创建数据库CREATE DATABASE QQDB; 2.创建各表（表结构；约束）/***创建**/USE QQDB; DROP TABLE IF EXISTS QQUser;CREATE TABLE QQUser(qqid BIGINT PRIMARY KEY,PASSWORD VARCHAR(20) NOT NULL,lastlogtime DATETIME NOT NULL,online">
+<meta name="twitter:title" content="常用经典SQL语句大全完整版--详解+实例">
+<meta name="twitter:description" content="下列语句部分是Mssql语句，不可以在access中使用。　　SQL分类：　　DDL—数据定义语言(CREATE，ALTER，DROP，DECLARE)　　DML—数据操纵语言(SELECT，DELETE，UPDATE，INSERT)　　DCL—数据控制语言(GRANT，REVOKE，COMMIT，ROLLBACK)　　首先,简要介绍基础语句：　　1、说明：创建数据库CREATE DATABASE">
 
 
 
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/mysql测试题目/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/常用经典SQL语句大全完整版-详解-实例/"/>
 
 
 
 
 
-  <title>mysql测试题目 | 田润超的博客</title>
+  <title>常用经典SQL语句大全完整版--详解+实例 | 田润超的博客</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/mysql测试题目/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/常用经典SQL语句大全完整版-详解-实例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="python_wuyanzu_boke">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql测试题目</h1>
+          <h1 class="post-title" itemprop="name headline">常用经典SQL语句大全完整版--详解+实例</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T15:07:35+08:00">
-                2019-02-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T19:42:09+08:00">
+                2019-02-23
               </time>
             
 
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.5k
+                  5.3k
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12
+                  22
                 </span>
               
             </div>
@@ -415,104 +415,138 @@
       
 
       
-        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><p>CREATE DATABASE QQDB;</p>
-<h3 id="2-创建各表（表结构；约束）"><a href="#2-创建各表（表结构；约束）" class="headerlink" title="2.创建各表（表结构；约束）"></a>2.创建各表（表结构；约束）</h3><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>创建<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>USE QQDB;</p>
-<p>DROP TABLE IF EXISTS QQUser;<br>CREATE TABLE QQUser<br>(<br>qqid BIGINT PRIMARY KEY,<br>PASSWORD VARCHAR(20) NOT NULL,<br>lastlogtime DATETIME NOT NULL,<br>online INT NOT NULL,<br>LEVEL INT NOT NULL<br>);</p>
-<p>DROP TABLE IF EXISTS baseinfo;<br>CREATE TABLE baseinfo<br>(<br>qqid BIGINT PRIMARY KEY,<br>nickname VARCHAR(50) NOT NULL,<br>sex INT,<br>age INT NOT NULL,<br>province VARCHAR(50),<br>city VARCHAR(50),<br>address VARCHAR(200),<br>phone CHAR(50),<br>CONSTRAINT <code>FK_qqid</code> FOREIGN KEY (<code>qqid</code>) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
-<p>DROP TABLE IF EXISTS relaion;<br>CREATE TABLE relaion<br>(<br>qqid BIGINT NOT NULL,<br>relationqqid BIGINT NOT NULL,<br>relationstatus INT NOT NULL,<br>CONSTRAINT <code>FK_r_qqid</code> FOREIGN KEY (qqid) REFERENCES <code>qquser</code> (<code>qqid</code>),<br>CONSTRAINT <code>FK_r_relationqqid</code> FOREIGN KEY (relationqqid) REFERENCES <code>qquser</code> (<code>qqid</code>)<br>);</p>
-<h2 id="3-添加-插入-数据"><a href="#3-添加-插入-数据" class="headerlink" title="3.添加/插入 数据"></a>3.添加/插入 数据</h2><p>/<strong><strong><strong><strong>***</strong></strong></strong></strong>添加<strong><strong><strong><strong><em>**</em></strong></strong></strong></strong>/<br>insert  into <code>qquser</code>(<code>QQid</code>,<code>Password</code>,<code>lastlogTime</code>,<code>Online</code>,<code>level</code>)<br>values (1,’a123456’,’2017-03-02 00:00:00’,1,6),<br>(2,’b123456’,’2017-03-02 00:00:00’,2,7),<br>(3,’c123456’,’2018-03-01 00:00:00’,2,6),<br>(4,’d123456’,’2018-03-02 00:00:00’,2,8),<br>(7,’g123456’,’2012-02-02 00:00:00’,0,-1),<br>(8855678,’gues0221’,’2008-02-21 16:28:20’,1,6),<br>(54789625,’add512#&amp;’,’2008-02-16 17:01:35’,2,1),<br>(88662753,’admin0219’,’2008-02-19 21:08:35’,0,5);</p>
-<p>insert  into <code>baseinfo</code>(<code>QQID</code>,<code>nickName</code>,<code>Sex</code>,<code>Age</code>,<code>provice</code>,<code>City</code>,<code>Addres</code>,<code>phone</code>)<br>values (1,’小明’,0,18,’山东省’,’济南’,’小村村’,’004’),<br>(2,’小天’,1,15,’山东’,’聊城’,’大村村’,’005’),<br>(3,’小王’,1,16,’河南’,’开封’,’不知奥’,’006’),<br>(4,’嘟嘟鱼’,0,13,’天津’,’塘沽’,’呵呵’,’007’),<br>(8855678,’独行侠,1,38,’北京’,’海淀区’,’解放中路号院123室’,’003’),<br>(54789625,’蝴蝶飞飞’,1,16,’北京’,’海淀区’,’亚运村’,’001’),<br>(88662753,’青青草’,0,20,’河南省’,’安阳’,’汤阴’,’002’);</p>
-<p>INSERT INTO <code>relaion</code>(<code>qqid</code>,<code>relationqqid</code>,<code>relationstatus</code>)<br>VALUES(54789625,88662753,0),<br>(88662753,8855678,1),<br>(54789625,8855678,0);</p>
-<h2 id="4-查询数据"><a href="#4-查询数据" class="headerlink" title="4.查询数据"></a>4.查询数据</h2><p>##查询数据</p>
-<p>#01.查询QQ号码为54789625的所有好友信息，包括QQ号码，昵称，年龄<br>select RelationQQID as QQ号码,NickName as 昵称,Age as 年龄<br>from BaseInfo,Relation<br>where BaseInfo.QQID=Relation.RelationQQID<br>and Relation.QQID=54789625<br>and RelationStatus=0 或者1</p>
-<p>#02.查询当前在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID AND Online=0</p>
-<p>#03.查询北京的、年龄在18至45岁之间的在线用户的信息<br>SELECT NickName,Province FROM<br>BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND   BaseInfo.Province LIKE ‘%北京%’<br>AND   BaseInfo.Age BETWEEN 18 AND 45<br>AND   Online=0</p>
-<p>#04.查询昵称为青青草的用户信息<br>SELECT NickName,Province,City,Address<br>FROM BaseInfo<br>WHERE NickName=’青青草’</p>
-<p>#05.查询QQ号码为54789625的用户的好友中每个省份的总人数，并且总人数按由大到小排序。<br>SELECT BaseInfo.Province,COUNT(*) AS 总人数 FROM Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.RelationStatus=0<br>AND Relation.QQID=54789625<br>GROUP BY BaseInfo.Province<br>ORDER BY 总人数 DESC</p>
-<p>#06.查询至少有150天未登录QQ账号的用户信息，包括QQ号码，最后一次登录时间、等级、昵称、年龄，并按时间的降序排列<br>SELECT QQUser.QQID,QQUser.LastLogTime,QQUser.Level,BaseInfo.NickName,BaseInfo.Age<br>FROM BaseInfo,QQUser<br>WHERE BaseInfo.QQID=QQUser.QQID<br>AND DATEDIFF(NOW(),lastLogTime)&gt;=150<br>ORDER BY DATEDIFF(NOW(),lastLogTime) DESC</p>
-<p>#07.查询QQ号码为54789625的好友中等级为10级以上的“月亮”级用户信息。<br>SELECT NickName,Province<br>FROM QQUser,Relation,BaseInfo<br>WHERE Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>AND Relation.RelationStatus=0<br>AND Relation.RelationQQID=QQUser.QQID<br>AND QQUser.Level&gt;=10</p>
-<p>#08.–查询QQ号码为54789625的好友中隐身的用户信息。<br>SELECT NickName,province<br>FROM Relation INNER JOIN BaseInfo<br>ON Relation.RelationQQID=BaseInfo.QQID<br>AND Relation.QQID=54789625<br>INNER JOIN QQUser<br>ON QQUser.QQID=RelationQQID<br>AND Online=2  #2代表隐身<br>AND Relation.RelationStatus=0  #0代表好友</p>
-<p>#09.–查询好友超过20个的用户信息。<br>SELECT Nickname,province<br>FROM BaseInfo WHERE QQID IN<br>(SELECT QQID<br>FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY QQID<br>HAVING COUNT(*)&gt;20<br>)</p>
-<p>#10.为了查看信誉度，管理员需要查询被当做黑名单人物次数排名前3的用户<br>SELECT  RelationQQID,COUNT(<em>) AS 次数<br>FROM Relation<br>WHERE RelationStatus=1<br>GROUP BY RelationQQID<br>ORDER BY COUNT(</em>) DESC<br>LIMIT 3</p>
-<h2 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a>5.修改数据</h2><p>##修改数据</p>
-<p>#01.假设我的QQ号码为8855678，今天我隐身登录<br>UPDATE QQUser SET Online=2,LastLogTime=NOW()<br>WHERE QQID=8855678</p>
-<p>#02.假设我的QQ号码为8855678，修改我的昵称为“被淹死的鱼”，地址为“解放中路号院123室”<br>UPDATE BaseInfo SET NickName=’被淹死的鱼’,Address=’解放中路号院室’<br>WHERE  QQID=8855678</p>
-<p>#03.假设我的QQ号码为54789625，将我的好友“青青草”拖进黑名单。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=88662753</p>
-<p>#04.为了提高QQ用户的聊天积极性，把等级小于6级的用户的等级都提升1个级别。<br>update QQUser set Level=Level+1<br>where Level&lt;6</p>
-<p>#05.管理员将超过365天没有登录过的QQ锁定（即将等级值设定为-1）。<br>UPDATE QQUser SET LEVEL=-1<br>WHERE DATEDIFF(NOW(),lastLogTime)&gt;=365</p>
-<p>#06.为了奖励用户，将好友数量超过20的用户等级提升1个级别。<br>UPDATE QQUser SET LEVEL=LEVEL+1<br>WHERE QQID IN(<br>SELECT Relation.QQID FROM Relation<br>WHERE RelationStatus=0<br>GROUP BY Relation.QQID<br>HAVING COUNT(Relation.RelationQQID)&gt;=20)</p>
-<p>#07.把QQ号码为54789625的用户的好友“嘟嘟鱼”拖进黑名单中。<br>UPDATE Relation SET RelationStatus=1<br>WHERE QQID=54789625 AND RelationQQID=<br>(SELECT QQID FROM BaseInfo WHERE NickName=’嘟嘟鱼’)<br>AND RelationStatus=0</p>
-<h2 id="6-删除数据"><a href="#6-删除数据" class="headerlink" title="6.删除数据"></a>6.删除数据</h2><p>##删除数据</p>
-<p>#1.把QQ号码为54789625的用户黑名单中的用户删除。<br>DELETE FROM Relation WHERE QQID=54789625 AND RelationStatus=1</p>
-<p>#2.QQ号码为54789625的用户多次在QQ中发布违法信息，造成了很坏的影响，因此管理员决定将其删除。<br>DELETE FROM Relation WHERE QQID=54789625 OR RelationQQID=54789625<br>DELETE FROM BaseInfo WHERE QQID=54789625<br>DELETE FROM QQUser WHERE QQID=54789625</p>
-<p>#3.管理员将超过1000天没有登录过的QQ删除。<br>DELETE FROM Relation WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>OR RelationQQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM BaseInfo WHERE QQID IN<br>(<br>  SELECT QQID FROM QQUser<br>  WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000<br>)<br>DELETE FROM QQUser<br>WHERE DATEDIFF(NOW(),LastLogTime)&gt;=1000</p>
-<p>辅助blog</p>
-<h2 id="MySQL-获得当前日期时间-函数"><a href="#MySQL-获得当前日期时间-函数" class="headerlink" title="MySQL 获得当前日期时间 函数"></a>MySQL 获得当前日期时间 函数</h2><p>获得当前日期+时间（date + time）函数：now()</p>
-<p>mysql&gt; select now();</p>
-<p>+———————+| now() |+———————+| 2008-08-08 22:20:46 |+———————+</p>
-<p>获得当前日期+时间（date + time）函数：sysdate()<br>sysdate() 日期时间函数跟 now() 类似，不同之处在于：now() 在执行开始时值就得到了， sysdate() 在函数执行时动态得到值。看下面的例子就明白了：</p>
-<p>mysql&gt; select now(), sleep(3), now();</p>
-<p>+———————+———-+———————+| now() | sleep(3) | now() |+———————+———-+———————+| 2008-08-08 22:28:21 | 0 | 2008-08-08 22:28:21 |+———————+———-+———————+</p>
-<p>sysdate() 日期时间函数，一般情况下很少用到。</p>
-<p>MySQL 获得当前时间戳函数：current_timestamp, current_timestamp()</p>
-<p>mysql&gt; select current_timestamp, current_timestamp();</p>
-<p>+———————+———————+| current_timestamp | current_timestamp() |+———————+———————+| 2008-08-09 23:22:24 | 2008-08-09 23:22:24 |+———————+———————+</p>
-<p>MySQL 日期转换函数、时间转换函数<br>MySQL Date/Time to Str（日期/时间转换为字符串）函数：date_format(date,format), time_format(time,format)</p>
-<p>mysql&gt; select date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’);</p>
-<p>+—————————————————-+| date_format(‘2008-08-08 22:23:01’, ‘%Y%m%d%H%i%s’) |+—————————————————-+| 20080808222301 |+—————————————————-+</p>
-<p>MySQL 日期、时间转换函数：date_format(date,format), time_format(time,format) 能够把一个日期/时间转换成各种各样的字符串格式。它是 str_to_date(str,format) 函数的 一个逆转换。</p>
-<p>MySQL Str to Date （字符串转换为日期）函数：str_to_date(str, format)</p>
-<p>select str_to_date(‘08/09/2008’, ‘%m/%d/%Y’); – 2008-08-09select str_to_date(‘08/09/08’ , ‘%m/%d/%y’); – 2008-08-09select str_to_date(‘08.09.2008’, ‘%m.%d.%Y’); – 2008-08-09select str_to_date(‘08:09:30’, ‘%h:%i:%s’); – 08:09:30select str_to_date(‘08.09.2008 08:09:30’, ‘%m.%d.%Y %h:%i:%s’); – 2008-08-09 08:09:30</p>
-<p>可以看到，str_to_date(str,format) 转换函数，可以把一些杂乱无章的字符串转换为日期格式。另外，它也可以转换为时间。“format” 可以参看 MySQL 手册。</p>
-<p>MySQL （日期、天数）转换函数：to_days(date), from_days(days)</p>
-<p>select to_days(‘0000-00-00’); – 0select to_days(‘2008-08-08’); – 733627</p>
-<p>MySQL （时间、秒）转换函数：time_to_sec(time), sec_to_time(seconds)</p>
-<p>select time_to_sec(‘01:00:05’); – 3605select sec_to_time(3605); – ‘01:00:05’</p>
-<p>MySQL 拼凑日期、时间函数：makdedate(year,dayofyear), maketime(hour,minute,second)</p>
-<p>select makedate(2001,31); – ‘2001-01-31’select makedate(2001,32); – ‘2001-02-01’select maketime(12,15,30); – ‘12:15:30’</p>
-<p>MySQL （Unix 时间戳、日期）转换函数</p>
-<p>unix_timestamp(),</p>
-<p>unix_timestamp(date),</p>
-<p>from_unixtime(unix_timestamp),</p>
-<p>from_unixtime(unix_timestamp,format)</p>
-<p>下面是示例：</p>
-<p>select unix_timestamp(); – 1218290027select unix_timestamp(‘2008-08-08’); – 1218124800select unix_timestamp(‘2008-08-08 12:30:00’); – 1218169800</p>
-<p>select from_unixtime(1218290027); – ‘2008-08-09 21:53:47’select from_unixtime(1218124800); – ‘2008-08-08 00:00:00’select from_unixtime(1218169800); – ‘2008-08-08 12:30:00’</p>
-<p>select from_unixtime(1218169800, ‘%Y %D %M %h:%i:%s %x’); – ‘2008 8th August 12:30:00 2008’</p>
-<p>MySQL 日期时间计算函数</p>
-<p>MySQL 为日期增加一个时间间隔：date_add()</p>
-<p>set @dt = now();</p>
-<p>select date_add(@dt, interval 1 day); – add 1 dayselect date_add(@dt, interval 1 hour); – add 1 hourselect date_add(@dt, interval 1 minute); – …select date_add(@dt, interval 1 second);select date_add(@dt, interval 1 microsecond);select date_add(@dt, interval 1 week);select date_add(@dt, interval 1 month);select date_add(@dt, interval 1 quarter);select date_add(@dt, interval 1 year);</p>
-<p>select date_add(@dt, interval -1 day); – sub 1 day</p>
-<p>MySQL adddate(), addtime()函数，可以用 date_add() 来替代。下面是 date_add() 实现 addtime() 功能示例：</p>
-<p>mysql&gt; set @dt = ‘2008-08-09 12:12:33’;</p>
-<p>mysql&gt;</p>
-<p>mysql&gt; select date_add(@dt, interval ‘01:15:30’ hour_second);</p>
-<p>+————————————————+| date_add(@dt, interval ‘01:15:30’ hour_second) |+————————————————+| 2008-08-09 13:28:03 |+————————————————+</p>
-<p>mysql&gt; select date_add(@dt, interval ‘1 01:15:30’ day_second);</p>
-<p>+————————————————-+| date_add(@dt, interval ‘1 01:15:30’ day_second) |+————————————————-+| 2008-08-10 13:28:03 |+————————————————-+</p>
-<p>MySQL 为日期减去一个时间间隔：date_sub()</p>
-<p>mysql&gt; select date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second);</p>
-<p>+—————————————————————-+| date_sub(‘1998-01-01 00:00:00’, interval ‘1 1:1:1’ day_second) |+—————————————————————-+| 1997-12-30 22:58:59 |+—————————————————————-+</p>
-<p>MySQL date_sub() 日期时间函数 和 date_add() 用法一致，不再赘述。</p>
-<p>MySQL 日期、时间相减函数：datediff(date1,date2), timediff(time1,time2)</p>
-<p>MySQL datediff(date1,date2)：两个日期相减 date1 - date2，返回天数。select datediff(‘2008-08-08’, ‘2008-08-01’); – 7select datediff(‘2008-08-01’, ‘2008-08-08’); – -7</p>
-<p>MySQL timediff(time1,time2)：两个日期相减 time1 - time2，返回 time 差值。</p>
-<p>select timediff(‘2008-08-08 08:08:08’, ‘2008-08-08 00:00:00’); – 08:08:08select timediff(‘08:08:08’, ‘00:00:00’); – 08:08:08</p>
-<p>注意：timediff(time1,time2) 函数的两个参数类型必须相同。</p>
-<p>MySQL 时间戳（timestamp）转换、增、减函数：</p>
-<p>timestamp(date) – date to timestamptimestamp(dt,time) – dt + time</p>
-<p>timestampadd(unit,interval,datetime_expr) –timestampdiff(unit,datetime_expr1,datetime_expr2) –</p>
-<p>请看示例部分：</p>
-<p>select timestamp(‘2008-08-08’); – 2008-08-08 00:00:00select timestamp(‘2008-08-08 08:00:00’, ‘01:01:01’); – 2008-08-08 09:01:01select timestamp(‘2008-08-08 08:00:00’, ‘10 01:01:01’); – 2008-08-18 09:01:01</p>
-<p>select timestampadd(day, 1, ‘2008-08-08 08:00:00’); – 2008-08-09 08:00:00select date_add(‘2008-08-08 08:00:00’, interval 1 day); – 2008-08-09 08:00:00</p>
-<p>MySQL timestampadd() 函数类似于 date_add()。select timestampdiff(year,’2002-05-01’,’2001-01-01’); – -1select timestampdiff(day ,’2002-05-01’,’2001-01-01’); – -485select timestampdiff(hour,’2008-08-08 12:00:00’,’2008-08-08 00:00:00’); – -12</p>
-<p>select datediff(‘2008-08-08 12:00:00’, ‘2008-08-01 00:00:00’); – 7</p>
-<p>MySQL timestampdiff() 函数就比 datediff() 功能强多了，datediff() 只能计算两个日期（date）之间相差的天数。</p>
-<p>MySQL 时区（timezone）转换函数<br>convert_tz(dt,from_tz,to_tz)</p>
-<p>select convert_tz(‘2008-08-08 12:00:00’, ‘+08:00’, ‘+00:00’); – 2008-08-08 04:00:00</p>
-<p>时区转换也可以通过 date_add, date_sub, timestampadd 来实现。</p>
-<p>select date_add(‘2008-08-08 12:00:00’, interval -8 hour); – 2008-08-08 04:00:00select date_sub(‘2008-08-08 12:00:00’, interval 8 hour); – 2008-08-08 04:00:00select timestampadd(hour, -8, ‘2008-08-08 12:00:00’); – 2008-08-08 04:00:00</p>
+        <p>下列语句部分是Mssql语句，不可以在access中使用。<br>　　SQL分类：<br>　　DDL—数据定义语言(CREATE，ALTER，DROP，DECLARE)<br>　　DML—数据操纵语言(SELECT，DELETE，UPDATE，INSERT)<br>　　DCL—数据控制语言(GRANT，REVOKE，COMMIT，ROLLBACK)<br>　　首先,简要介绍基础语句：<br>　　1、说明：创建数据库<br>CREATE DATABASE database-name<br>　　2、说明：删除数据库<br>drop database dbname<br>　　3、说明：备份sql server<br>　　— 创建 备份数据的 device<br>USE master<br>EXEC sp_addumpdevice ’disk’, ’testBack’, ’c:\mssql7backup\MyNwind_1.dat’<br>　　— 开始 备份<br>BACKUP DATABASE pubs TO testBack<br>　　4、说明：创建新表<br>create table tabname(col1 type1 [not null][primary key],col2 type2 [not null],..)<br>　　根据已有的表创建新表：<br>A：create table tab_new like tab_old (使用旧表创建新表)<br>B：create table tab_new as select col1,col2… from tab_old definition only<br>　　5、说明：<br>　　删除新表：drop table tabname<br>　　6、说明：<br>　　增加一个列：Alter table tabname add column col type<br>　　注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。<br>　　7、说明：<br>　　添加主键：Alter table tabname add primary key(col)<br>　　说明：<br>　　删除主键：Alter table tabname drop primary key(col)<br>　　8、说明：<br>　　创建索引：create [unique] index idxname on tabname(col….)<br>　　删除索引：drop index idxname<br>　　注：索引是不可更改的，想更改必须删除重新建。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">CREATE INDEX index_name ON table_name(column_name,column_name) include(score)</span><br><span class="line"></span><br><span class="line">普通索引</span><br><span class="line"></span><br><span class="line">CREATE UNIQUE INDEX index_name ON table_name (column_name) ;</span><br><span class="line"></span><br><span class="line">非空索引</span><br><span class="line"></span><br><span class="line">CREATE PRIMARY KEY INDEX index_name ON table_name (column_name) ;</span><br><span class="line"></span><br><span class="line">主键索引</span><br><span class="line"> </span><br><span class="line">使用ALTER TABLE语句创建索引</span><br><span class="line"></span><br><span class="line">alter table table_name add index index_name (column_list) ;</span><br><span class="line">alter table table_name add unique (column_list) ;</span><br><span class="line">alter table table_name add primary key (column_list) ;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">删除索引</span><br><span class="line"></span><br><span class="line">drop index index_name on table_name ;</span><br><span class="line">alter table table_name drop index index_name ;</span><br><span class="line">alter table table_name drop primary key ;</span><br></pre></td></tr></table></figure>
+<p>　　9、说明：<br>　　创建视图：create view viewname as select statement<br>　　删除视图：drop view viewname<br>10、说明：几个简单的基本的sql语句<br>　　选择：select <em> from table1 where 范围<br>　　插入：insert into table1(field1,field2) values(value1,value2)<br>　　删除：delete from table1 where 范围<br>　　更新：update table1 set field1=value1 where 范围<br>　　查找：select </em> from table1 where field1 like ’%value1%’ —like的语法很精妙，查资料!<br>　　排序：select <em> from table1 order by field1,field2 [desc]<br>　　总数：select count </em> as totalcount from table1<br>　　求和：select sum(field1) as sumvalue from table1<br>　　平均：select avg(field1) as avgvalue from table1<br>　　最大：select max(field1) as maxvalue from table1<br>　　最小：select min(field1) as minvalue from table1<br>　　11、说明：几个高级查询运算词<br>　　A： UNION 运算符<br>　　UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION 一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。<br>　　B： EXCEPT 运算符<br>　　EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。<br>　　C： INTERSECT 运算符<br>　　INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。<br>　　注：使用运算词的几个查询结果行必须是一致的。<br>　　12、说明：使用外连接<br>　　A、left outer join：<br>　　左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。<br>SQL: select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c<br>　　B：right outer join:<br>　　右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。<br>　　C：full outer join：<br>　　全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。<br>　　其次，大家来看一些不错的sql语句<br>　　1、说明：复制表(只复制结构,源表名：a 新表名：b) (Access可用)<br>　　法一：select <em> into b from a where 1&lt;&gt;1<br>　　法二：select top 0 </em> into b from a<br>　　2、说明：拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)<br>insert into b(a, b, c) select d,e,f from b;<br>　　3、说明：跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)<br>insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件<br>　　例子：..from b in ’”&amp;Server.MapPath(“.”)&amp;”\data.mdb” &amp;”’ where..<br>　　4、说明：子查询(表名1：a 表名2：b)<br>select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)<br>　　5、说明：显示文章、提交人和最后回复时间<br>select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b<br>6、说明：外连接查询(表名1：a 表名2：b)<br>select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c<br>　　7、说明：在线视图查询(表名1：a )<br>select <em> from (SELECT a,b,c FROM a) T where t.a &gt; 1;<br>　　8、说明：between的用法,between限制查询数据范围时包括了边界值,not between不包括<br>select </em> from table1 where time between time1 and time2<br>select a,b,c, from table1 where a not between 数值1 and 数值2<br>　　9、说明：in 的使用方法<br>select <em> from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)<br>　　10、说明：两张关联表，删除主表中已经在副表中没有的信息<br>delete from table1 where not exists ( select </em> from table2 where table1.field1=table2.field1 )<br>　　11、说明：四表联查问题：<br>select <em> from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where …..<br>　　12、说明：日程安排提前五分钟提醒<br>SQL: select </em> from 日程安排 where datediff(’minute’,f开始时间,getdate())&gt;5<br>　　13、说明：一条sql 语句搞定数据库分页<br>select top 10 b.<em> from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段<br>　　14、说明：前10条记录<br>select top 10 </em> form table1 where 范围<br>　　15、说明：选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)<br>select a,b,c from tablename ta where a=(select max(a) from tablename tb where tb.b=ta.b)<br>　　16、说明：包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表<br>(select a from tableA ) except (select a from tableB) except (select a from tableC)<br>　　17、说明：随机取出10条数据<br>select top 10 * from tablename order by newid()<br>　　18、说明：随机选择记录<br>select newid()<br>　　19、说明：删除重复记录<br>Delete from tablename where id not in (select max(id) from tablename group by col1,col2,…)<br>　　20、说明：列出数据库里所有的表名<br>select name from sysobjects where type=’U’<br>21、说明：列出表里的所有的<br>select name from syscolumns where id=object_id(’TableName’)<br>　　22、说明：列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。<br>select type,sum(case vender when ’A’ then pcs else 0 end),sum(case vender when ’C’ then pcs else 0 end),sum(case vender when ’B’ then pcs else 0 end) FROM tablename group by type<br>　　显示结果：<br>type    vender pcs<br>电脑 A 1<br>电脑 A 1<br>光盘 B 2<br>光盘 A 2<br>手机 B 3<br>手机 C 3</p>
+<p>23、说明：初始化表table1<br>TRUNCATE TABLE table1<br>　　24、说明：选择从10到15的记录<br>select top 5 <em> from (select top 15 </em> from table order by id asc) table_别名 order by id desc<br>随机选择数据库记录的方法（使用Randomize函数，通过SQL语句实现）<br>　　对存储在数据库中的数据来说，随机数特性能给出上面的效果，但它们可能太慢了些。你不能要求ASP“找个随机数”然后打印出来。实际上常见的解决方案是建立如下所示的循环：<br>Randomize<br>RNumber = Int(Rnd<em>499) +1<br>　<br>While Not objRec.EOF<br>If objRec(“ID”) = RNumber THEN<br>… 这里是执行脚本 …<br>end if<br>objRec.MoveNext<br>Wend<br>　　这很容易理解。首先，你取出1到500范围之内的一个随机数（假设500就是数据库内记录的总数）。然后，你遍历每一记录来测试ID 的值、检查其是否匹配RNumber。满足条件的话就执行由THEN 关键字开始的那一块代码。假如你的RNumber 等于495，那么要循环一遍数据库花的时间可就长了。虽然500这个数字看起来大了些，但相比更为稳固的企业解决方案这还是个小型数据库了，后者通常在一个数据库内就包含了成千上万条记录。这时候不就死定了？<br>　　采用SQL，你就可以很快地找出准确的记录并且打开一个只包含该记录的recordset，如下所示：<br>Randomize<br>RNumber = Int(Rnd</em>499) + 1<br>　<br>SQL = “SELECT <em> FROM Customers WHERE ID = “ &amp; RNumber<br>　<br>set objRec = ObjConn.Execute(SQL)<br>Response.WriteRNumber &amp; “ = “ &amp; objRec(“ID”) &amp; “ “ &amp; objRec(“c_email”)<br>　　不必写出RNumber 和ID，你只需要检查匹配情况即可。只要你对以上代码的工作满意，你自可按需操作“随机”记录。Recordset没有包含其他内容，因此你很快就能找到你需要的记录这样就大大降低了处理时间。<br>再谈随机数<br>　　现在你下定决心要榨干Random 函数的最后一滴油，那么你可能会一次取出多条随机记录或者想采用一定随机范围内的记录。把上面的标准Random 示例扩展一下就可以用SQL应对上面两种情况了。<br>　　为了取出几条随机选择的记录并存放在同一recordset内，你可以存储三个随机数，然后查询数据库获得匹配这些数字的记录：<br>　　SQL = “SELECT </em> FROM Customers WHERE ID = “ &amp; RNumber &amp; “ OR ID = “ &amp; RNumber2 &amp; “ OR ID = “ &amp; RNumber3<br>　　假如你想选出10条记录（也许是每次页面装载时的10条链接的列表），你可以用BETWEEN 或者数学等式选出第一条记录和适当数量的递增记录。这一操作可以通过好几种方式来完成，但是 SELECT 语句只显示一种可能（这里的ID 是自动生成的号码）：<br>SQL = “SELECT <em> FROM Customers WHERE ID BETWEEN “ &amp; RNumber &amp; “ AND “ &amp; RNumber &amp; “+ 9”<br>　　注意：以上代码的执行目的不是检查数据库内是否有9条并发记录。<br>　　随机读取若干条记录，测试过<br>Access语法：SELECT top 10 </em> From 表名 ORDER BY Rnd(id)<br>Sql server:select top n <em> from 表名 order by newid()<br>mysql select </em> From 表名 Order By rand() Limit n<br>　　Access左连接语法(最近开发要用左连接,Access帮助什么都没有,网上没有Access的SQL说明,只有自己测试, 现在记下以备后查)<br>　　语法 select table1.fd1,table1,fd2,table2.fd2 From table1 left join table2 on table1.fd1,table2.fd1 where …<br>　　使用SQL语句 用…代替过长的字符串显示<br>　　语法：<br>　　SQL数据库：select case when len(field)&gt;10 then left(field,10)+’…’ else field end as news_name,news_id from tablename<br>　　Access数据库：SELECT iif(len(field)&gt;2,left(field,2)+’…’,field) FROM tablename;<br>　　Conn.Execute说明<br>　　Execute方法<br>　　该方法用于执行SQL语句。根据SQL语句执行后是否返回记录集，该方法的使用格式分为以下两种：<br>　　1．执行SQL查询语句时，将返回查询得到的记录集。用法为：<br>　　Set 对象变量名=连接对象.Execute(“SQL 查询语言”)<br>　　Execute方法调用后，会自动创建记录集对象，并将查询结果存储在该记录对象中，通过Set方法，将记录集赋给指定的对象保存，以后对象变量就代表了该记录集对象。<br>　　2．执行SQL的操作性语言时，没有记录集的返回。此时用法为：<br>　　连接对象.Execute “SQL 操作性语句” [, RecordAffected][, Option]<br>　　·RecordAffected 为可选项，此出可放置一个变量，SQL语句执行后，所生效的记录数会自动保存到该变量中。通过访问该变量，就可知道SQL语句队多少条记录进行了操作。<br>　　·Option 可选项，该参数的取值通常为adCMDText，它用于告诉ADO，应该将Execute方法之后的第一个字符解释为命令文本。通过指定该参数，可使执行更高效。<br>　　·BeginTrans、RollbackTrans、CommitTrans方法<br>　　这三个方法是连接对象提供的用于事务处理的方法。BeginTrans用于开始一个事物；RollbackTrans用于回滚事务；CommitTrans用于提交所有的事务处理结果，即确认事务的处理。<br>　　事务处理可以将一组操作视为一个整体，只有全部语句都成功执行后，事务处理才算成功；若其中有一个语句执行失败，则整个处理就算失败，并恢复到处里前的状态。<br>　　BeginTrans和CommitTrans用于标记事务的开始和结束，在这两个之间的语句，就是作为事务处理的语句。判断事务处理是否成功，可通过连接对象的Error集合来实现，若Error集合的成员个数不为0，则说明有错误发生，事务处理失败。Error集合中的每一个Error对象，代表一个错误信息。<br>SQL语句大全精要<br>2006/10/26 13:46<br>DELETE语句<br>DELETE语句：用于创建一个删除查询，可从列在 FROM 子句之中的一个或多个表中删除记录，且该子句满足 WHERE 子句中的条件，可以使用DELETE删除多个记录。<br>语法：DELETE [table.<em>] FROM table WHERE criteria<br>语法：DELETE </em> FROM table WHERE criteria=’查询的字’<br>说明：table参数用于指定从其中删除记录的表的名称。<br>criteria参数为一个表达式，用于指定哪些记录应该被删除的表达式。<br>可以使用 Execute 方法与一个 DROP 语句从数据库中放弃整个表。不过，若用这种方法删除表，将会失去表的结构。不同的是当使用 DELETE，只有数据会被删除；表的结构以及表的所有属性仍然保留，例如字段属性及索引。<br>UPDATE<br>有关UPDATE，急！！！！！！！！！！！<br>在ORACLE数据库中<br>表 A ( ID ,FIRSTNAME,LASTNAME )<br>表 B( ID,LASTNAME)<br>表 A 中原来ID,FIRSTNAME两个字段的数据是完整的<br>表 B中原来ID,LASTNAME两个字段的数据是完整的<br>现在要把表 B中的LASTNAME字段的相应的数据填入到A表中LASTNAME相应的位置。两个表中的ID字段是相互关联的。<br>先谢谢了!!!!<br>update a set a.lastname=(select b.lastname from b where a.id=b.id)<br>　　掌握SQL四条最基本的数据操作语句：Insert，Select，Update和Delete。<br>　　练掌握SQL是数据库用户的宝贵财富。在本文中，我们将引导你掌握四条最基本的数据操作语句—SQL的核心功能—来依次介绍比较操作符、选择断言以及三值逻辑。当你完成这些学习后，显然你已经开始算是精通SQL了。<br>　　在我们开始之前，先使用CREATE TABLE语句来创建一个表（如图1所示）。DDL语句对数据库对象如表、列和视进行定义。它们并不对表中的行进行处理，这是因为DDL语句并不处理数据库中实际的数据。这些工作由另一类SQL语句—数据操作语言（DML）语句进行处理。<br>　　SQL中有四种基本的DML操作：INSERT，SELECT，UPDATE和DELETE。由于这是大多数SQL用户经常用到的，我们有必要在此对它们进行一一说明。在图1中我们给出了一个名为EMPLOYEES的表。其中的每一行对应一个特定的雇员记录。请熟悉这张表，我们在后面的例子中将要用到它。</p>
+<p>The Execute method executes a specified query, SQL statement, stored procedure, or provider-specific text.<br>Execute的作用是：执行一个查询语句、陈述语句、程序或技术提供对象[provider]的详细文本。</p>
+<p>The results are stored in a new Recordset object if it is a row-returning query. A closed Recordset object will be returned if it is not a row-returning query.<br>如果返回行[row-returning]查询语句，那么结果将被存储在一个新的记录对象中；如果它不是一个返回行[row-returning]查询语句，那么它将返回一个关闭的记录对象。</p>
+<p>Note: The returned Recordset is always a read-only, forward-only Recordset!<br>注意：返回的Recordset是一个只读的、只向前兼容的Recordset。</p>
+<p>Tip: To create a Recordset with more functionality, first create a Recordset object. Set the desired properties, and then use the Recordset object’s Open method to execute the query.<br>提示：在第一次创建Recordset对象时，需要将它创建为一个更具功能性的Recordset对象。设置一个我们所希望的属性，使用Recordset对象的Open方法去执行查询语句。</p>
+<p>Syntax for row-returning<br>row-returning[返回行]语法</p>
+<p>Set objrs=objconn.Execute(commandtext,ra,options)</p>
+<p>Syntax for non-row-returning<br>non-row-returning[非返回行]语法</p>
+<p>objconn.Execute commandtext,ra,options</p>
+<table>
+<thead>
+<tr>
+<th>Parameter参数</th>
+<th>Description描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commandtext</td>
+<td>Required. The SQL statement, stored procedure, or provider-specific text to execute 必要参数。指定需要执行的SQL语句，现存的程序或技术提供对象[provider]的详细文本</td>
+</tr>
+<tr>
+<td>ra</td>
+<td>Optional. The number of records affected by the query 可选参数。返回查询语句执行的记录数</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Optional. Sets how the provider should evaluate the commandtext parameter. Can be one or more <a href="http://www.w3pop.com/learn/view/doc/met_conn_%20/#commandtypeenum" target="_blank" rel="noopener">CommandTypeEnum</a> or <a href="http://www.w3pop.com/learn/view/doc/met_conn_%20/#executeoptionenum" target="_blank" rel="noopener">ExecuteOptionEnum</a> values. Default is adCmdUnspecified 可选参数。设置技术提供对象[provider]应该如何评估CommandText属性的功能。它可以是一个或多个CommandTypeEnum 或 ExecuteOptionEnum的值。默认值是adCmdUnspecified</td>
+</tr>
+</tbody>
+</table>
+<p>Example<br>案例</p>
+<p>&lt;%sql=”SELECT companyname FROM Customers”Set rs=conn.Execute(sql)%&gt;</p>
+<hr>
+<p>CommandTypeEnum Values</p>
+<table>
+<thead>
+<tr>
+<th>Constant常量</th>
+<th>Value值</th>
+<th>Description描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adCmdUnspecified</td>
+<td>-1</td>
+<td>Does not specify the command type argument. 不指定指令类型自变量</td>
+</tr>
+<tr>
+<td>adCmdText</td>
+<td>1</td>
+<td>Evaluates CommandText as a textual definition of a command or stored procedure call. 指示提供者应该将Source作为命令的文本定义来计算。</td>
+</tr>
+<tr>
+<td>adCmdTable</td>
+<td>2</td>
+<td>Evaluates CommandText as a table name whose columns are all returned by an internally generated SQL query. 指示ADO生成SQL查询以便从在Source中命名的表中返回所有行</td>
+</tr>
+<tr>
+<td>adCmdStoredProc</td>
+<td>4</td>
+<td>Evaluates CommandText as a stored procedure name. 将CommandText作为一个已存的程序名称</td>
+</tr>
+<tr>
+<td>adCmdUnknown</td>
+<td>8</td>
+<td>Indicates that the type of command in the CommandText property is not known. 默认值。指定未知的CommandText属性命令</td>
+</tr>
+<tr>
+<td>adCmdFile</td>
+<td>256</td>
+<td>Evaluates CommandText as the file name of a persistently stored Recordset. Used with Recordset.Open or Requery only. 指示应从在Source中命名的文件中恢复保留（保存的）Recordset。它仅能与Recordset.Open 或 Requery 指令一起使用</td>
+</tr>
+<tr>
+<td>adCmdTableDirect</td>
+<td>512</td>
+<td>Evaluates CommandText as a table name whose columns are all returned. Used with Recordset.Open or Requery only. To use the Seek method, the Recordset must be opened with adCmdTableDirect. This value cannot be combined with the ExecuteOptionEnum value adAsyncExecute. 指示提供者更改从在 Source 中命名的表中返回所有行/ 将CommandText作为一个表的名称（该表的列全部是通过内部的SQL查询语句返回的）。它仅适用Recordset.Open 或 Requery 指令；如果需要使用查找方式，那么Recordset必须以adCmdTableDirect打开。这个值不能与ExecuteOptionEnum值 adAsyncExecute一起使用</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>ExecuteOptionEnum Values</p>
+<table>
+<thead>
+<tr>
+<th>Constant常量</th>
+<th>Value值</th>
+<th>Description描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adOptionUnspecified</td>
+<td>-1</td>
+<td>Indicates that the command is unspecified. 指明为指定的指令</td>
+</tr>
+<tr>
+<td>adAsyncExecute</td>
+<td></td>
+<td>Indicates that the command should execute asynchronously. This value cannot be combined with the CommandTypeEnum value adCmdTableDirect. 指明指令是否需要异步执行。这个值不能与CommandTypeEnum 之中的adCmdTableDirect一起使用</td>
+</tr>
+<tr>
+<td>adAsyncFetch</td>
+<td></td>
+<td>Indicates that the remaining rows after the initial quantity specified in the CacheSize property should be retrieved asynchronously. 指明在CacheSize属性中指定了初始量以后，是否应该异步获取保留行[remaining rows]</td>
+</tr>
+<tr>
+<td>adAsyncFetchNonBlocking</td>
+<td></td>
+<td>Indicates that the main thread never blocks while retrieving. If the requested row has not been retrieved, the current row automatically moves to the end of the file. If you open a Recordset from a Stream containing a persistently stored Recordset, adAsyncFetchNonBlocking will not have an effect; the operation will be synchronous and blocking. adAsynchFetchNonBlocking has no effect when the adCmdTableDirect option is used to open the Recordset. 指示主要线程在提取期间从未堵塞。如果所请求的行尚未提取，那么当前行将自动移到文件末尾。如果打开的记录流中的记录固定地包含一个记录，那么adAsyncFetchNonBlocking将不会产生作用；才作程序将同时运行以及阻塞该常量。当adCmdTableDirect选项用于打开记录时，adAsynchFetchNonBlocking将不会产生任何作用</td>
+</tr>
+<tr>
+<td>adExecuteNoRecords</td>
+<td></td>
+<td>Indicates that the command text is a command or stored procedure that does not return rows (for example, a command that only inserts data). If any rows are retrieved, they are discarded and not returned. adExecuteNoRecords can only be passed as an optional parameter to the Command or Connection Execute method. 它仅指明了指令文本仅是一条不返回任何行的指令或现存程序（如：一条只执行数据插入的指令）。如果没有任何行被提取，那么他们将放弃执行并不返回任何值。 adExecuteNoRecords仅可以作为一个可选参数传递到指令中或连接执行方法[Connection Execute method]中</td>
+</tr>
+<tr>
+<td>adExecuteStream</td>
+<td></td>
+<td>Indicates that the results of a command execution should be returned as a stream. adExecuteStream can only be passed as an optional parameter to the Command Execute method. 指明需要以结果流的形式返回命令执行的结果。adExecuteStream仅可以作为一个可选参数传递到指令中或连接执行方法[Connection Execute method]中</td>
+</tr>
+<tr>
+<td>adExecuteRecord</td>
+<td></td>
+<td>Indicates that the CommandText is a command or stored procedure that returns a single row which should be returned as a Record object. 指明CommandText仅是返回一个单独行（该单独行作为一条记录对象返回）的一条指令或现存程序</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -541,7 +575,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/02/18/mysql测试题目/" title="mysql测试题目">http://yoursite.com/2019/02/18/mysql测试题目/</a>
+    <a href="http://yoursite.com/2019/02/23/常用经典SQL语句大全完整版-详解-实例/" title="常用经典SQL语句大全完整版--详解+实例">http://yoursite.com/2019/02/23/常用经典SQL语句大全完整版-详解-实例/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -565,7 +599,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mysql/" rel="tag">#mysql</a>
+            <a href="/tags/sql/" rel="tag">#sql</a>
 		  
         </div>
       
@@ -578,8 +612,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/python解释器安装/" rel="next" title="python解释器安装">
-                <i class="fa fa-chevron-left"></i> python解释器安装
+              <a href="/2019/02/23/MTCP建立连接和断开连接过程详解/" rel="next" title="MTCP建立连接和断开连接过程详解">
+                <i class="fa fa-chevron-left"></i> MTCP建立连接和断开连接过程详解
               </a>
             
           </div>
@@ -588,8 +622,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/18/常用浏览器User-Agent大全/" rel="prev" title="常用浏览器User_Agent大全">
-                常用浏览器User_Agent大全 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/23/python面试题总结/" rel="prev" title="python面试题总结">
+                python面试题总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -680,17 +714,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -791,22 +816,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-创建数据库"><span class="nav-number">1.</span> <span class="nav-text">1.创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建各表（表结构；约束）"><span class="nav-number">2.</span> <span class="nav-text">2.创建各表（表结构；约束）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-添加-插入-数据"><span class="nav-number"></span> <span class="nav-text">3.添加/插入 数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-查询数据"><span class="nav-number"></span> <span class="nav-text">4.查询数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-修改数据"><span class="nav-number"></span> <span class="nav-text">5.修改数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-删除数据"><span class="nav-number"></span> <span class="nav-text">6.删除数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL-获得当前日期时间-函数"><span class="nav-number"></span> <span class="nav-text">MySQL 获得当前日期时间 函数</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
