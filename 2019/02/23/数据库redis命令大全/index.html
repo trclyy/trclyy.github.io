@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="数据库," />
+  <meta name="keywords" content="redis," />
 
 
 
@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="目录：一、关系型数据库（一）常用关系型数据库：二、非关系型数据库（一）常用非关系型数据库：（二）分类：文档型key-value型列式数据库图形数据库一、关系型数据库（一）常用关系型数据库：MySQL、SQL-Server、SQLite、MariaDB、ORACLE、PostgreSQL、…二、非关系型数据库（一）常用非关系型数据库：CouchDB、MongoDB、 Redis、Voldemort、">
-<meta name="keywords" content="数据库">
+<meta name="description" content="数据库 【redis】 命令大全以下纯属搬砖，我用Python抓取的redis命令列表页内容 如果想看命令的具体使用可查去官网查看，以下整理为个人查找方便而已 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
+<meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python3数据库分类和比较（入门）">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/python3数据库分类和比较（入门）/index.html">
+<meta property="og:title" content="数据库redis命令大全">
+<meta property="og:url" content="http://yoursite.com/2019/02/23/数据库redis命令大全/index.html">
 <meta property="og:site_name" content="田润超的博客">
-<meta property="og:description" content="目录：一、关系型数据库（一）常用关系型数据库：二、非关系型数据库（一）常用非关系型数据库：（二）分类：文档型key-value型列式数据库图形数据库一、关系型数据库（一）常用关系型数据库：MySQL、SQL-Server、SQLite、MariaDB、ORACLE、PostgreSQL、…二、非关系型数据库（一）常用非关系型数据库：CouchDB、MongoDB、 Redis、Voldemort、">
+<meta property="og:description" content="数据库 【redis】 命令大全以下纯属搬砖，我用Python抓取的redis命令列表页内容 如果想看命令的具体使用可查去官网查看，以下整理为个人查找方便而已 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-18T06:39:22.561Z">
+<meta property="og:updated_time" content="2019-02-25T06:44:21.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python3数据库分类和比较（入门）">
-<meta name="twitter:description" content="目录：一、关系型数据库（一）常用关系型数据库：二、非关系型数据库（一）常用非关系型数据库：（二）分类：文档型key-value型列式数据库图形数据库一、关系型数据库（一）常用关系型数据库：MySQL、SQL-Server、SQLite、MariaDB、ORACLE、PostgreSQL、…二、非关系型数据库（一）常用非关系型数据库：CouchDB、MongoDB、 Redis、Voldemort、">
+<meta name="twitter:title" content="数据库redis命令大全">
+<meta name="twitter:description" content="数据库 【redis】 命令大全以下纯属搬砖，我用Python抓取的redis命令列表页内容 如果想看命令的具体使用可查去官网查看，以下整理为个人查找方便而已 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646">
 
 
 
@@ -137,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/python3数据库分类和比较（入门）/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/02/23/数据库redis命令大全/"/>
 
 
 
 
 
-  <title>python3数据库分类和比较（入门） | 田润超的博客</title>
+  <title>数据库redis命令大全 | 田润超的博客</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/python3数据库分类和比较（入门）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/23/数据库redis命令大全/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="python_wuyanzu_boke">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python3数据库分类和比较（入门）</h1>
+          <h1 class="post-title" itemprop="name headline">数据库redis命令大全</h1>
         
 
         <div class="post-meta">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T14:38:33+08:00">
-                2019-02-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T21:16:57+08:00">
+                2019-02-23
               </time>
             
 
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  498
+                  2.8k
                 </span>
               
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  10
                 </span>
               
             </div>
@@ -415,8 +415,9 @@
       
 
       
-        <p>目录：<br>一、关系型数据库<br>（一）常用关系型数据库：<br>二、非关系型数据库<br>（一）常用非关系型数据库：<br>（二）分类：<br>文档型<br>key-value型<br>列式数据库<br>图形数据库<br>一、关系型数据库<br>（一）常用关系型数据库：<br>MySQL、SQL-Server、SQLite、MariaDB、ORACLE、PostgreSQL、…<br>二、非关系型数据库<br>（一）常用非关系型数据库：<br>CouchDB、MongoDB、 Redis、Voldemort、Oracle、Cassandra、HBase、Riak、Neo4j、InfoGrid、Infinite Graph、 …<br>（二）分类：<br>文档型<br>举例    CouchDB、MongoDB<br>典型应用场景    Web应用（与Key-Value类似，Value是结构化的，不同的是数据库能够了解Value的内容）<br>数据模型    Key-Value为对应的键值对，Value为结构化数据<br>强项    数据结构要求不严格，表结构可变，不需要预先定于表结构<br>弱项    查询性能不高，而且缺乏统一的查询语法<br>key-value型<br>举例    Redis、Voldemort、Oracle Berkeley DB<br>典型应用场景    内容缓存，主要用于处理大量数据的高访问负载，也用于一些日志系统等<br>数据模型    Key指向Value的键值对，通常用hash table来实现<br>强项    查询速度快<br>弱项    数据无结构化，通常只被当作字符串或者二进制数据<br>列式数据库<br>举例    Cassandra、HBase、Riak<br>典型应用场景    分布式的文件系统<br>数据模型    以列簇式存储，将同一列数据存在一起<br>强项    查询速度快，可扩展性强，更容易进行分布式扩展<br>弱项    功能相对局限<br>图形数据库<br>举例    Neo4j、InfoGrid、Infinite Graph<br>典型应用场景    专注于构建关系图谱，如社交网络，推荐系统等<br>数据模型    图结构<br>强项    利用图结构相关算法。如最短路径寻址、N度关系查找等</p>
-<h2 id="弱项-很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案"><a href="#弱项-很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案" class="headerlink" title="弱项    很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案"></a>弱项    很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案</h2>
+        <h1 id="数据库-【redis】-命令大全"><a href="#数据库-【redis】-命令大全" class="headerlink" title="数据库 【redis】 命令大全"></a><a href="https://www.cnblogs.com/tangkaishou/p/10269712.html" target="_blank" rel="noopener">数据库 【redis】 命令大全</a></h1><p>以下纯属搬砖，我用Python抓取的redis命令列表页内容</p>
+<p>如果想看命令的具体使用可查去官网查看，以下整理为个人查找方便而已</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br></pre></td><td class="code"><pre><span class="line">地理位置</span><br><span class="line">GEOADD     将指定的地理空间位置（纬度、经度、名称）添加到指定的key中</span><br><span class="line">GEODIST    返回两个给定位置之间的距离</span><br><span class="line">GEOHASH    返回一个或多个位置元素的 Geohash 表示</span><br><span class="line">GEOPOS     从key里返回所有给定位置元素的位置（经度和纬度）</span><br><span class="line">GEORADIUS  以给定的经纬度为中心， 找出某一半径内的元素</span><br><span class="line">GEORADIUSBYMEMBER  找出位于指定范围内的元素，中心点是由给定的位置元素决定</span><br><span class="line">key</span><br><span class="line">DEL    该用于在 key 存在是删除 key。</span><br><span class="line">Dump   序列化给定 key ，并返回被序列化的值。</span><br><span class="line">EXISTS     检查给定 key 是否存在。</span><br><span class="line">Expire     seconds为给定 key 设置过期时间。</span><br><span class="line">Expireat   EXPIREAT 的作用和 EXPIRE 类似，都用于为 key 设置过期时间。 不同在于 EXPIREAT 接受的时间参数是 UNIX 时间戳(unix timestamp)。</span><br><span class="line">PEXPIREAT  设置 key 的过期时间亿以毫秒计。</span><br><span class="line">PEXPIREAT  设置 key 过期时间的时间戳(unix timestamp) 以毫秒计</span><br><span class="line">Keys   查找所有符合给定模式( pattern)的 key 。</span><br><span class="line">Move   将当前数据库的 key 移动到给定的数据库 db 当中。</span><br><span class="line">PERSIST    移除 key 的过期时间，key 将持久保持。</span><br><span class="line">Pttl   以毫秒为单位返回 key 的剩余的过期时间。</span><br><span class="line">TTL    以秒为单位，返回给定 key 的剩余生存时间(TTL, time to live)。</span><br><span class="line">RANDOMKEY  从当前数据库中随机返回一个 key 。</span><br><span class="line">Rename     修改 key 的名称</span><br><span class="line">Renamenx   仅当 newkey 不存在时，将 key 改名为 newkey 。</span><br><span class="line">Type   返回 key 所储存的值的类型。</span><br><span class="line"></span><br><span class="line">String </span><br><span class="line">SET    设置指定 key 的值</span><br><span class="line">Get    获取指定 key 的值。</span><br><span class="line">Getrange   返回 key 中字符串值的子字符</span><br><span class="line">Getset     将给定 key 的值设为 value ，并返回 key 的旧值(old value)。</span><br><span class="line">Getbit     对 key 所储存的字符串值，获取指定偏移量上的位(bit)。</span><br><span class="line">Mget   获取所有(一个或多个)给定 key 的值。</span><br><span class="line">Setbit     对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)。</span><br><span class="line">Setex  将值 value 关联到 key ，并将 key 的过期时间设为 seconds (以秒为单位)。</span><br><span class="line">Setnx  只有在 key 不存在时设置 key 的值。</span><br><span class="line">Setrange   用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始。</span><br><span class="line">Strlen     返回 key 所储存的字符串值的长度。</span><br><span class="line">Mset   同时设置一个或多个 key-value 对。</span><br><span class="line">Msetnx     同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。</span><br><span class="line">Psetex     这个和 SETEX 相似，但它以毫秒为单位设置 key 的生存时间，而不是像 SETEX 那样，以秒为单位。</span><br><span class="line">Incr   将 key 中储存的数字值增一。</span><br><span class="line">Incrby     将 key 所储存的值加上给定的增量值（increment） 。</span><br><span class="line">Incrbyfloat    将 key 所储存的值加上给定的浮点增量值（increment） 。</span><br><span class="line">Decr   将 key 中储存的数字值减一。</span><br><span class="line">Decrby     key 所储存的值减去给定的减量值（decrement） 。</span><br><span class="line">Append     如果 key 已经存在并且是一个字符串， APPEND 将 value 追加到 key 原来的值的末尾。</span><br><span class="line"></span><br><span class="line">Hash</span><br><span class="line">Hdel   删除一个或多个哈希表字段</span><br><span class="line">Hexists    查看哈希表 key 中，指定的字段是否存在。</span><br><span class="line">Hget   获取存储在哈希表中指定字段的值/td&gt;</span><br><span class="line">Hgetall    获取在哈希表中指定 key 的所有字段和值</span><br><span class="line">Hincrby    为哈希表 key 中的指定字段的整数值加上增量 increment 。</span><br><span class="line">Hincrbyfloat   为哈希表 key 中的指定字段的浮点数值加上增量 increment 。</span><br><span class="line">Hkeys  获取所有哈希表中的字段</span><br><span class="line">Hlen   获取哈希表中字段的数量</span><br><span class="line">Hmget  获取所有给定字段的值</span><br><span class="line">Hmset  同时将多个 field-value (域-值)对设置到哈希表 key 中。</span><br><span class="line">Hset   将哈希表 key 中的字段 field 的值设为 value 。</span><br><span class="line">Hsetnx     只有在字段 field 不存在时，设置哈希表字段的值。</span><br><span class="line">Hvals  获取哈希表中所有值</span><br><span class="line"></span><br><span class="line">List</span><br><span class="line">Blpop  移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</span><br><span class="line">Brpop  移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</span><br><span class="line">Brpoplpush     从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。</span><br><span class="line">Lindex     通过索引获取列表中的元素</span><br><span class="line">Linsert    在列表的元素前或者后插入元素</span><br><span class="line">Llen   获取列表长度</span><br><span class="line">Lpop   移出并获取列表的第一个元素</span><br><span class="line">Lpush  将一个或多个值插入到列表头部</span><br><span class="line">Lpushx     将一个或多个值插入到已存在的列表头部</span><br><span class="line">Lrange     获取列表指定范围内的元素</span><br><span class="line">Lrem   移除列表元素</span><br><span class="line">Lset   通过索引设置列表元素的值</span><br><span class="line">Ltrim  对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除。</span><br><span class="line">Rpop   移除并获取列表最后一个元素</span><br><span class="line">Rpoplpush  移除列表的最后一个元素，并将该元素添加到另一个列表并返回</span><br><span class="line">Rpush  在列表中添加一个或多个值</span><br><span class="line">Rpushx     为已存在的列表添加值</span><br><span class="line"></span><br><span class="line">Set 命令</span><br><span class="line">Sadd   向集合添加一个或多个成员</span><br><span class="line">Scard  获取集合的成员数</span><br><span class="line">Sdiff  返回给定所有集合的差集</span><br><span class="line">Sdiffstore     返回给定所有集合的差集并存储在 destination 中</span><br><span class="line">Sinter     返回给定所有集合的交集</span><br><span class="line">Sinterstore    返回给定所有集合的交集并存储在 destination 中</span><br><span class="line">Sismember  判断 member 元素是否是集合 key 的成员</span><br><span class="line">Smembers   返回集合中的所有成员</span><br><span class="line">Smove  将 member 元素从 source 集合移动到 destination 集合</span><br><span class="line">Spop   移除并返回集合中的一个随机元素</span><br><span class="line">Srandmember    返回集合中一个或多个随机数</span><br><span class="line">Srem   移除集合中一个或多个成员</span><br><span class="line">Sunion     返回所有给定集合的并集</span><br><span class="line">Sunionstore    所有给定集合的并集存储在 destination 集合中</span><br><span class="line">Sscan  迭代集合中的元素</span><br><span class="line"></span><br><span class="line">sorted set有序集合</span><br><span class="line">Zadd   向有序集合添加一个或多个成员，或者更新已存在成员的分数</span><br><span class="line">Zcard  获取有序集合的成员数</span><br><span class="line">Zcount     计算在有序集合中指定区间分数的成员数</span><br><span class="line">Zincrby    有序集合中对指定成员的分数加上增量 increment</span><br><span class="line">Zinterstore    计算给定的一个或多个有序集的交集并将结果集存储在新的有序集合 key 中</span><br><span class="line">Zlexcount  在有序集合中计算指定字典区间内成员数量</span><br><span class="line">Zrange     通过索引区间返回有序集合成指定区间内的成员</span><br><span class="line">Zrangebylex    通过字典区间返回有序集合的成员</span><br><span class="line">Zrangebyscore  通过分数返回有序集合指定区间内的成员</span><br><span class="line">Zrank  返回有序集合中指定成员的索引</span><br><span class="line">Zrem   移除有序集合中的一个或多个成员</span><br><span class="line">Zremrangebylex     移除有序集合中给定的字典区间的所有成员</span><br><span class="line">Zremrangebyrank    移除有序集合中给定的排名区间的所有成员</span><br><span class="line">Zremrangebyscore   移除有序集合中给定的分数区间的所有成员</span><br><span class="line">Zrevrange  返回有序集中指定区间内的成员，通过索引，分数从高到底</span><br><span class="line">Zrevrangebyscore   返回有序集中指定分数区间内的成员，分数从高到低排序</span><br><span class="line">Zrevrank   返回有序集合中指定成员的排名，有序集成员按分数值递减(从大到小)排序</span><br><span class="line">Zscore     返回有序集中，成员的分数值</span><br><span class="line">Zunionstore    计算给定的一个或多个有序集的并集，并存储在新的 key 中</span><br><span class="line">Zscan  迭代有序集合中的元素（包括元素成员和元素分值）</span><br><span class="line"></span><br><span class="line">Redis HyperLogLog 命令</span><br><span class="line">Pfadd  添加指定元素到 HyperLogLog 中。</span><br><span class="line">Pfcount    返回给定 HyperLogLog 的基数估算值。</span><br><span class="line">Pgmerge    将多个 HyperLogLog 合并为一个 HyperLogLog</span><br><span class="line"></span><br><span class="line">Redis 发布订阅 命令</span><br><span class="line">Psubscribe     订阅一个或多个符合给定模式的频道。</span><br><span class="line">Pubsub     查看订阅与发布系统状态。</span><br><span class="line">Publish    将信息发送到指定的频道。</span><br><span class="line">Punsubscribe   退订所有给定模式的频道。</span><br><span class="line">Subscribe  订阅给定的一个或多个频道的信息。</span><br><span class="line">Unsubscribe    指退订给定的频道。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Redis 事务 命令</span><br><span class="line">Discard    取消事务，放弃执行事务块内的所有。</span><br><span class="line">Exec   执行所有事务块内的。</span><br><span class="line">Multi  标记一个事务块的开始。</span><br><span class="line">Unwatch    取消 WATCH 对所有 key 的监视。</span><br><span class="line">Watch  监视一个(或多个) key ，如果在事务执行之前这个(或这些) key 被其他所改动，那么事务将被打断。</span><br><span class="line"></span><br><span class="line">Redis 脚本 命令</span><br><span class="line">Eval   执行 Lua 脚本。</span><br><span class="line">Evalsha    执行 Lua 脚本。</span><br><span class="line">Script Exists  查看指定的脚本是否已经被保存在缓存当中。</span><br><span class="line">Script Flush   从脚本缓存中移除所有脚本。</span><br><span class="line">Script kill    杀死当前正在运行的 Lua 脚本。</span><br><span class="line">Script Load    将脚本 script 添加到脚本缓存中，但并不立即执行这个脚本。</span><br><span class="line"></span><br><span class="line">Redis 连接 命令</span><br><span class="line">Auth   验证密码是否正确</span><br><span class="line">Echo   打印字符串</span><br><span class="line">Ping   查看服务是否运行</span><br><span class="line">Quit   关闭当前连接</span><br><span class="line">Select     切换到指定的数据库</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Redis 服务器 命令</span><br><span class="line">Bgrewriteaof   异步执行一个 AOF（AppendOnly File） 文件重写操作</span><br><span class="line">Bgsave     在后台异步保存当前数据库的数据到磁盘</span><br><span class="line">Client Kill    关闭客户端连接</span><br><span class="line">Client List    获取连接到服务器的客户端连接列表</span><br><span class="line">Client Getname     获取连接的名称</span><br><span class="line">Client Pause   在指定时间内终止运行来自客户端的</span><br><span class="line">Client Setname     设置当前连接的名称</span><br><span class="line">Cluster Slots  获取集群节点的映射数组</span><br><span class="line">Command    获取 详情数组</span><br><span class="line">Command Count  获取 总数</span><br><span class="line">Command Getkeys    获取给定的所有键</span><br><span class="line">Time   返回当前服务器时间</span><br><span class="line">Command Info   获取指定 描述的数组</span><br><span class="line">Config Get     获取指定配置参数的值</span><br><span class="line">Config rewrite     对启动 服务器时所指定的 redis.conf 配置文件进行改写</span><br><span class="line">Config Set     修改 redis 配置参数，无需重启</span><br><span class="line">Config Resetstat   重置 INFO 中的某些统计数据</span><br><span class="line">Dbsize     返回当前数据库的 key 的数量</span><br><span class="line">Debug Object   获取 key 的调试信息</span><br><span class="line">Debug Segfault     让 服务崩溃</span><br><span class="line">Flushall   删除所有数据库的所有key</span><br><span class="line">Flushdb    删除当前数据库的所有key</span><br><span class="line">Info   获取 服务器的各种信息和统计数值</span><br><span class="line">Lastsave   返回最近一次 成功将数据保存到磁盘上的时间，以 UNIX 时间戳格式表示</span><br><span class="line">Monitor    实时打印出 服务器接收到的，调试用</span><br><span class="line">Role   返回主从实例所属的角色</span><br><span class="line">Save   异步保存数据到硬盘</span><br><span class="line">Shutdown   异步保存数据到硬盘，并关闭服务器</span><br><span class="line">Slaveof    将当前服务器转变为指定服务器的从属服务器(slave server)</span><br><span class="line">Showlog    管理 redis 的慢日志</span><br><span class="line">Sync   用于复制功能(replication)的内部</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -444,7 +445,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/02/18/python3数据库分类和比较（入门）/" title="python3数据库分类和比较（入门）">http://yoursite.com/2019/02/18/python3数据库分类和比较（入门）/</a>
+    <a href="http://yoursite.com/2019/02/23/数据库redis命令大全/" title="数据库redis命令大全">http://yoursite.com/2019/02/23/数据库redis命令大全/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -468,7 +469,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据库/" rel="tag">#数据库</a>
+            <a href="/tags/redis/" rel="tag">#redis</a>
 		  
         </div>
       
@@ -481,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/18/请求包含哪几个部分（请求行、请求头、请求体）/" rel="next" title="请求包含哪几个部分（请求行、请求头、请求体）">
-                <i class="fa fa-chevron-left"></i> 请求包含哪几个部分（请求行、请求头、请求体）
+              <a href="/2019/02/23/python面试题总结/" rel="next" title="python面试题总结">
+                <i class="fa fa-chevron-left"></i> python面试题总结
               </a>
             
           </div>
@@ -491,8 +492,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/18/python常用的数据库之一mysql基础篇/" rel="prev" title="python常用的数据库之_mysql基础篇">
-                python常用的数据库之_mysql基础篇 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/25/linux命令大全/" rel="prev" title="linux命令大全">
+                linux命令大全 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -704,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#弱项-很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案"><span class="nav-number">1.</span> <span class="nav-text">弱项    很多时候需要对整个图做计算才能得出需要的信息，而且这种结构不太好做分布式的集群方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库-【redis】-命令大全"><span class="nav-number">1.</span> <span class="nav-text">数据库 【redis】 命令大全</span></a></li></ol></div>
             
 
           </div>
