@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20180719153559536?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0MTQ3MDUx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180719153750763?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0MTQ3MDUx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180719150732873?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI0MTQ3MDUx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2019-02-26T09:03:57.297Z">
+<meta property="og:updated_time" content="2019-02-27T11:34:15.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="输入一个url到浏览器页面展示都经历了哪些过程">
 <meta name="twitter:description" content="在日常的浏览器访问过程中，我们肯定会访问n多页面，但是我们输入一个网址后是如何变成一个页面展示在我们面前，从一个url到页面的展示这个过程中，我们的浏览器都经历了一些什么？  步骤→ 1- 输入网址→ 2- 缓存解析→ 3- 域名解析→ 4- tcp连接，三次握手→ 6- 页面渲染  一：输入网址 那肯定是输入你要访问的网站网址了，俗称url； 二：缓存解析 浏览器获取了这个url，当然就去解析了">
@@ -382,7 +382,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  867
+                  1.4k
                 </span>
               
 
@@ -398,7 +398,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -445,6 +445,12 @@
 <p>服务器收到浏览器发送的请求信息，返回一个响应头和一个响应体。</p>
 <p><strong>六：页面渲染</strong></p>
 <p>浏览器收到服务器发送的响应头和响应体，进行客户端渲染，生成Dom树、解析css样式、js交互</p>
+<p>简单理解为：</p>
+<p>在此期间经历了四个过程，如下：</p>
+<p>1.域名解析：根据域名找到IP地址的过程，一个完整的域名由2个或2个以上的部分组成。IP分为网络部分和主机部分，子网掩码就是告诉计算机哪是网络部分，哪是主机部分。路由器中的地址一般使用网段中第一个地址，15.0.0.1这样，每个计算机都要配网关，网关在不同网段转发。MAC地址(物理地址),出厂时固定到网卡上了，48位的二进制，路由器也有mac地址。通过DNS服务器获取IP地址，发数据包时就发给服务器IP。寻找域名对应的ＩＰ地址的过程为：Ｉ查找浏览器缓存；ＩＩ．查找系统缓存，- windows系统为从C:\Windows\System32\drivers\etc\hosts文件中查找 ；- linux系统为从/etc/hosts文件中查找 ；ＩＩＩ．查找路由器缓存和ISP的DNS服务器缓存 ；ＩＶ.如果以上方式均找不到，则从顶级域名开始查找；</p>
+<p>2.建立ＴＣＰ连接：建立：三次握手；释放连接：四次挥手。网页一般比较大，一个数据包传不过去，数据包最大ＭＴＵ＝１５００，把网页进行切割、编号，发过去后对方按照编号整合成一个完整的网页。那么，该如何切割呢？有解：ａ．数据分割好后放缓存里，发送缓存，接收缓存都有；ｂ．先放缓存，再准备发；ｃ．从缓存中发出去的数据不能删，因为中途可能传输中丢掉，客户端收到后给一个确认，然后就可以从缓存中删除；ｄ．浏览器端从接受缓存中读取数据，再拼成一个网页。；</p>
+<p>3.浏览器发送Ｇｅｔ请求到服务器，服务器根据请求返回内容给浏览器。；</p>
+<p>4.返回页面：浏览器显示页面中所有文本。<br>原文：<a href="https://blog.csdn.net/lilyheart1/article/details/80611730" target="_blank" rel="noopener">https://blog.csdn.net/lilyheart1/article/details/80611730</a> </p>
 
       
     </div>
@@ -773,7 +779,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共94.3k字</span>
+  <span class="post-count">博客全站共94.8k字</span>
 </div>
 
         
