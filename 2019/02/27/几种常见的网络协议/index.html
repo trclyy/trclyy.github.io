@@ -105,7 +105,7 @@
 <meta property="og:description" content="几种常用的网络协议 一、OSI模型 名称            层次                功能 物理层          1               实现计算机系统与网络间的物理连接 数据链路层      2               进行数据打包与解包，形成信息帧 网络层          3               提供数据通过的路由 传输层          4">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images.cnblogs.com/cnblogs_com/jenry/image001.gif">
-<meta property="og:updated_time" content="2019-02-27T11:42:27.237Z">
+<meta property="og:updated_time" content="2019-02-27T13:13:45.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="几种常见的网络协议">
 <meta name="twitter:description" content="几种常用的网络协议 一、OSI模型 名称            层次                功能 物理层          1               实现计算机系统与网络间的物理连接 数据链路层      2               进行数据打包与解包，形成信息帧 网络层          3               提供数据通过的路由 传输层          4">
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.3k
+                  4.7k
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  15
+                  16
                 </span>
               
             </div>
@@ -455,6 +455,28 @@
 <p>　　SDLC／HDLC的一帧信息包括以下几个场（Field），所有场都是从最低有效位开始传送。<br>　　1． SDLC／HDLC标志字符<br>　　SDLC／HDLC协议规定，所有信息传输必须以一个标志字符开始，且以同一个字符结束。这个标志字符是01111110，称标志场（F）。从开始标志到结束标志之间构成一个完整的信息单位，称为一帧（Frame）。所有的信息是以帧的形式传输的，而标志字符提供了每一帧的边界。接收端可以通过搜索”01111110”来探知帧的开头和结束，以此建立帧同步。<br>　　2．地址场和控制场<br>　　在标志场之后，可以有一个地址场A（Address）和一个控制场C（Contro1）。地址场用来规定与之通信的次站的地址。控制场可规定若干个命令。SDLC规定A场和C场的宽度为8位。HDLC则允许A场可为任意长度，C场为8位或16位。接收方必须检查每个地址字节的第一位，如果为”0”，则后边跟着另一个地址字节；若为”1”，则该字节就是最后一个地址字节。同理，如果控制场第一个字节的第一位为”0”，则还有第二个控制场字节，否则就只有一个字节。<br>　　3．信息场<br>　　跟在控制场之后的是信息场I（Information）。I场包含有要传送的数据，亦成为数据场。并不是每一帧都必须有信息场。即信息场可以为0，当它为0时，则这一帧主要是控制命令。<br>　　4．帧校验场<br>　　紧跟在信息场之后的是两字节的帧校验场，帧校验场称为FC（Frame Check）场， 校验序列FCS（Frame check Sequence）。SDLC／HDLC均采用16位循环冗余校验码CRC （Cyclic Redundancy Code），其生成多项式为CCITT多项式X^16+X^12+X^5+1。除了标志场和自动插入的”0”位外，所有的信息都参加CRC计算。 CRC的编码器在发送码组时为每一码组加入冗余的监督码位。接收时译码器可对在纠错范围内的错码进行纠正，对在校错范 围内的错码进行校验，但不能纠正。超出校、纠错范围之外的多位错误将不可能被校验发现 。</p>
 <p>　　三．实际应用时的两个技术问题 </p>
 <p>　　 1．”0”位插入／删除技术<br>　 　如上所述，SDLC／HDLC协议规定以01111110为标志字节，但在信息场中也完全有可能有同一种模式的字符，为了把它与标志区分开来，所以采取了”0”位插入和删除技术。具体作法是发送端在发送所有信息（除标志字节外）时，只要遇到连续5个”1”，就自动插入一个”0”当接收端在接收数据时（除标志字节）如果连续接收到5个”1”，就自动将其后的一个”0”删除，以恢复信息的原有形式。这种”0”位的插入和删除过程是由硬件自动完成的，比上述面向字符的”数据透明”容易实现。<br>　　 2． SDLC／HDLC异常结束<br>　　 若在发送过程中出现错误，则SDLC／HDLC协议用异常结束（Abort）字符，或称失效序列使本帧作废。在HDLC规程中7个连续的”1”被作为失效字符，而在SDLC中失效字符是8个连续的”1”。当然在失效序列中不使用”0”位插入／删除技术。<br>　　 SDLC／HDLC协议规定，在一帧之内不允许出现数据间隔。在两帧信息之间，发送器可以连续输出标志字符序列，也可以输出连续的高电平，它被称为空闲（Idle）信号。</p>
+<p># </p>
+<h1 id="常用的HTTP协议"><a href="#常用的HTTP协议" class="headerlink" title="常用的HTTP协议"></a><a href="https://www.cnblogs.com/zhuifeng/p/4008089.html" target="_blank" rel="noopener">常用的HTTP协议</a></h1><p>http协议：超文本传输协议方案，除了没有用户名和密码之外，与通用的URL格式相符，如果省略了端口，就默认为80</p>
+<p>基本格式：http://<host>:<port>/<path></path>?<query>#<frag></frag></query></port></host></p>
+<p>示例：<a href="http://www.baidu.com/index.html" target="_blank" rel="noopener">http://www.baidu.com:80/index.html</a></p>
+<p>https协议：该方案与http方案是一对的，唯一的区别在于方案https使用了网景的SSL，SSL为HTTP连接提供了端到端的加密机制，其语法与HTTP的语法相同，默认端口为443</p>
+<p>基本格式：https://<host>:<port>/<path></path>?<query>#<frag></frag></query></port></host></p>
+<p>示例：<a href="http://www.baidu.com/index.html" target="_blank" rel="noopener">https://www.baidu.com:80/index.html</a></p>
+<p>mailto协议：mailto URL指向的是E-mail地址，由于E-mail的行为与其他方案都有所不同，它并不指向任何可以直接访问的对象</p>
+<p>基本格式：mailto:<rfc-822-addr-spec></rfc-822-addr-spec></p>
+<p>示例：mailto:<a href="mailto:joe@joes-hardware.com" target="_blank" rel="noopener">joe@joes-hardware.com</a></p>
+<p>ftp协议：文件传输协议URL可以用来从FTP服务器上下载或向其上载文件，并获取FTP服务器上的目录结构内容的列表</p>
+<p>基本格式：ftp:<user>:<password>@<host>:<port>/<path></path>;<params></params></port></host></password></user></p>
+<p>示例：<a href="ftp://anonymous:joe%40joes@prep.an.edu:21/pub/gs" target="_blank" rel="noopener">ftp://anonymous:joe%40joes@prep.an.edu:21/pub/gs</a></p>
+<p>rtsp和rtspu协议：RTSP URL是可以通过实时流传输协议解析的音/视频媒体资源的标示符。方案respu中的u表示它是使用UDP协议来获取资源的</p>
+<p>基本格式：rtsp:<user>:<password>@<host>:<port>/<path></path></port></host></password></user></p>
+<p>示例：rtspu://<a href="http://www.baidu.com:554/inte/cto_video" target="_blank" rel="noopener">www.baidu.com:554/inte/cto_video</a></p>
+<p>file协议：file方案表示一台指定主机上可直接访问的文件。各字段都遵循通用格式，如果省略了主机名，就默认为正在使用URL的本地主机</p>
+<p>基本格式：file:<user>:<password>@<host>:<port>/<path></path></port></host></password></user></p>
+<p>示例：file://OFFICE-FS/poli/cds.doc</p>
+<p>telnet协议：telnet方案用于访问交互式业务，它表示的并不是对象自身，而是可通过telnet协议访问的交互式应用程式(资源)。</p>
+<p>基本格式：telnet://<user>:<password>@<host>:<port>/</port></host></password></user></p>
+<p>示例：telnet:csh:<a href="mailto:webcsh@joes.com" target="_blank" rel="noopener">webcsh@joes.com</a>:50/</p>
 
       
     </div>
@@ -739,7 +761,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#几种常用的网络协议"><span class="nav-number">1.</span> <span class="nav-text">几种常用的网络协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#几种常用的网络协议"><span class="nav-number">1.</span> <span class="nav-text">几种常用的网络协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"> </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用的HTTP协议"><span class="nav-number">3.</span> <span class="nav-text">常用的HTTP协议</span></a></li></ol></div>
             
 
           </div>
@@ -783,7 +805,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共99k字</span>
+  <span class="post-count">博客全站共99.5k字</span>
 </div>
 
         
