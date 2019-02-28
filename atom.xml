@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-27T13:13:45.252Z</updated>
+  <updated>2019-02-28T06:27:48.216Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cookie和session区别和用法</title>
+    <link href="http://yoursite.com/2019/02/28/cookie%E5%92%8Csession%E5%8C%BA%E5%88%AB%E5%92%8C%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2019/02/28/cookie和session区别和用法/</id>
+    <published>2019-02-28T06:26:30.000Z</published>
+    <updated>2019-02-28T06:27:48.216Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="cookie和session的区别和用法"><a href="#cookie和session的区别和用法" class="headerlink" title="cookie和session的区别和用法"></a><a href="https://www.cnblogs.com/xxtalhr/p/9053906.html" target="_blank" rel="noopener">cookie和session的区别和用法</a></h1><h1 id="flask中-cookie和session介绍"><a href="#flask中-cookie和session介绍" class="headerlink" title="flask中**cookie和session介绍**"></a><strong>flask中**</strong>cookie和session介绍**</h1><h2 id="一、cookie："><a href="#一、cookie：" class="headerlink" title="一、cookie："></a>一、<strong>cookie：</strong></h2><p>在网站中，http请求是无状态的。也就是说即使第一次和服务器连接后并且登录成功后，第二次请求服务器依然不能知道当前请求是哪个用户。cookie的出现就是为了解决这个问题，第一次登录后服务器返回一些数据（cookie）给浏览器，然后浏览器保存在本地，当该用户发送第二次请求的时候，就会自动的把上次请求存储的cookie数据自动的携带给服务器，服务器通过浏览器携带的数据就能判断当前用户是哪个了。cookie存储的数据量有限，不同的浏览器有不同的存储大小，但一般不超过4KB。因此使用cookie只能存储一些小量的数据。</p><h2 id="二、-session"><a href="#二、-session" class="headerlink" title="二、**session:**"></a><strong>二、**</strong>session:**</h2><p>session和cookie的作用有点类似，都是为了存储用户相关的信息。不同的是，cookie是存储在本地浏览器，而session存储在服务器。存储在服务器的数据会更加的安全，不容易被窃取。但存储在服务器也有一定的弊端，就是会占用服务器的资源，但现在服务器已经发展至今，一些session信息还是绰绰有余的。</p><h2 id="三、cookie和session结合使用："><a href="#三、cookie和session结合使用：" class="headerlink" title="三、cookie和session结合使用："></a>三、<strong>cookie和session结合使用：</strong></h2><p>web开发发展至今，cookie和session的使用已经出现了一些非常成熟的方案。在如今的市场或者企业里，一般有两种存储方式：</p><p>1、存储在服务端：通过cookie存储一个session_id，然后具体的数据则是保存在session中。如果用户已经登录，则服务器会在cookie中保存一个session_id，下次再次请求的时候，会把该session_id携带上来，服务器根据session_id在session库中获取用户的session数据。就能知道该用户到底是谁，以及之前保存的一些状态信息。这种专业术语叫做server side session。</p><p>2、将session数据加密，然后存储在cookie中。这种专业术语叫做client side session。flask采用的就是这种方式，但是也可以替换成其他形式。</p><h1 id="flask中使用cookie和session"><a href="#flask中使用cookie和session" class="headerlink" title="flask中使用cookie和session"></a><strong>flask中使用cookie和session</strong></h1><h2 id="一、cookies："><a href="#一、cookies：" class="headerlink" title="一、cookies："></a>一、<strong>cookies：</strong></h2><p>在Flask中操作cookie，是通过response对象来操作，可以在response返回之前，通过response.set_cookie来设置，这个方法有以下几个参数需要注意：</p><p>key：设置的cookie的key。</p><p>value：key对应的value。</p><p>max_age：改cookie的过期时间，如果不设置，则浏览器关闭后就会自动过期。</p><p>expires：过期时间，应该是一个datetime类型。</p><p>domain：该cookie在哪个域名中有效。一般设置子域名，比如cms.example.com。</p><p>path：该cookie在哪个路径下有效。</p><p>使用：</p><p>  获取：request.cookies.get(key, ‘默认值’)</p><p>  设置：resp.set_cookie(key, value, max_age=整数)</p><p>  删除：resp.delete_cookie(key)</p><p><a href="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230452258-932272330.png" target="_blank" rel="noopener"><img src="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230452614-570860514.png" alt="image"></a></p><h2 id="二、session："><a href="#二、session：" class="headerlink" title="二、session："></a>二、<strong>session：</strong></h2><p>Flask中的session是通过from flask import session。然后添加值key和value进去即可。</p><p>client side session：Flask中的session机制是将session信息加密，然后存储在cookie中。专业术语叫做client side session。</p><p>server side session：存储在服务器，客户端保存的时session_id（通过cookie完成）</p><p>使用：</p><p>  获取：session.get(key, ‘默认值’)</p><p>设置：</p><p>​     session.permanent = True</p><p>​     session[key] = value  </p><p>删除：</p><p>指定删除：session.pop(key, None)</p><p>清空所有：session.clear()</p><p><a href="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230452915-1379683480.jpg" target="_blank" rel="noopener"><img src="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230453600-891375187.jpg" alt="wps1A19.tmp"></a></p><h2 id="三、manage-py"><a href="#三、manage-py" class="headerlink" title="三、manage.py"></a>三、<strong>manage.py</strong></h2><p><a href="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230453936-608869511.jpg" target="_blank" rel="noopener"><img src="https://images2018.cnblogs.com/blog/1400528/201805/1400528-20180517230454351-1633624818.jpg" alt="wps1A1A.tmp"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;cookie和session的区别和用法&quot;&gt;&lt;a href=&quot;#cookie和session的区别和用法&quot; class=&quot;headerlink&quot; title=&quot;cookie和session的区别和用法&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblo
+      
+    
+    </summary>
+    
+    
+      <category term="cookie" scheme="http://yoursite.com/tags/cookie/"/>
+    
+  </entry>
   
   <entry>
     <title>几种常见的网络协议</title>
