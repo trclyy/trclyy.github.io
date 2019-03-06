@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="http," />
+  <meta name="keywords" content="django," />
 
 
 
@@ -96,26 +96,18 @@
 
 
 
-<meta name="description" content="先具体说下get和post区别GET和POST两种基本请求方法的区别GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。 最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。 你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。 当你在面试中被问到这个">
-<meta name="keywords" content="http">
+<meta name="description" content="目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。 以下是根据书上的学习和实践，拷贝自网络： 1、服务端响应url请求的执行顺序 　  1）项目结构 　　 　　django_web 　　　　　　　　in">
+<meta name="keywords" content="django">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈HTTP中Get、Post、Put与Delete的区别">
-<meta property="og:url" content="http://yoursite.com/2019/02/14/浅谈HTTP中Get、Post、Put与Delete的区别/index.html">
+<meta property="og:title" content="django从输入url的响应过程">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/django从输入url的响应过程/index.html">
 <meta property="og:site_name" content="田润超的博客">
-<meta property="og:description" content="先具体说下get和post区别GET和POST两种基本请求方法的区别GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。 最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。 你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。 当你在面试中被问到这个">
+<meta property="og:description" content="目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。 以下是根据书上的学习和实践，拷贝自网络： 1、服务端响应url请求的执行顺序 　  1）项目结构 　　 　　django_web 　　　　　　　　in">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLcm8TfMjvKvXwbzXTbpUaahYNVFpXh8fIMgqcmbIeEBqFTt7ibiaewMicg/640?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLkCV5yUI4QFlaibOg9aFp2ZjPlaeAgaibbYyzOYsmcDfPlzFPAdcy21dQ/640?wx_fmt=jpeg">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLVXZkPZibSibtVZoIkDcBTQJ3mFibpNtqOSNTLDs01s2rmB6PyCoibjczxQ/640?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLdhmQxXtz2Kwn3yzT8Jzic1joUsjXxeaU8JwerDiabz9N9sYmBpIgWic2A/640?wx_fmt=jpeg">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLSDX3EiadGp0gDsHwgvGictCwWSEaAQ4jVib1sLaqnBGpFAUhHhjv8xGKQ/640?wx_fmt=jpeg">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLNqLBKzbCAfuLHkM355iaBC9FuOlWrtiaIUmD95T8ReVJ9FInZIZWV0YA/0?">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLyfrfWEnMQlicIoNbaQJCicpKjOVQp8tNjU9Zp8Eia40om3vTah9aZEF7w/640?wx_fmt=jpeg">
-<meta property="og:updated_time" content="2019-02-18T04:04:49.416Z">
+<meta property="og:updated_time" content="2019-03-06T09:15:48.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈HTTP中Get、Post、Put与Delete的区别">
-<meta name="twitter:description" content="先具体说下get和post区别GET和POST两种基本请求方法的区别GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。 最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。 你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。 当你在面试中被问到这个">
-<meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLcm8TfMjvKvXwbzXTbpUaahYNVFpXh8fIMgqcmbIeEBqFTt7ibiaewMicg/640?wx_fmt=png">
+<meta name="twitter:title" content="django从输入url的响应过程">
+<meta name="twitter:description" content="目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。 以下是根据书上的学习和实践，拷贝自网络： 1、服务端响应url请求的执行顺序 　  1）项目结构 　　 　　django_web 　　　　　　　　in">
 
 
 
@@ -145,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/14/浅谈HTTP中Get、Post、Put与Delete的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/django从输入url的响应过程/"/>
 
 
 
 
 
-  <title>浅谈HTTP中Get、Post、Put与Delete的区别 | 田润超的博客</title>
+  <title>django从输入url的响应过程 | 田润超的博客</title>
   
 
 
@@ -325,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/浅谈HTTP中Get、Post、Put与Delete的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/django从输入url的响应过程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="python_wuyanzu_boke">
@@ -342,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅谈HTTP中Get、Post、Put与Delete的区别</h1>
+          <h1 class="post-title" itemprop="name headline">django从输入url的响应过程</h1>
         
 
         <div class="post-meta">
@@ -354,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-14T10:40:29+08:00">
-                2019-02-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-06T17:15:12+08:00">
+                2019-03-06
               </time>
             
 
@@ -386,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4.2k
+                  1.3k
                 </span>
               
 
@@ -402,7 +394,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  14
+                  5
                 </span>
               
             </div>
@@ -423,105 +415,137 @@
       
 
       
-        <h1 id="先具体说下get和post区别"><a href="#先具体说下get和post区别" class="headerlink" title="先具体说下get和post区别"></a>先具体说下get和post区别</h1><h1 id="GET和POST两种基本请求方法的区别"><a href="#GET和POST两种基本请求方法的区别" class="headerlink" title="GET和POST两种基本请求方法的区别"></a><a href="https://www.cnblogs.com/logsharing/p/8448446.html" target="_blank" rel="noopener">GET和POST两种基本请求方法的区别</a></h1><p>GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。</p>
-<p>最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。</p>
-<p>你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。</p>
-<p>当你在面试中被问到这个问题，你的内心充满了自信和喜悦。</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLcm8TfMjvKvXwbzXTbpUaahYNVFpXh8fIMgqcmbIeEBqFTt7ibiaewMicg/640?wx_fmt=png" alt="img"></p>
-<p>你轻轻松松的给出了一个“标准答案”：</p>
-<ul>
-<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
-</ul>
-<ul>
-<li>GET产生的URL地址可以被Bookmark，而POST不可以。</li>
-</ul>
-<ul>
-<li>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</li>
-</ul>
-<ul>
-<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
-</ul>
-<ul>
-<li>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</li>
-</ul>
-<ul>
-<li>GET请求在URL中传送的参数是有长度限制的，而POST么有。</li>
-</ul>
-<ul>
-<li>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</li>
-</ul>
-<ul>
-<li>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</li>
-</ul>
-<ul>
-<li>GET参数通过URL传递，POST放在Request body中。</li>
-</ul>
-<p>（本标准答案参考自w3schools）</p>
-<p>“很遗憾，这不是我们要的回答！”</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLkCV5yUI4QFlaibOg9aFp2ZjPlaeAgaibbYyzOYsmcDfPlzFPAdcy21dQ/640?wx_fmt=jpeg" alt="img"></p>
-<p>请告诉我真相。。。</p>
-<p>如果我告诉你GET和POST本质上没有区别你信吗？ </p>
-<p>让我们扒下GET和POST的外衣，坦诚相见吧！</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLVXZkPZibSibtVZoIkDcBTQJ3mFibpNtqOSNTLDs01s2rmB6PyCoibjczxQ/640?wx_fmt=png" alt="img"></p>
-<p>GET和POST是什么？HTTP协议中的两种发送请求的方法。</p>
-<p>HTTP是什么？HTTP是基于TCP/IP的关于数据如何在万维网中如何通信的协议。</p>
-<p>HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。 </p>
-<p>那么，“标准答案”里的那些区别是怎么回事？</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLdhmQxXtz2Kwn3yzT8Jzic1joUsjXxeaU8JwerDiabz9N9sYmBpIgWic2A/640?wx_fmt=jpeg" alt="img"></p>
-<p>在我大万维网世界中，TCP就像汽车，我们用TCP来运输数据，它很可靠，从来不会发生丢件少件的现象。但是如果路上跑的全是看起来一模一样的汽车，那这个世界看起来是一团混乱，送急件的汽车可能被前面满载货物的汽车拦堵在路上，整个交通系统一定会瘫痪。为了避免这种情况发生，交通规则HTTP诞生了。HTTP给汽车运输设定了好几个服务类别，有GET, POST, PUT, DELETE等等，HTTP规定，当执行GET请求的时候，要给汽车贴上GET的标签（设置method为GET），而且要求把传送的数据放在车顶上（url中）以方便记录。如果是POST请求，就要在车上贴上POST的标签，并把货物放在车厢里。当然，你也可以在GET的时候往车厢内偷偷藏点货物，但是这是很不光彩；也可以在POST的时候在车顶上也放一些数据，让人觉得傻乎乎的。HTTP只是个行为准则，而TCP才是GET和POST怎么实现的基本。</p>
-<p>但是，我们只看到HTTP对GET和POST参数的传送渠道（url还是requrest body）提出了要求。“标准答案”里关于参数大小的限制又是从哪来的呢？</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLSDX3EiadGp0gDsHwgvGictCwWSEaAQ4jVib1sLaqnBGpFAUhHhjv8xGKQ/640?wx_fmt=jpeg" alt="img"></p>
-<p>在我大万维网世界中，还有另一个重要的角色：运输公司。不同的浏览器（发起http请求）和服务器（接受http请求）就是不同的运输公司。 虽然理论上，你可以在车顶上无限的堆货物（url中无限加参数）。但是运输公司可不傻，装货和卸货也是有很大成本的，他们会限制单次运输量来控制风险，数据量太大对浏览器和服务器都是很大负担。业界不成文的规定是，（大多数）浏览器通常都会限制url长度在2K个字节，而（大多数）服务器最多处理64K大小的url。超过的部分，恕不处理。如果你用GET服务，在request body偷偷藏了数据，不同服务器的处理方式也是不同的，有些服务器会帮你卸货，读出数据，有些服务器直接忽略，所以，虽然GET可以带request body，也不能保证一定能被接收到哦。</p>
-<p>好了，现在你知道，GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。 </p>
-<p>你以为本文就这么结束了？</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLNqLBKzbCAfuLHkM355iaBC9FuOlWrtiaIUmD95T8ReVJ9FInZIZWV0YA/0?" alt="img"></p>
-<p>我们的大BOSS还等着出场呢。。。</p>
-<p>这位BOSS有多神秘？当你试图在网上找“GET和POST的区别”的时候，那些你会看到的搜索结果里，从没有提到他。他究竟是什么呢。。。</p>
-<p>GET和POST还有一个重大区别，简单的说：</p>
-<p>GET产生一个TCP数据包；POST产生两个TCP数据包。</p>
-<p>长的说：</p>
-<p>对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；</p>
-<p>而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</p>
-<p>也就是说，GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“嗨，我等下要送一批货来，你们打开门迎接我”，然后再回头把货送过去。</p>
-<p>因为POST需要两步，时间上消耗的要多一点，看起来GET比POST更有效。因此Yahoo团队有推荐用GET替换POST来优化网站性能。但这是一个坑！跳入需谨慎。为什么？</p>
-<p>\1. GET与POST都有自己的语义，不能随便混用。</p>
-<p>\2. 据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。</p>
-<p>\3. 并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。</p>
-<p>现在，当面试官再问你“GET与POST的区别”的时候，你的内心是不是这样的？</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/VUGnGjllRE5vZcld02bjOjWPPBRXYdhLyfrfWEnMQlicIoNbaQJCicpKjOVQp8tNjU9Zp8Eia40om3vTah9aZEF7w/640?wx_fmt=jpeg" alt="img"></p>
-<h2 id="1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。"><a href="#1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。" class="headerlink" title="1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。"></a>1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。</h2><h2 id="2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。"><a href="#2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。" class="headerlink" title="2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。"></a>2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。</h2><h2 id="3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。"><a href="#3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。" class="headerlink" title="3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。"></a>3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。</h2><h2 id="4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。"><a href="#4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。" class="headerlink" title="4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。"></a>4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。</h2><p>就像前面所讲的一样，既然PUT和POST操作都是向服务器端发送数据的，那么两者有什么区别呢。。。POST主要作用在一个集合资源之上的（url），而PUT主要作用在一个具体资源之上的（url/xxx），通俗一下讲就是，如URL可以在客户端确定，那么可使用PUT，否则用POST。</p>
-<h1 id="综上所述，我们可理解为以下："><a href="#综上所述，我们可理解为以下：" class="headerlink" title="综上所述，我们可理解为以下："></a>综上所述，我们可理解为以下：</h1><p>1、POST /url 创建<br>2、DELETE /url/xxx 删除<br>3、PUT /url/xxx 更新<br>4、GET /url/xxx 查看</p>
-<p> Http定义了与服务器交互的不同方法，最基本的方法有4种，分别是GET，POST，PUT，DELETE。URL全称是统一资源定位符，我们可以这样认为：一个URL地址，它用于描述一个网络上的资源，而HTTP中的GET，POST，PUT，DELETE就对应着对这个资源的查，改，增，删4个操作。到这里，大家应该有个大概的了解了，GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。</p>
-<h1 id="1-根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。"><a href="#1-根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。" class="headerlink" title="1.根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。"></a>1.根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。</h1><p>(1).所谓安全的意味着该操作用于获取信息而非修改信息。换句话说，GET 请求一般不应产生副作用。就是说，它仅仅是获取资源信息，就像数据库查询一样，不会修改，增加数据，不会影响资源的状态。</p>
-<ul>
-<li>注意：这里安全的含义仅仅是指是非修改信息。</li>
-</ul>
-<p>(2).幂等的意味着对同一URL的多个请求应该返回同样的结果。这里我再解释一下幂等这个概念：</p>
-<p>幂等（idempotent、idempotence）是一个数学或计算机学概念，常见于抽象代数中。<br>　　幂等有一下几种定义：<br>　　对于单目运算，如果一个运算对于在范围内的所有的一个数多次进行该运算所得的结果和进行一次该运算所得的结果是一样的，那么我们就称该运算是幂等的。比如绝对值运算就是一个例子，在实数集中，有abs(a)=abs(abs(a))。<br>　　对于双目运算，则要求当参与运算的两个值是等值的情况下，如果满足运算结果与参与运算的两个值相等，则称该运算幂等，如求两个数的最大值的函数，有在在实数集中幂等，即max(x,x) = x。</p>
-<p>看完上述解释后，应该可以理解GET幂等的含义了。</p>
-<p>　　但在实际应用中，以上2条规定并没有这么严格。引用别人文章的例子：比如，新闻站点的头版不断更新。虽然第二次请求会返回不同的一批新闻，该操作仍然被认为是安全的和幂等的，因为它总是返回当前的新闻。从根本上说，如果目标是当用户打开一个链接时，他可以确信从自身的角度来看没有改变资源即可。</p>
-<h1 id="2-根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。"><a href="#2-根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。" class="headerlink" title="2.根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。"></a>2.根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。</h1><p>　　上面大概说了一下HTTP规范中GET和POST的一些原理性的问题。但在实际的做的时候，很多人却没有按照HTTP规范去做，导致这个问题的原因有很多，比如说：</p>
-<p>1.很多人贪方便，更新资源时用了GET，因为用POST必须要到FORM（表单），这样会麻烦一点。</p>
-<p>2.对资源的增，删，改，查操作，其实都可以通过GET/POST完成，不需要用到PUT和DELETE。</p>
-<p>3.另外一个是，早期的Web MVC框架设计者们并没有有意识地将URL当作抽象的资源来看待和设计，所以导致一个比较严重的问题是传统的Web MVC框架基本上都只支持GET和POST两种HTTP方法，而不支持PUT和DELETE方法。</p>
-<ul>
-<li>简单解释一下MVC：MVC本来是存在于Desktop程序中的，M是指数据模型，V是指用户界面，C则是控制器。使用MVC的目的是将M和V的实现代码分离，从而使同一个程序可以使用不同的表现形式。</li>
-</ul>
-<p>　　以上3点典型地描述了老一套的风格（没有严格遵守HTTP规范），随着架构的发展，现在出现REST(Representational State Transfer)，一套支持HTTP规范的新风格，这里不多说了，可以参考《RESTful Web Services》。</p>
-<h2 id="说完原理性的问题，我们再从表面现像上面看看GET和POST的区别："><a href="#说完原理性的问题，我们再从表面现像上面看看GET和POST的区别：" class="headerlink" title="说完原理性的问题，我们再从表面现像上面看看GET和POST的区别："></a>说完原理性的问题，我们再从表面现像上面看看GET和POST的区别：</h2><p>1.GET请求的数据会附在URL之后（就是把数据放置在HTTP协议头中），以?分割URL和传输数据，参数之间以&amp;相连，如：login.action?name=hyddd&amp;password=idontknow&amp;verify=%E4%BD%A0%E5%A5%BD。如果数据是英文字母/数字，原样发送，如果是空格，转换为+，如果是中文/其他字符，则直接把字符串用BASE64加密，得出如：%E4%BD%A0%E5%A5%BD，其中％XX中的XX为该符号以16进制表示的ASCII。</p>
-<p>POST把提交的数据则放置在是HTTP包的包体中。</p>
-<p>2.”GET方式提交的数据最多只能是1024字节，理论上POST没有限制，可传较大量的数据，IIS4中最大为80KB，IIS5中为100KB”？？！</p>
-<p>　　以上这句是我从其他文章转过来的，其实这样说是错误的，不准确的：</p>
-<p>(1).首先是”GET方式提交的数据最多只能是1024字节”，因为GET是通过URL提交数据，那么GET可提交的数据量就跟URL的长度有直接关系了。而实际上，URL不存在参数上限的问题，HTTP协议规范没有对URL长度进行限制。这个限制是特定的浏览器及服务器对它的限制。IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。</p>
-<p>　　注意这是限制是整个URL长度，而不仅仅是你的参数值数据长度。[见参考资料5]</p>
-<p>(2).理论上讲，POST是没有大小限制的，HTTP协议规范也没有进行大小限制，说“POST数据量存在80K/100K的大小限制”是不准确的，POST数据是没有限制的，起限制作用的是服务器的处理程序的处理能力。</p>
-<p>　　对于ASP程序，Request对象处理每个表单域时存在100K的数据长度限制。但如果使用Request.BinaryRead则没有这个限制。</p>
-<p>　　由这个延伸出去，对于IIS 6.0，微软出于安全考虑，加大了限制。我们还需要注意：</p>
-<p>1).IIS 6.0默认ASP POST数据量最大为200KB，每个表单域限制是100KB。<br>2).IIS 6.0默认上传文件的最大大小是4MB。<br>3).IIS 6.0默认最大请求头是16KB。<br>IIS 6.0之前没有这些限制。[见参考资料5]</p>
-<p>　　所以上面的80K，100K可能只是默认值而已(注：关于IIS4和IIS5的参数，我还没有确认)，但肯定是可以自己设置的。由于每个版本的IIS对这些参数的默认值都不一样，具体请参考相关的IIS配置文档。</p>
-<p>3.在ASP中，服务端获取GET请求参数用Request.QueryString，获取POST请求参数用Request.Form。在JSP中，用request.getParameter(\”XXXX\”)来获取，虽然jsp中也有request.getQueryString()方法，但使用起来比较麻烦，比如：传一个test.jsp?name=hyddd&amp;password=hyddd，用request.getQueryString()得到的是：name=hyddd&amp;password=hyddd。在PHP中，可以用$_GET和$_POST分别获取GET和POST中的数据，而$_REQUEST则可以获取GET和POST两种请求中的数据。值得注意的是，JSP中使用request和PHP中使用$_REQUEST都会有隐患，这个下次再写个文章总结。</p>
-<p>4.POST的安全性要比GET的安全性高。注意：这里所说的安全性和上面GET提到的“安全”不是同个概念。上面“安全”的含义仅仅是不作数据修改，而这里安全的含义是真正的Security的含义，比如：通过GET提交数据，用户名和密码将明文出现在URL上，因为(1)登录页面有可能被浏览器缓存，(2)其他人查看浏览器的历史纪录，那么别人就可以拿到你的账号和密码了，除此之外，使用GET提交数据还可能会造成Cross-site request forgery攻击。</p>
-<p>　　总结一下，Get是向服务器发索取数据的一种请求，而Post是向服务器提交数据的一种请求，在FORM（表单）中，Method默认为”GET”，实质上，GET和POST只是发送机制不同，并不是一个取一个发！</p>
+        <p> 目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。</p>
+<pre><code>以下是根据书上的学习和实践，拷贝自网络：
+</code></pre><p>1、服务端响应url请求的执行顺序</p>
+<p>　  1）项目结构</p>
+<p>　　</p>
+<p>　　django_web</p>
+<p>　　　　　　　　<strong>init</strong>.py</p>
+<p>　　　　　　　　settings.py</p>
+<p>　　　　　　　　urls.py</p>
+<p>　　　　　　　　wsgi.py</p>
+<p>　　django_web_app</p>
+<p>　　　　　　　　<strong>init</strong>.py</p>
+<p>　　　　　　　　admin.py</p>
+<p>　　　　　　　　models.py</p>
+<p>　　　　　　　　tests.py</p>
+<p>　　　　　　　　views.py</p>
+<p>　　templates</p>
+<p>　　　　　　　　home_page.html</p>
+<p>　　　　　　　　latest_books.html</p>
+<p>　　manage.py</p>
+<p>　　2）执行顺序</p>
+<p>　　　　　a）启动服务端——python manage.py runserver</p>
+<p>　　　　　获取setting.py文件中的配置，主要包括：</p>
+<p>　　　　　url映射关系文件路径：</p>
+<p>ROOT_URLCONF = ‘django_web.urls’</p>
+<p>　　　　　  页面文件模板路径：</p>
+<p>TEMPLATE_DIRS = (</p>
+<pre><code>os.path.join(BASE_DIR, &apos;templates&apos;),
+</code></pre><p>)</p>
+<p>　　　　　　数据库配置：</p>
+<p>DATABASES = {</p>
+<pre><code>&apos;default&apos;: {
+
+    &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,
+
+    &apos;NAME&apos;: &apos;django_db&apos;,
+
+    &apos;USER&apos;: &apos;root&apos;,
+
+    &apos;PASSWORD&apos;: &apos;feng&apos;,
+
+    &apos;HOST&apos;: &apos;127.0.0.1&apos;,
+
+    &apos;PORT&apos;: &apos;3306&apos;,
+
+}
+</code></pre><p>}</p>
+<p>b）响应顺序</p>
+<p>　            说明：</p>
+<p>第一步：浏览器提交请求</p>
+<p>　　　　　<a href="http://127.0.0.1:8000/latest_books/" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/</a></p>
+<p>　第二步：服务端根据请求的url在urls.py中进行匹配，并找到对应的“视图函数”</p>
+<p>　第三步：调用对应的“视图函数” 返回一个HttpResponse对象</p>
+<p>　第四步：django转换HttpResponse对象为一个适合的HTTP response，并返回给页面进行显示</p>
+<p>2、url匹配模式</p>
+<p>　  基本结构：</p>
+<pre><code>    &apos;^需要匹配的url字符串$&apos;
+
+ PS:实际上最终完整的url串是http://根路径：端口号/需要匹配的url字符串
+
+ 系统自动添加的部分&apos;http://根路径：端口号/&apos;
+
+eg：url匹配模式：&apos;^latest_books/$&apos;
+
+       最终完整的url字符串：&apos;http://127.0.0.1:8000/latest_books/&apos;
+
+1）^：匹配“子串头”。
+</code></pre><p>　　  eg:</p>
+<p> ‘^latest_books/‘</p>
+<p> ‘<a href="http://127.0.0.1:8000/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/&#39;，</a></p>
+<p> ‘<a href="http://127.0.0.1:8000/latest_books/test1/&#39;" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/test1/&#39;</a>,</p>
+<pre><code>   都会被匹配上。     
+
+2）$：匹配“子串结尾”。
+
+    eg：
+</code></pre><p>　 ‘latest_books/$’</p>
+<p>   ‘<a href="http://127.0.0.1:8000/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/&#39;，</a></p>
+<p>   ‘<a href="http://127.0.0.1:8000/updir_1/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/updir_1/latest_books/&#39;，</a></p>
+<p>   ‘<a href="http://127.0.0.1:8000/updir_2/latest_books/&#39;" target="_blank" rel="noopener">http://127.0.0.1:8000/updir_2/latest_books/&#39;</a></p>
+<pre><code>    都会被匹配上。
+
+3）子串末尾是否包含&apos;/&apos;
+
+    默认情况下必须添加（django开发者的基本习惯），如果不添加将会出现如下情况：
+</code></pre><p>from django.conf.urls import patterns, url, include</p>
+<p>urlpatterns = patterns(‘’,</p>
+<p>(r’^latest_books$’, ‘django_web_app.views.latest_books’),</p>
+<p>)</p>
+<p>　　  </p>
+<pre><code>如果子串末尾不想包含&apos;/&apos;，可在setting.py中添加设置：APPEND_SLASH=False
+
+但是必须安装了CommonMiddleware才会起作用。
+</code></pre><p>　　4）手动配置网站“根目录”</p>
+<p>　　　　在不手动配置网站“根目录”对应“视图函数”的情况下，会出现如下情况：</p>
+<p>　　　　</p>
+<p>　　　　手动配置“根目录”对应“视图函数”：</p>
+<p>　　　　a)urls.py</p>
+<p>from django.conf.urls import patterns, url, include</p>
+<p>urlpatterns = patterns(‘’,</p>
+<pre><code>(r&apos;^$&apos;,&apos;django_web_app.views.home_page&apos;),
+
+(r&apos;^latest_books/$&apos;, &apos;django_web_app.views.latest_books&apos;),
+</code></pre><p>)</p>
+<p>　　　　b)views.py</p>
+<p>def home_page(request):</p>
+<pre><code>return render_to_response(&apos;home_page.html&apos;)
+</code></pre><p>　　　　c)home_page.html</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html><br><br><head><br><br>    <title>my home page</title><br><br></head><br><br><body><br><br>    <h1>This is home page, welcome !</h1><br><br><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260},"mobile":{"show":false},"log":false});</script></body><br><br></html>
+
+<p>　　　　运行结果：</p>
+<p>　　　　</p>
+<p>　　</p>
+<p>0、基本过程</p>
+<p>  1）创建 Django  工程     执行 django-admin.py startproject mysite 这样会在目录下建立一个 mysite：</p>
+<p>　</p>
+<p>文件如下：</p>
+<p><strong>init</strong>.py  ：让 Python 把该目录当成一个开发包 (即一组模块)所需的文件。 这是一个空文件，一般你不需要修改它。</p>
+<p>manage.py  ：一种命令行工具，允许你以多种方式与该 Django 项目进行交互。 键入 python   manage.py   help ，看一下它能做什么。 你应当不需要编辑这个文件；在这个目录下生成它纯是为了方便。</p>
+<p>settings.py  ：该 Django 项目的设置或配置。 查看并理解这个文件中可用的设置类型及其默认值。</p>
+<p>urls.py ：Django项目的URL设置。 可视其为你的django网站的目录。 目前，它是空的。</p>
+<p>尽管这些的文件很小，但这些文件已经构成了一个可运行的Django应用。</p>
+<pre><code>python manage.py runserver  port 可以运行刚才建立的空服务端
+</code></pre><p>2）设置数据库，自带的是sqlite 3）开始一个新的Apps<br>python manage.py startapp books<br>这个命令并没有输出什么，它只在  mysite  的目录里创建了一个  books  目录。 让我们来看看这个目录的内容：</p>
+<p>books/<br>​    <strong>init</strong>.py<br>​    models.py<br>​    tests.py<br>​    views.py<br>这个目录包含了这个app的模型和视图。</p>
+<p>4）模型安装<br>在 Django 项目中  激活  这些模型。 将  books  app 添加到配置文件的已安装应用列表中即可完成此步骤。</p>
+<p>再次编辑  settings.py  文件， 找到  INSTALLED_APPS  设置。  INSTALLED_APPS  告诉 Django 项目哪些 app 处于激活状态。 </p>
+<p>5）db的产生（尚未验证）</p>
+<p>python manage.py validate        #validate  命令检查你的模型的语法和逻辑是否正确<br>python manage.py sqlall books    #把产生数据库表的SQL语句段打印出来</p>
+<h2 id="python-manage-py-syncdb-运行上面产生的SQL语句，实际生成数据库表"><a href="#python-manage-py-syncdb-运行上面产生的SQL语句，实际生成数据库表" class="headerlink" title="python manage.py syncdb        #运行上面产生的SQL语句，实际生成数据库表"></a>python manage.py syncdb        #运行上面产生的SQL语句，实际生成数据库表</h2><p>作者：Leo笑<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/hgstclyh/article/details/71107002" target="_blank" rel="noopener">https://blog.csdn.net/hgstclyh/article/details/71107002</a> </p>
 
       
     </div>
@@ -550,7 +574,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2019/02/14/浅谈HTTP中Get、Post、Put与Delete的区别/" title="浅谈HTTP中Get、Post、Put与Delete的区别">http://yoursite.com/2019/02/14/浅谈HTTP中Get、Post、Put与Delete的区别/</a>
+    <a href="http://yoursite.com/2019/03/06/django从输入url的响应过程/" title="django从输入url的响应过程">http://yoursite.com/2019/03/06/django从输入url的响应过程/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -574,7 +598,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/http/" rel="tag">#http</a>
+            <a href="/tags/django/" rel="tag">#django</a>
 		  
         </div>
       
@@ -587,8 +611,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/12/正则表达式的使用/" rel="next" title="正则表达式的使用">
-                <i class="fa fa-chevron-left"></i> 正则表达式的使用
+              <a href="/2019/03/06/django中model用法详解/" rel="next" title="django中model用法详解">
+                <i class="fa fa-chevron-left"></i> django中model用法详解
               </a>
             
           </div>
@@ -596,10 +620,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/16/npm 和 cnpm 区别/" rel="prev" title="npm 和 cnpm区别">
-                npm 和 cnpm区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -810,7 +830,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#先具体说下get和post区别"><span class="nav-number">1.</span> <span class="nav-text">先具体说下get和post区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GET和POST两种基本请求方法的区别"><span class="nav-number">2.</span> <span class="nav-text">GET和POST两种基本请求方法的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。"><span class="nav-number">2.1.</span> <span class="nav-text">1、GET请求会向数据库发索取数据的请求，从而来获取信息，该请求就像数据库的select操作一样，只是用来查询一下数据，不会修改、增加数据，不会影响资源的内容，即该请求不会产生副作用。无论进行多少次操作，结果都是一样的。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。"><span class="nav-number">2.2.</span> <span class="nav-text">2、与GET不同的是，PUT请求是向服务器端发送数据的，从而改变信息，该请求就像数据库的update操作一样，用来修改数据的内容，但是不会增加数据的种类等，也就是说无论进行多少次PUT操作，其结果并没有不同。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。"><span class="nav-number">2.3.</span> <span class="nav-text">3、POST请求同PUT请求类似，都是向服务器端发送数据的，但是该请求会改变数据的种类等资源，就像数据库的insert操作一样，会创建新的内容。几乎目前所有的提交操作都是用POST请求的。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。"><span class="nav-number">2.4.</span> <span class="nav-text">4、DELETE请求顾名思义，就是用来删除某一个资源的，该请求就像数据库的delete操作。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#综上所述，我们可理解为以下："><span class="nav-number">3.</span> <span class="nav-text">综上所述，我们可理解为以下：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。"><span class="nav-number">4.</span> <span class="nav-text">1.根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。"><span class="nav-number">5.</span> <span class="nav-text">2.根据HTTP规范，POST表示可能修改变服务器上的资源的请求。继续引用上面的例子：还是新闻以网站为例，读者对新闻发表自己的评论应该通过POST实现，因为在评论提交后站点的资源已经不同了，或者说资源被修改了。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说完原理性的问题，我们再从表面现像上面看看GET和POST的区别："><span class="nav-number">5.1.</span> <span class="nav-text">说完原理性的问题，我们再从表面现像上面看看GET和POST的区别：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">This is home page, welcome !</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python-manage-py-syncdb-运行上面产生的SQL语句，实际生成数据库表"><span class="nav-number">1.1.</span> <span class="nav-text">python manage.py syncdb        #运行上面产生的SQL语句，实际生成数据库表</span></a></li></ol></li></ol></div>
             
 
           </div>

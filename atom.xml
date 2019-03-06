@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-06T03:26:49.042Z</updated>
+  <updated>2019-03-06T09:15:48.273Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>django从输入url的响应过程</title>
+    <link href="http://yoursite.com/2019/03/06/django%E4%BB%8E%E8%BE%93%E5%85%A5url%E7%9A%84%E5%93%8D%E5%BA%94%E8%BF%87%E7%A8%8B/"/>
+    <id>http://yoursite.com/2019/03/06/django从输入url的响应过程/</id>
+    <published>2019-03-06T09:15:12.000Z</published>
+    <updated>2019-03-06T09:15:48.273Z</updated>
+    
+    <content type="html"><![CDATA[<p> 目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。</p><pre><code>以下是根据书上的学习和实践，拷贝自网络：</code></pre><p>1、服务端响应url请求的执行顺序</p><p>　  1）项目结构</p><p>　　</p><p>　　django_web</p><p>　　　　　　　　<strong>init</strong>.py</p><p>　　　　　　　　settings.py</p><p>　　　　　　　　urls.py</p><p>　　　　　　　　wsgi.py</p><p>　　django_web_app</p><p>　　　　　　　　<strong>init</strong>.py</p><p>　　　　　　　　admin.py</p><p>　　　　　　　　models.py</p><p>　　　　　　　　tests.py</p><p>　　　　　　　　views.py</p><p>　　templates</p><p>　　　　　　　　home_page.html</p><p>　　　　　　　　latest_books.html</p><p>　　manage.py</p><p>　　2）执行顺序</p><p>　　　　　a）启动服务端——python manage.py runserver</p><p>　　　　　获取setting.py文件中的配置，主要包括：</p><p>　　　　　url映射关系文件路径：</p><p>ROOT_URLCONF = ‘django_web.urls’</p><p>　　　　　  页面文件模板路径：</p><p>TEMPLATE_DIRS = (</p><pre><code>os.path.join(BASE_DIR, &apos;templates&apos;),</code></pre><p>)</p><p>　　　　　　数据库配置：</p><p>DATABASES = {</p><pre><code>&apos;default&apos;: {    &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,    &apos;NAME&apos;: &apos;django_db&apos;,    &apos;USER&apos;: &apos;root&apos;,    &apos;PASSWORD&apos;: &apos;feng&apos;,    &apos;HOST&apos;: &apos;127.0.0.1&apos;,    &apos;PORT&apos;: &apos;3306&apos;,}</code></pre><p>}</p><p>b）响应顺序</p><p>　            说明：</p><p>第一步：浏览器提交请求</p><p>　　　　　<a href="http://127.0.0.1:8000/latest_books/" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/</a></p><p>　第二步：服务端根据请求的url在urls.py中进行匹配，并找到对应的“视图函数”</p><p>　第三步：调用对应的“视图函数” 返回一个HttpResponse对象</p><p>　第四步：django转换HttpResponse对象为一个适合的HTTP response，并返回给页面进行显示</p><p>2、url匹配模式</p><p>　  基本结构：</p><pre><code>    &apos;^需要匹配的url字符串$&apos; PS:实际上最终完整的url串是http://根路径：端口号/需要匹配的url字符串 系统自动添加的部分&apos;http://根路径：端口号/&apos;eg：url匹配模式：&apos;^latest_books/$&apos;       最终完整的url字符串：&apos;http://127.0.0.1:8000/latest_books/&apos;1）^：匹配“子串头”。</code></pre><p>　　  eg:</p><p> ‘^latest_books/‘</p><p> ‘<a href="http://127.0.0.1:8000/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/&#39;，</a></p><p> ‘<a href="http://127.0.0.1:8000/latest_books/test1/&#39;" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/test1/&#39;</a>,</p><pre><code>   都会被匹配上。     2）$：匹配“子串结尾”。    eg：</code></pre><p>　 ‘latest_books/$’</p><p>   ‘<a href="http://127.0.0.1:8000/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/latest_books/&#39;，</a></p><p>   ‘<a href="http://127.0.0.1:8000/updir_1/latest_books/&#39;，" target="_blank" rel="noopener">http://127.0.0.1:8000/updir_1/latest_books/&#39;，</a></p><p>   ‘<a href="http://127.0.0.1:8000/updir_2/latest_books/&#39;" target="_blank" rel="noopener">http://127.0.0.1:8000/updir_2/latest_books/&#39;</a></p><pre><code>    都会被匹配上。3）子串末尾是否包含&apos;/&apos;    默认情况下必须添加（django开发者的基本习惯），如果不添加将会出现如下情况：</code></pre><p>from django.conf.urls import patterns, url, include</p><p>urlpatterns = patterns(‘’,</p><p>(r’^latest_books$’, ‘django_web_app.views.latest_books’),</p><p>)</p><p>　　  </p><pre><code>如果子串末尾不想包含&apos;/&apos;，可在setting.py中添加设置：APPEND_SLASH=False但是必须安装了CommonMiddleware才会起作用。</code></pre><p>　　4）手动配置网站“根目录”</p><p>　　　　在不手动配置网站“根目录”对应“视图函数”的情况下，会出现如下情况：</p><p>　　　　</p><p>　　　　手动配置“根目录”对应“视图函数”：</p><p>　　　　a)urls.py</p><p>from django.conf.urls import patterns, url, include</p><p>urlpatterns = patterns(‘’,</p><pre><code>(r&apos;^$&apos;,&apos;django_web_app.views.home_page&apos;),(r&apos;^latest_books/$&apos;, &apos;django_web_app.views.latest_books&apos;),</code></pre><p>)</p><p>　　　　b)views.py</p><p>def home_page(request):</p><pre><code>return render_to_response(&apos;home_page.html&apos;)</code></pre><p>　　　　c)home_page.html</p><p>&lt;!DOCTYPE html&gt;</p><html><br><br><head><br><br>    <title>my home page</title><br><br></head><br><br><body><br><br>    <h1>This is home page, welcome !</h1><br><br><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260},"mobile":{"show":false},"log":false});</script></body><br><br></html><p>　　　　运行结果：</p><p>　　　　</p><p>　　</p><p>0、基本过程</p><p>  1）创建 Django  工程     执行 django-admin.py startproject mysite 这样会在目录下建立一个 mysite：</p><p>　</p><p>文件如下：</p><p><strong>init</strong>.py  ：让 Python 把该目录当成一个开发包 (即一组模块)所需的文件。 这是一个空文件，一般你不需要修改它。</p><p>manage.py  ：一种命令行工具，允许你以多种方式与该 Django 项目进行交互。 键入 python   manage.py   help ，看一下它能做什么。 你应当不需要编辑这个文件；在这个目录下生成它纯是为了方便。</p><p>settings.py  ：该 Django 项目的设置或配置。 查看并理解这个文件中可用的设置类型及其默认值。</p><p>urls.py ：Django项目的URL设置。 可视其为你的django网站的目录。 目前，它是空的。</p><p>尽管这些的文件很小，但这些文件已经构成了一个可运行的Django应用。</p><pre><code>python manage.py runserver  port 可以运行刚才建立的空服务端</code></pre><p>2）设置数据库，自带的是sqlite 3）开始一个新的Apps<br>python manage.py startapp books<br>这个命令并没有输出什么，它只在  mysite  的目录里创建了一个  books  目录。 让我们来看看这个目录的内容：</p><p>books/<br>​    <strong>init</strong>.py<br>​    models.py<br>​    tests.py<br>​    views.py<br>这个目录包含了这个app的模型和视图。</p><p>4）模型安装<br>在 Django 项目中  激活  这些模型。 将  books  app 添加到配置文件的已安装应用列表中即可完成此步骤。</p><p>再次编辑  settings.py  文件， 找到  INSTALLED_APPS  设置。  INSTALLED_APPS  告诉 Django 项目哪些 app 处于激活状态。 </p><p>5）db的产生（尚未验证）</p><p>python manage.py validate        #validate  命令检查你的模型的语法和逻辑是否正确<br>python manage.py sqlall books    #把产生数据库表的SQL语句段打印出来</p><h2 id="python-manage-py-syncdb-运行上面产生的SQL语句，实际生成数据库表"><a href="#python-manage-py-syncdb-运行上面产生的SQL语句，实际生成数据库表" class="headerlink" title="python manage.py syncdb        #运行上面产生的SQL语句，实际生成数据库表"></a>python manage.py syncdb        #运行上面产生的SQL语句，实际生成数据库表</h2><p>作者：Leo笑<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/hgstclyh/article/details/71107002" target="_blank" rel="noopener">https://blog.csdn.net/hgstclyh/article/details/71107002</a> </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 目前使用的主要开发语言还是python，有部分会用到网站开发，顺便看了一下《web接口开发与自动化测试基于python语言》，里面有Django的一些简单介绍，必要可以基于这个来开发个简单的web界面。首先一个是搞明白Django的访问逻辑次序。&lt;/p&gt;
+&lt;pre&gt;&lt;co
+      
+    
+    </summary>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+  </entry>
   
   <entry>
     <title>django中model用法详解</title>
