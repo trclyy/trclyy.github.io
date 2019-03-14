@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-12T23:07:10.828Z</updated>
+  <updated>2019-03-06T09:15:48.273Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>少儿编程演讲稿准备</title>
-    <link href="http://yoursite.com/2019/03/13/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B%E5%87%86%E5%A4%87/"/>
-    <id>http://yoursite.com/2019/03/13/少儿编程准备/</id>
-    <published>2019-03-12T23:01:48.000Z</published>
-    <updated>2019-03-12T23:07:10.828Z</updated>
-    
-    <content type="html"><![CDATA[<p>各位同学大家好 我是你的python老师田润超<br>今天我们来学习第一课 hello word</p><h3 id="先来看一下本节课的任务"><a href="#先来看一下本节课的任务" class="headerlink" title="先来看一下本节课的任务"></a>先来看一下本节课的任务</h3><p>1.了解什么是编程<br>2.了解python语言的以及特点<br>3.python软件的安装<br>4.写一个python第一个hello word</p><h2 id="1-什么是编程？"><a href="#1-什么是编程？" class="headerlink" title="1.什么是编程？"></a>1.什么是编程？</h2><p> 在这个全民互联网时代，编程看似离我们很远，有看似离我们很近，简单来说编程就是跟计算机对话的过程，来让计算机为我们做事 而且还要把细节说的很清楚</p><p>如果 直接跟计算机沟通 计算机会傻眼 ，由于计算机不是像人我们这样的生命体，是听不懂我们讲话的，所以咱们学习怎么跟计算机沟通是比较枯燥的，但是如果学会了，就可以让计算机帮我们做很多事</p><p>同学们知道一台电脑一个手机会有这么多功能吗，<br>就是因为很多聪明的程序员在他们背后写入了各式各样的程序<br>好 说到这 同学们大概对编程有一个基本的了解了吧</p><p>2.什么是Python？<br>就是人与计算不止python这一种语言，机沟通的一种语言，如果你学会 Python 语言，就可以指挥计算机做事，当然不止python这一种语言，知乎，网易用python写的，在上手其他的语言比如比较流行的java，比如淘宝，搜狗就是用java语言写的，还有Javascript，c/c++,PHP,Python</p><h2 id="2-python语言特点："><a href="#2-python语言特点：" class="headerlink" title="2.python语言特点："></a>2.python语言特点：</h2><p>1.python 语言简单，容易理解 世界上最简单的语言，没有之一，<br>所以程序员有句话叫：人生苦短，我用python<br>2.python是开源免费的软件，当我们学python时，可以在网上很方便的下载使用python软件，查找学习资料，好玩的python程序和工具<br>3.跨平台性，今天我们用苹果系统写一个python程序，拿到window系统也可以用<br>4.开源，简洁，夸平台性，所以使用的人群人数正在飞速上涨，包括美国航天局、谷歌这样世界级的都在使用python，根据2017统计，python已经上升为第4大语言</p><h2 id="3-为什么要学编程："><a href="#3-为什么要学编程：" class="headerlink" title="3.为什么要学编程："></a>3.为什么要学编程：</h2><p>我们大部分人最后不会成为专业的程序员，但仍然不妨碍很多业余人士学习编程，这其中就包括小学生：<br>原因：1.兴趣使然：编程本身是一件很有意思的事情，深入其中以后，获得的成就感高于玩游戏<br>2.中小学生学习编程可以提高孩子们的逻辑思维能力，可以提高英语和数学的成绩，这可能也就是你们父母来送你们学习编程的原因，也是我选择当编程老师的原因，帮助孩子们一块成长<br>3.手机电脑已经无处不在，往未来说，人工智能、机器人后面都需要海量的编程，学习编程可以让我们让我们更好的理解周围的世界。</p><p>学习python可以干嘛：<br>好了，讲了这么多枯燥的话题，python可以用来干嘛呢，相信这也是同学们比较关注的话题<br>许多同学可能都比较喜欢玩游戏，用python我们就可以来创造自己的游戏，那将很好玩</p><p>好了。。。这就是我大半夜睡不着。。准备的少儿编程演讲稿了， 在南京面试了好几天后端工程师了，结果到处碰壁，心情也变的不好了，想了一下，打算转一下方向尝试一下少儿编程，最近有少儿编程面试，想好好做好这件事，好好准备，希望可以通过面试，找到一份合适的工作，跟孩子一块成长也是很快乐，很有趣的，加油加油加油!  祝我成功<br>​                                                                                                                                                                                                                                                        2019.3.13 4:48 。。。。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;各位同学大家好 我是你的python老师田润超&lt;br&gt;今天我们来学习第一课 hello word&lt;/p&gt;
-&lt;h3 id=&quot;先来看一下本节课的任务&quot;&gt;&lt;a href=&quot;#先来看一下本节课的任务&quot; class=&quot;headerlink&quot; title=&quot;先来看一下本节课的任务&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="少儿编程" scheme="http://yoursite.com/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
   
   <entry>
     <title>django从输入url的响应过程</title>
