@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-06T09:15:48.273Z</updated>
+  <updated>2019-03-17T07:06:10.900Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决有关爬虫Python编码的错误</title>
+    <link href="http://yoursite.com/2019/03/17/%E8%A7%A3%E5%86%B3%E6%9C%89%E5%85%B3%E7%88%AC%E8%99%ABPython%E7%BC%96%E7%A0%81%E7%9A%84%E9%94%99%E8%AF%AF/"/>
+    <id>http://yoursite.com/2019/03/17/解决有关爬虫Python编码的错误/</id>
+    <published>2019-03-17T07:03:17.000Z</published>
+    <updated>2019-03-17T07:06:10.900Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Python-Solve-UnicodeEncodeError-‘gbk’-‘ascii’-‘utf8’-codec-can’t-encode-character-‘-x-’-in-position-解决有关Python编码的错误"><a href="#Python-Solve-UnicodeEncodeError-‘gbk’-‘ascii’-‘utf8’-codec-can’t-encode-character-‘-x-’-in-position-解决有关Python编码的错误" class="headerlink" title="Python Solve UnicodeEncodeError ‘gbk’ / ‘ascii’ / ‘utf8’ codec can’t encode character ‘\x??’ in position ? 解决有关Python编码的错误"></a><a href="https://www.cnblogs.com/grandyang/p/6906431.html" target="_blank" rel="noopener">Python Solve UnicodeEncodeError ‘gbk’ / ‘ascii’ / ‘utf8’ codec can’t encode character ‘\x??’ in position ? 解决有关Python编码的错误</a></h1><p>在Python中，处理中文字符一直是很令人头痛的问题，一言不合就乱码，而且引起乱码的原因也不尽相同，有时候是python本身默认的编码器设置的不对，有时候是使用的IDE的解码器不对，还有的时候是终端terminal的解码器不对，有时候同一份代码在Python2上正常运行，Python3上就不行了，反正产生乱码的原因很多，这里就列举一些博主遇到过的一些错误及其解决方案：</p><p>Error 1:</p><p>UnicodeEncodeError: ‘gbk’ codec can’t encode character ‘\x??’ in position ?: illegal multibyte sequence</p><p>这个是在Win7上用Python3编译的时候遇到的，原因是win7的python3的默认编码不是utf8，我们只需要将默认编码改为utf8就能解决这个问题，参见下面的代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys, io</span><br><span class="line">sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding=&apos;utf8&apos;) # Change default encoding to utf8</span><br></pre></td></tr></table></figure><p>Error 2：</p><p>UnicodeDecodeError: ‘ascii’ codec can’t decode byte 0x?? in position: ordinal not in range(128)</p><p>这个是Mac上使用Python2编译的时候遇到的，原因是也是由于python2的默认编码不是utf8，我们只需要将默认编码改为utf8就能解决这个问题，参见下面的代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(&apos;utf-8&apos;)</span><br></pre></td></tr></table></figure><p>像其他的产生错误的原因，比如IDE显示乱码，或者终端Terminal显示乱码，可以通过Google搜索快速的找出解决方法，这里就不赘述了。</p><p>Error3:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python抓取网页内容时出错，UnicodeEncodeError: &apos;gbk&apos; codec can&apos;t encode character &apos;\ue4bf.....</span><br></pre></td></tr></table></figure><p>网页的数据应该是’utf-8’编码,这个可以在网页的head上面看得到,然后你爬网页的时候会把它转化成Unicode,出问题的是在print()这儿,对于print()这个函数,他需要把内容转化为’<a href="https://www.baidu.com/s?wd=gbk&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">gbk</a>‘编码才能显示出来. 然后解决办法是这样,你在转化后的Unicode编码的string后面,加上 .encode(‘<a href="https://www.baidu.com/s?wd=GBK&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">GBK</a>‘,’ignore’).decode(‘<a href="https://www.baidu.com/s?wd=GBk&amp;tn=SE_PcZhidaonwhc_ngpagmjz&amp;rsv_dl=gh_pc_zhidao" target="_blank" rel="noopener">GBk</a>‘) 也就是先用gbk编码,忽略掉非法字符,然后再译码,是不是很有道理 应该是这样的,因为我和你遇到同样的问题,现在解决了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Python-Solve-UnicodeEncodeError-‘gbk’-‘ascii’-‘utf8’-codec-can’t-encode-character-‘-x-’-in-position-解决有关Python编码的错误&quot;&gt;&lt;a href=&quot;#Pytho
+      
+    
+    </summary>
+    
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx介绍</title>
+    <link href="http://yoursite.com/2019/03/15/nginx%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/2019/03/15/nginx介绍/</id>
+    <published>2019-03-15T01:03:10.000Z</published>
+    <updated>2019-03-15T01:04:19.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>Nginx是什么？Nginx介绍及Nginx的优点</p><p>Nginx是俄罗斯人编写的十分轻量级的HTTP服务器,Nginx，它的发音为“engine X”，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器。Nginx是由俄罗斯人 Igor Sysoev为俄罗斯访问量第二的 Rambler.ru站点开发的，它已经在该站点运行超过两年半了。Igor Sysoev在建立的项目时,使用基于BSD许可。</p><p>英文主页：<a href="http://nginx.net/" target="_blank" rel="noopener">http://nginx.net</a> 。</p><p>到2013年，目前有很多国内网站采用Nginx作为Web服务器，如国内知名的新浪、163、腾讯、Discuz、豆瓣等。据netcraft统计，Nginx排名第3，约占15%的份额(参见：<a href="http://news.netcraft.com/archives/category/web-server-survey/" target="_blank" rel="noopener">http://news.netcraft.com/archives/category/web-server-survey/</a> )</p><p>Nginx以事件驱动的方式编写，所以有非常好的性能，同时也是一个非常高效的反向代理、负载平衡。其拥有匹配Lighttpd的性能，同时还没有Lighttpd的内存泄漏问题，而且Lighttpd的mod_proxy也有一些问题并且很久没有更新。</p><p>现在，Igor将源代码以类BSD许可证的形式发布。Nginx因为它的稳定性、丰富的模块库、灵活的配置和低系统资源的消耗而闻名．业界一致认为它是Apache2.2＋mod_proxy_balancer的轻量级代替者，不仅是因为响应静态页面的速度非常快，而且它的模块数量达到Apache的近2/3。对proxy和rewrite模块的支持很彻底，还支持mod_fcgi、ssl、vhosts ，适合用来做mongrel clusters的前端HTTP响应。</p><p>nginx做为HTTP服务器，有以下几项基本特性：</p><ul><li></li><li><p>处理静态文件，索引文件以及自动索引；打开文件描述符缓冲．</p></li><li>无缓存的反向代理加速，简单的负载均衡和容错．</li><li>FastCGI，简单的负载均衡和容错．</li><li>模块化的结构。包括gzipping, byte ranges, chunked responses,以及 SSI-filter等filter。如果由FastCGI或其它代理服务器处理单页中存在的多个SSI，则这项处理可以并行运行，而不需要相互等待。</li><li>支持SSL 和 TLSSNI．</li><li><p>Nginx专为性能优化而开发，性能是其最重要的考量,实现上非常注重效率 。它支持内核Poll模型，能经受高负载的考验,有报告表明能支持高达 50,000个并发连接数。</p></li><li><p>Nginx具有很高的稳定性。其它HTTP服务器，当遇到访问的峰值，或者有人恶意发起慢速连接时，也很可能会导致服务器物理内存耗尽频繁交换，失去响应，只能重启服务器。例如当前apache一旦上到200个以上进程，web响应速度就明显非常缓慢了。而Nginx采取了分阶段资源分配技术，使得它的CPU与内存占用率非常低。nginx官方表示保持10,000个没有活动的连接，它只占2.5M内存，所以类似DOS这样的攻击对nginx来说基本上是毫无用处的。就稳定性而言,nginx比lighthttpd更胜一筹。</p></li><li><p>Nginx支持热部署。它的启动特别容易, 并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够在不间断服务的情况下，对软件版本进行进行升级。</p></li><li><p>Nginx采用master-slave模型,能够充分利用SMP的优势，且能够减少工作进程在磁盘I/O的阻塞延迟。当采用select()/poll()调用时，还可以限制每个进程的连接数。</p></li><li><p>Nginx代码质量非常高，代码很规范，手法成熟， 模块扩展也很容易。特别值得一提的是强大的Upstream与Filter链。Upstream为诸如reverse proxy,与其他服务器通信模块的编写奠定了很好的基础。而Filter链最酷的部分就是各个filter不必等待前一个filter执行完毕。它可以把前一个filter的输出做为当前filter的输入，这有点像Unix的管线。这意味着，一个模块可以开始压缩从后端服务器发送过来的请求，且可以在模块接收完后端服务器的整个请求之前把压缩流转向客户端。</p></li><li><p>Nginx采用了一些os提供的最新特性如对sendfile (Linux2.2+)，accept-filter (FreeBSD4.1+)，TCP_DEFER_ACCEPT (Linux 2.4+)的支持，从而大大提高了性能。</p></li><li><p>当然，nginx还很年轻，多多少少存在一些问题，比如：Nginx是俄罗斯人创建，虽然前几年文档比较少，但是目前文档方面比较全面，英文资料居多，中文的资料也比较多，而且有专门的书籍和资料可供查找。</p></li><li><p>nginx的作者和社区都在不断的努力完善，我们有理由相信nginx将继续以高速的增长率来分享轻量级HTTP服务器市场，会有一个更美好的未来。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Nginx是什么？Nginx介绍及Nginx的优点&lt;/p&gt;
+&lt;p&gt;Nginx是俄罗斯人编写的十分轻量级的HTTP服务器,Nginx，它的发音为“engine X”，是一个高性能的HTTP和反向代理服务器，同时也是一个IMAP/POP3/SMTP 代理服务器。Nginx是由俄
+      
+    
+    </summary>
+    
+    
+      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue介绍</title>
+    <link href="http://yoursite.com/2019/03/15/vue%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/2019/03/15/vue介绍/</id>
+    <published>2019-03-15T01:02:56.000Z</published>
+    <updated>2019-03-15T01:03:52.652Z</updated>
+    
+    <content type="html"><![CDATA[<p>一.MVX框架模式了解</p><p>MVX框架模式：MVC+MVP+MVVM</p><p>1.MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。<br>​      View通过Controller来和Model联系，Controller是View和Model的协调者，View和Model不直接联系，基本联系都是单向的。<br>用户User通过控制器Controller来操作模板Model从而达到视图View的变化。</p><p>2.MVP：是从MVC模式演变而来的，都是通过Controller/Presenter负责逻辑的处理+Model提供数据+View负责显示。<br>​      在MVP中，Presenter完全把View和Model进行了分离，主要的程序逻辑在Presenter里实现。<br>并且，Presenter和View是没有直接关联的，是通过定义好的接口进行交互，从而使得在变更View的时候可以保持Presenter不变。</p><p>MVP模式的框架：Riot,js。</p><p>3.MVVM：MVVM是把MVC里的Controller和MVP里的Presenter改成了ViewModel。Model+View+ViewModel。<br>​       View的变化会自动更新到ViewModel,ViewModel的变化也会自动同步到View上显示。<br>​     这种自动同步是因为ViewModel中的属性实现了Observer，当属性变更时都能触发对应的操作。</p><p>MVVM模式的框架有：AngularJS+Vue.js和Knockout+Ember.js后两种知名度较低以及是早起的框架模式。</p><p>View 是HTML文本的js模板<br>ViewModel是业务逻辑层（一切js可视业务逻辑，比如表单按钮提交，自定义事件的注册和处理逻辑都在viewmodel里面负责监控俩边的数据）<br>Model 数据层 对数据的处理（比如增删改查）</p><p>二.Vue.js 是什么</p><p>   Vue.js是一个轻巧、高性能、可组件化的MVVM库，同时拥有非常容易上手的API；</p><p>   Vue.js是一个构建数据驱动的Web界面的库。</p><p>   Vue.js是一套构建用户界面的 渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和 Vue 生态系统支持的库开发的复杂单页应用。数据驱动+组件化的前端开发。</p><p>简而言之：Vue.js是一个构建数据驱动的 web 界面的渐进式框架。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。核心是一个响应的数据绑定系统。</p><p>Vue.js的特性如下：</p><p>1.轻量级的框架</p><p>2.双向数据绑定</p><p>3.指令</p><h2 id="4-插件化"><a href="#4-插件化" class="headerlink" title="4.插件化"></a>4.插件化</h2><p>作者：面条请不要欺负汉堡<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/gao_xu_520/article/details/76020365" target="_blank" rel="noopener">https://blog.csdn.net/gao_xu_520/article/details/76020365</a> </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;一.MVX框架模式了解&lt;/p&gt;
+&lt;p&gt;MVX框架模式：MVC+MVP+MVVM&lt;/p&gt;
+&lt;p&gt;1.MVC：Model(模型)+View(视图)+controller(控制器)，主要是基于分层的目的，让彼此的职责分开。&lt;br&gt;​      View通过Controller来和
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux查看端口</title>
+    <link href="http://yoursite.com/2019/03/15/linux%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3/"/>
+    <id>http://yoursite.com/2019/03/15/linux查看端口/</id>
+    <published>2019-03-15T01:01:41.000Z</published>
+    <updated>2019-03-15T01:02:13.136Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>netstat命令各个参数说明如下：</strong></p><p>　　<strong>-t : 指明显示TCP端口</strong></p><p>　　<strong>-u : 指明显示UDP端口</strong></p><p>　　<strong>-l : 仅显示监听套接字(所谓套接字就是使应用程序能够读写与收发通讯协议(protocol)与资料的程序)</strong></p><p>　　<strong>-p : 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序。</strong></p><p>　　<strong>-n : 不进行DNS轮询，显示IP(可以加速操作)</strong></p><p><strong>即可显示当前服务器上所有端口及进程服务，于grep结合可查看某个具体端口及服务情况··</strong></p><p><strong>netstat -ntlp   //查看当前所有tcp端口·</strong></p><p><strong>netstat -ntulp |grep 80   //查看所有80端口使用情况·</strong></p><p><strong>netstat -an | grep 3306   //查看所有3306端口使用情况·</strong></p><p><strong>查看一台服务器上面哪些服务及端口</strong></p><p><strong>netstat  -lanp</strong></p><p><strong>查看一个服务有几个端口。比如要查看mysqld</strong></p><p><strong>ps -ef |grep mysqld</strong></p><p><strong>查看某一端口的连接数量,比如3306端口</strong></p><p><strong>netstat -pnt |grep :3306 |wc</strong></p><p><strong>查看某一端口的连接客户端IP 比如3306端口</strong></p><p><strong>netstat -anp |grep 3306</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">netstat -an 查看网络端口 </span><br><span class="line"></span><br><span class="line">lsof -i :port，使用lsof -i :port就能看见所指定端口运行的程序，同时还有当前连接。 </span><br><span class="line"></span><br><span class="line">nmap 端口扫描</span><br><span class="line">netstat -nupl  (UDP类型的端口)</span><br><span class="line">netstat -ntpl  (TCP类型的端口)</span><br><span class="line">netstat -anp 显示系统端口使用情况</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;netstat命令各个参数说明如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;-t : 指明显示TCP端口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;-u : 指明显示UDP端口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;strong&gt;-l
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>django从输入url的响应过程</title>
